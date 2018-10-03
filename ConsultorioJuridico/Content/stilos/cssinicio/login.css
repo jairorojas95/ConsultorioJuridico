@@ -1,0 +1,146 @@
+﻿F@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v10/IVeH6A3MiFyaSEiudUMXE8u2Q0OS-KeTAWjgkS85mDg.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;}
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+body,html{height:100%; width:100%}
+body {
+    background: url();
+    background-image: url('../../imagenes/imagesinicio/fonfouni.jpg');
+    background-position: center;
+    background-size: cover;
+    font-family: 'Montserrat',sans-serif;
+    height: 100%;
+    color:white;
+
+}
+
+.login-form{background:rgba(5, 31, 60, 0.35); padding-bottom:20px; margin-top:100px; box-shadow:0 1px 3px rgba(0,0,0,.3); border-radius:25px}
+.input-group-addon{background:rgba(5, 31, 60,1); border:none; color:#fff;border-radius:35px  }
+.form-control{border:none; color:#fff; outline:none !important; box-shadow:none !important; background:rgba(5, 31, 60, 1);border-radius:35px}
+.input-group{mara59}
+.input-group{margin-bottom:15px}
+.btn{border:none; padding:8px; outline:none !important; box-shadow:none !important}
+.logo-b{height:80px; width:80px; border:solid 5px #d9534f; margin:15px 0; font-weight:600;padding:0; display:inline-block; color:#fff; font-size:30px; line-height:70px; border-radius:50%}
+.btn-round {
+   border-radius:35px;
+  
+   
+}
+.input-group .input-group-addon {
+    border: 0;
+   
+    
+    padding: 0px 6px 0px;
+}
+
+header {
+    height:50px;
+   display:flex;
+    color:#fff;
+    justify-content:flex-end;
+    background:rgba(5, 31, 60, 0.35);
+    align-items:center;
+   
+}
+#btn-menu {
+
+    display:none;
+
+    
+
+}
+
+header nav {
+	
+	z-index:1000;
+    
+	
+}
+
+header label{
+    font-size:30px;
+    cursor:pointer;
+    display:none;
+    list-style:none;
+}
+
+.menu ul{
+   
+    display:flex;
+    list-style:none;
+
+}
+
+.menu a {
+    display:block;
+    padding:6px 35px;
+    color:#fff;
+    text-decoration:none;
+   
+}
+.menu a:hover{
+    background:rgba(5, 31, 60, 0.6);
+}
+
+ 
+
+ 
+
+
+.menu ul li btn:hover{
+    background-color: rgba(0,0,0,.0);
+    opacity: 0.2;
+}
+
+ 
+
+
+.menu ul li .material-icons {
+    vertical-align: middle;
+    font-size: 20px;
+    top: -1px;
+    position: relative;}
+ 
+
+@media(max-width:768px){
+
+    header label{
+        display:block;
+
+    }
+    .menu{
+        position:absolute;
+        top:50px;
+        left:0;
+        width:90%;
+        transform:translateX(-100%);
+        transition:all 0.3s;
+
+    }
+        .menu ul {
+            display:block;
+             background:rgba(5, 31, 60, 0.5);
+
+        }
+       .menu ul li btn{
+      display:block;
+}
+        #btn-menu:checked ~ .menu{
+            transform:translateX(0%);
+
+
+
+        }
+
+}
