@@ -66,10 +66,7 @@ namespace juefi2.Views.usuario
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            if (conne.Conectar() == true)
-            {
-                try
-            {
+           
 
                 us.nombre1 = nombre1.Text;
                 us.nombre2 = nombre2.Text;
@@ -137,20 +134,8 @@ namespace juefi2.Views.usuario
                 }
 
              
-            }
-            catch (Exception)
-            {
-
-            }
-
-                Response.Write("<script> alert('Conexion exitosa'); </script>");
-                return;
-            }
-            else
-            {
-                Response.Write("<script> alert('Conexion fallida'); </script>");
-                return;
-            }
+                       
+           
         }
     }
 }

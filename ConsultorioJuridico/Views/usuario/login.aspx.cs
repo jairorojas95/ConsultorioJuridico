@@ -41,9 +41,7 @@ namespace juefi2.Views.usuario
                         Session["id_usuario"] = dato["id_usuario"].ToString();
                         Session["Id_Session"] = Session.SessionID.ToString();
 
-
-
-                        Response.Redirect("principal.aspx");
+                        Response.Redirect("../Views/principal.aspx");
                     }
                     else
                     {

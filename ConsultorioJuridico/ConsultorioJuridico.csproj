@@ -6770,7 +6770,7 @@
     <Content Include="Views\CrearProceso.aspx" />
     <Content Include="Views\Diagnostico.aspx" />
     <Content Include="Views\usuario\login.aspx" />
-    <Content Include="Views\usuario\principal.aspx" />
+    <Content Include="Views\principal.aspx" />
     <Content Include="Views\usuario\registro.aspx" />
     <Content Include="Views\HojadeRuta.aspx" />
     <Content Include="Web.config">
@@ -7344,11 +7344,11 @@
     <Compile Include="Views\usuario\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\usuario\principal.aspx.cs">
+    <Compile Include="Views\principal.aspx.cs">
       <DependentUpon>principal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\usuario\principal.aspx.designer.cs">
+    <Compile Include="Views\principal.aspx.designer.cs">
       <DependentUpon>principal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\usuario\registro.aspx.cs">
