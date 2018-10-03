@@ -38,11 +38,11 @@ namespace juefi2.Models
         public string conficontrasena { get; set; }
 
 
-        //public DataTable ConsultarCuenta(UsuarioModel obj)
-        //{
-        //    string sql = "SELECT usu.id_usuario FROM usuario usu where usu.usuario='" + obj.user + "' AND usu.contrasena = Md5('" + obj.contrasena + "');";
-        //    return conn.EjecutarConsulta(sql, CommandType.Text);
-        //}
+        public DataTable ConsultarCuenta(UsuarioModel obj)
+        {
+            string sql = "SELECT id_usuario FROM usuarios where usuario='" + obj.user + "' AND contrasena = Md5('" + obj.contrasena + "');";
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
 
         public bool registrarusuario(UsuarioModel obj)
         {

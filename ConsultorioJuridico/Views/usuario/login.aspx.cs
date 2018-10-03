@@ -26,22 +26,21 @@ namespace juefi2.Views.usuario
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
 
-            try
-            {
+           
 
                 if (!String.IsNullOrEmpty(usuario.Text) && !String.IsNullOrEmpty(contrasena.Text))
                 {
                     us.user = usuario.Text;
                     us.contrasena = contrasena.Text;
-                    //aux = us.ConsultarCuenta(us);
+                    aux = us.ConsultarCuenta(us);
 
-                    if (aux.Rows.Count > 0)
+                if (aux.Rows.Count > 0)
                     {
                         dato = aux.Rows[0];
                         Session["id_usuario"] = dato["id_usuario"].ToString();
                         Session["Id_Session"] = Session.SessionID.ToString();
 
-                        Response.Redirect("../Views/principal.aspx");
+                        Response.Redirect("../principal.aspx");
                     }
                     else
                     {
@@ -53,12 +52,10 @@ namespace juefi2.Views.usuario
                     Response.Write("<script> alert('CAMPOS NO PUEDEN SER VACIOS'); </script>");
                 }
 
-            }
-            catch (Exception) { Response.Write("<script> alert(':('); </script>"); }
+
+
         }
 
     }
-
-
 }
     

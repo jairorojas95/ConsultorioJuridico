@@ -19,13 +19,13 @@ namespace juefi2.Controllers
 
 
 
-        //public DataTable Login(UsuarioModel user)
+        public DataTable Login(UsuarioModel user)
 
-        //{
+        {
 
-        //    return user.ConsultarCuenta(user);
+            return user.ConsultarCuenta(user);
 
-        //}
+        }
 
         //public bool usuarioExiste(string obj)
         //{
