@@ -2,10 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+ <div class="col-md-8">
 
-    <div class="col-md-8">
-
-        <div class="box box-primary">
+        <div class="box box-primary" style="background:#E0E6F8">
             <div class="box-header with-border">
                 
                <center> <h3 class="box-title">Crear Implicado</h3></center>
@@ -91,16 +90,18 @@
                 </div>
             </div>
 
-            <div class="col-md-6 ">
-                <div class="form-group">
-                     <br />
-                    <center>
-                     <asp:Button ID="Button1"  CssClass="btn btn-outline-primary" runat="server" Text="Crear persona"></asp:Button>
-          </center>
-                </div>
-            </div>
+            
+               
                  </div>
 
         </div>
+      <div class="box box-primary">
+            <div class="box-header with-border" style="background:#E0E6F8">
+                <center>  
+                   <asp:Button ID="Button1"  CssClass="btn btn-outline-primary" style="background:#2E9AFE" runat="server" Text="Crear persona"></asp:Button>
+                </center>
+            </div>
+              </div>
     </div>
+
 </asp:Content>

@@ -27,14 +27,14 @@ namespace juefi2.Controllers
 
         }
 
-        //public bool usuarioExiste(string obj)
-        //{
-        //    return Usu.Validarusuario(obj);
-        //}
-        //public bool emailExiste(string obj)
-        //{
-        //    return Usu.Validaremail(obj);
-        //}
+        public bool usuarioExiste(string obj)
+        {
+            return Usu.Validarusuario(obj);
+        }
+        public bool emailExiste(string obj)
+        {
+            return Usu.Validaremail(obj);
+        }
         public bool Registrarse(UsuarioModel mod)
         {
 

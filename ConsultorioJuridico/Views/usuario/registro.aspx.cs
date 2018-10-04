@@ -106,20 +106,20 @@ namespace juefi2.Views.usuario
                     return;
                 }
 
-                //if (p.usuarioExiste(us.user) == true)
-                //{
+            if (p.usuarioExiste(us.user) == true)
+            {
 
-                //    Response.Write("<script> alert('Usuario ya existe'); </script>");
-                //    return;
+                Response.Write("<script> alert('Usuario ya existe'); </script>");
+                return;
 
-                //}
-                //if (p.emailExiste(us.correo_electronico) == true)
-                //{
+            }
+            if (p.emailExiste(us.correo_electronico) == true)
+            {
 
-                //    Response.Write("<script> alert('Correo electronico  ya existe'); </script>");
-                //    return;
-                //}
-                if (p.Registrarse(us) == true)
+                Response.Write("<script> alert('Correo electronico  ya existe'); </script>");
+                return;
+            }
+            if (p.Registrarse(us) == true)
                 {
 
                     Response.Redirect("../usuario/login.aspx");

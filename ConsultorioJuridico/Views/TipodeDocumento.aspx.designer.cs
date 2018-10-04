@@ -10,7 +10,7 @@
 namespace juefi2.Views {
     
     
-    public partial class CrearEntidad {
+    public partial class TipodeDocumento {
         
         /// <summary>
         /// Control Txtarea.

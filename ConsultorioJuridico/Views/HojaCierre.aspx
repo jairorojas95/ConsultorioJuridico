@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="CrearProceso.aspx.cs" Inherits="juefi2.Views.CrearProceso" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="HojaCierre.aspx.cs" Inherits="juefi2.Views.HojaCierre" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  <title>Hoja de Cierre</title>
+    <title>Hoja de Cierre</title>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="col-md-8">
@@ -56,4 +56,5 @@
             </div>
               </div>
                   </div>
+
 </asp:Content>

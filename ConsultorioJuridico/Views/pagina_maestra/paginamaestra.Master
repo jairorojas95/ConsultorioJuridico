@@ -94,6 +94,47 @@
                     </a>
                     <!-- Navbar Right Menu -->
                     <div class="navbar-custom-menu">
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="../../Content/imagenes/imagesinicio/logo.png" class="user-image" alt="User Image"   height="25%" width="25%" >
+                                <span class="hidden-xs">Alexander Pierce</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="../../Content/imagenes/imagesinicio/logo.png" class="img-circle" alt="User Image"   height="35%" width="35%">
+
+                                    <p>
+                                        Alexander Pierce - Web Developer
+                  <small>Member since oct. 2018</small>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Followers</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Sales</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Friends</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            </li>
                         <ul class="nav navbar-nav">
                             <!-- Messages: style can be found in dropdown.less-->
 
@@ -146,6 +187,11 @@
                         <li class="active"><a href="../Views/HojadeRuta.aspx"><i class=" fa fa-edit"></i><span>Hoja de Ruta</span></a></li>
                         <li class="active"><a href="../Views/CrearPersona.aspx"><i class="fa fa-child"></i><span>Crear Persona</span></a></li>
                         <li class="active"><a href="../Views/Diagnostico.aspx"><i class="fa fa-book"></i><span>Diagnostico</span></a></li>
+                         <li class="active"><a href="../Views/HojaCierre.aspx"><i class=" fa  fa-file-text-o"></i><span>Hoja de Cierre</span></a></li>
+                        <li class="active"><a href="../Views/TipodeDocumento.aspx"><i class="fa  fa-credit-card"></i><span>Tipo de Documento</span></a></li>
+                         <li class="active"><a href="../Views/CrearEntidad.aspx"><i class="fa fa-delicious"></i><span>Crear Entidad</span></a></li>
+                        
+                      
                        
                         
                         <!--   <li><a href="#"><i class="fa fa-pencil-square-o"></i><span>Gestionar reglas</span></a></li>-->
@@ -184,7 +230,7 @@
    
                 </div>
                 <!-- Default to the left -->
-                <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+                <strong>Copyright &copy; 2018 <a href="#">Company</a>.</strong> All rights reserved.
  
             </footer>
 

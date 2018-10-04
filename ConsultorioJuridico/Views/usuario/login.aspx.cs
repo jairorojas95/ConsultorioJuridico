@@ -25,37 +25,41 @@ namespace juefi2.Views.usuario
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-
-           
+            try
+            {
 
                 if (!String.IsNullOrEmpty(usuario.Text) && !String.IsNullOrEmpty(contrasena.Text))
-                {
-                    us.user = usuario.Text;
-                    us.contrasena = contrasena.Text;
-                    aux = us.ConsultarCuenta(us);
+            {
+                us.user = usuario.Text;
+                us.contrasena = contrasena.Text;
+                aux = us.ConsultarCuenta(us);
 
                 if (aux.Rows.Count > 0)
-                    {
-                        dato = aux.Rows[0];
-                        Session["id_usuario"] = dato["id_usuario"].ToString();
-                        Session["Id_Session"] = Session.SessionID.ToString();
+                {
+                    dato = aux.Rows[0];
+                    Session["id_usuario"] = dato["id_usuario"].ToString();
+                    Session["Id_Session"] = Session.SessionID.ToString();
 
-                        Response.Redirect("../principal.aspx");
-                    }
-                    else
-                    {
-                        Response.Write("<script> alert('VERIFIQUE USUARIO O CONTRASEÑA'); </script>");
-                    }
+
+
+                    Response.Redirect("../principal.aspx");
                 }
                 else
                 {
-                    Response.Write("<script> alert('CAMPOS NO PUEDEN SER VACIOS'); </script>");
+                    Response.Write("<script> alert('VERIFIQUE USUARIO O CONTRASEÑA'); </script>");
                 }
+            }
+            else
+            {
+                Response.Write("<script> alert('CAMPOS NO PUEDEN SER VACIOS'); </script>");
+            }
 
-
+            Response.Write("<script> alert('CONEXION A LA BASE DE DATOS EXITOSA'); </script>");
 
         }
-
-    }
+                catch (Exception) { Response.Write("<script> alert('REVISE LA CONEXION A LA BASE DE DATOS'); </script>"); }
+}
+        }
+    
 }
     

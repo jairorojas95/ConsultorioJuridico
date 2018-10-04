@@ -105,6 +105,6 @@ C:\Users\JAIRO ROJAS\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\bi
 C:\Users\JAIRO ROJAS\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\JAIRO ROJAS\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\JAIRO ROJAS\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\JAIRO ROJAS\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\obj\Debug\ConsultorioJuridico.csprojResolveAssemblyReference.cache
 C:\Users\JAIRO ROJAS\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\obj\Debug\juefi2.dll
 C:\Users\JAIRO ROJAS\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\obj\Debug\juefi2.pdb
-C:\Users\JAIRO ROJAS\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\obj\Debug\ConsultorioJuridico.csprojResolveAssemblyReference.cache

@@ -6766,9 +6766,12 @@
     <Content Include="Scripts\jsinicio\jquery-1.10.2.js" />
     <Content Include="Scripts\jsinicio\main.js" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\CrearEntidad.aspx" />
     <Content Include="Views\CrearPersona.aspx" />
     <Content Include="Views\CrearProceso.aspx" />
     <Content Include="Views\Diagnostico.aspx" />
+    <Content Include="Views\HojaCierre.aspx" />
+    <Content Include="Views\TipodeDocumento.aspx" />
     <Content Include="Views\usuario\login.aspx" />
     <Content Include="Views\principal.aspx" />
     <Content Include="Views\usuario\registro.aspx" />
@@ -7309,6 +7312,13 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\CrearEntidad.aspx.cs">
+      <DependentUpon>CrearEntidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CrearEntidad.aspx.designer.cs">
+      <DependentUpon>CrearEntidad.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\CrearPersona.aspx.cs">
       <DependentUpon>CrearPersona.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -7330,12 +7340,26 @@
     <Compile Include="Views\Diagnostico.aspx.designer.cs">
       <DependentUpon>Diagnostico.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\HojaCierre.aspx.cs">
+      <DependentUpon>HojaCierre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\HojaCierre.aspx.designer.cs">
+      <DependentUpon>HojaCierre.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.designer.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TipodeDocumento.aspx.cs">
+      <DependentUpon>TipodeDocumento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TipodeDocumento.aspx.designer.cs">
+      <DependentUpon>TipodeDocumento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\usuario\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
