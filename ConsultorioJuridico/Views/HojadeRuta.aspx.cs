@@ -16,7 +16,7 @@ namespace juefi2.Views
 {
     public partial class Vista1 : System.Web.UI.Page
     {
-        pruebaController prueba = new pruebaController();
+        ProcesoController prueba = new ProcesoController();
         pruebaModel pru = new pruebaModel();
         conecMysql conne = new conecMysql();
         public DataTable consultar = new DataTable();

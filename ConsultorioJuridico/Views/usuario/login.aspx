@@ -39,7 +39,7 @@
                 </a>
             </li>
     
-            <li >
+<%--            <li >
                 <a href="#">
                     <i class="fas fa-gamepad"></i>
                     Acerca del Juego
@@ -50,7 +50,7 @@
                     <i class="far fa-envelope"></i>
                 Contactanos 
                 </a>
-            </li>
+            </li>--%>
             
         <li>
            

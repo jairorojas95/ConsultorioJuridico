@@ -33,7 +33,7 @@ namespace juefi2.Models
         public DataTable hoja_ruta()
         {
             string sql = " SELECT *   FROM hoja_ruta ;";
-           return conn.EjecutarConsulta(sql, CommandType.Text); ;
+           return conn.EjecutarConsulta(sql, CommandType.Text); 
 
         }
     }

@@ -42,18 +42,18 @@
                 </a>
             </li>
     
-            <li >
+          <%--  <li >
                 <a href="#">
                     <i class="fas fa-gamepad"></i>
                     Acerca del Juego
                 </a>
-            </li>
-             <li>
+            </li>--%>
+          <%--   <li>
                 <a href="#">
                     <i class="far fa-envelope"></i>
                 Contactanos 
                 </a>
-            </li>
+            </li>--%>
             
         <li>
             <a href="../usuario/login.aspx" class="btn btn-danger btn-round    ">

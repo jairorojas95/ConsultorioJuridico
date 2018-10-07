@@ -6766,6 +6766,7 @@
     <Content Include="Scripts\jsinicio\jquery-1.10.2.js" />
     <Content Include="Scripts\jsinicio\main.js" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\ConsultarProceso.aspx" />
     <Content Include="Views\CrearEntidad.aspx" />
     <Content Include="Views\CrearPersona.aspx" />
     <Content Include="Views\CrearProceso.aspx" />
@@ -7295,12 +7296,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\pruebaController.cs" />
+    <Compile Include="Controllers\ProcesoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BD\conecMysql.cs" />
+    <Compile Include="Models\ProcesoModel.cs" />
     <Compile Include="Models\pruebaModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -7311,6 +7313,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultarProceso.aspx.cs">
+      <DependentUpon>ConsultarProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultarProceso.aspx.designer.cs">
+      <DependentUpon>ConsultarProceso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\CrearEntidad.aspx.cs">
       <DependentUpon>CrearEntidad.aspx</DependentUpon>

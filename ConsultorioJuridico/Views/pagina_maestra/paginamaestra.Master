@@ -6,8 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../Content/imagenes/imagesinicio/logo.png" >
+    <link rel="icon" type="image/png" href="../../Content/imagenes/imagesinicio/logo.png" >
 
     <title><%: Page.Title %></title>
 
@@ -167,7 +167,7 @@
                     <!-- Sidebar user panel (optional) -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            <img src="../../Content/imagenes/imagesinicio/logo.png"  class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
                             <p>Administrador</p>
@@ -187,11 +187,12 @@
                         <li class="active"><a href="../Views/HojadeRuta.aspx"><i class=" fa fa-edit"></i><span>Hoja de Ruta</span></a></li>
                         <li class="active"><a href="../Views/CrearPersona.aspx"><i class="fa fa-child"></i><span>Crear Persona</span></a></li>
                         <li class="active"><a href="../Views/Diagnostico.aspx"><i class="fa fa-book"></i><span>Diagnostico</span></a></li>
-                         <li class="active"><a href="../Views/HojaCierre.aspx"><i class=" fa  fa-file-text-o"></i><span>Hoja de Cierre</span></a></li>
+                        <li class="active"><a href="../Views/HojaCierre.aspx"><i class=" fa  fa-file-text-o"></i><span>Hoja de Cierre</span></a></li>
                         <li class="active"><a href="../Views/TipodeDocumento.aspx"><i class="fa  fa-credit-card"></i><span>Tipo de Documento</span></a></li>
-                         <li class="active"><a href="../Views/CrearEntidad.aspx"><i class="fa fa-delicious"></i><span>Crear Entidad</span></a></li>
+                        <li class="active"><a href="../Views/CrearEntidad.aspx"><i class="fa fa-delicious"></i><span>Crear Entidad</span></a></li>
+                        <li class="active"><a href="../Views/ConsultarProceso.aspx"><i class="fa fa-search-minus"></i><span>Consultar Proceso</span></a></li>
                         
-                      
+                        
                        
                         
                         <!--   <li><a href="#"><i class="fa fa-pencil-square-o"></i><span>Gestionar reglas</span></a></li>-->
