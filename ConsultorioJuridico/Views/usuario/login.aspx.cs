@@ -16,7 +16,7 @@ namespace juefi2.Views.usuario
         UsuarioModel us = new UsuarioModel();
         DataRow dato;
         DataTable aux;
-        private int script;
+       
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,7 +37,7 @@ namespace juefi2.Views.usuario
                 if (aux.Rows.Count > 0)
                 {
                     dato = aux.Rows[0];
-                    Session["id_usuario"] = dato["id_usuario"].ToString();
+                    Session["idusuario"] = dato["idusuario"].ToString();
                     Session["Id_Session"] = Session.SessionID.ToString();
 
 

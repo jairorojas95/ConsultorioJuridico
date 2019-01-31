@@ -75,6 +75,7 @@ namespace juefi2.Views.usuario
                 us.contrasena = contrasena.Text;
                 us.correo_electronico = email.Text;
                 us.user = usuario.Text;
+           
                
 
                 if (!(validarNombre(nombre1.Text, true) && validarNombre(nombre2.Text, false) &&

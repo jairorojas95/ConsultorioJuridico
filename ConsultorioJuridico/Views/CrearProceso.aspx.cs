@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace juefi2.Views
 {
-    public partial class CrearProceso : System.Web.UI.Page
+    public partial class CrearProceso : Page
     {
         ProcesoController proce = new ProcesoController();
         ProcesoModel procemo = new ProcesoModel();
@@ -23,15 +23,15 @@ namespace juefi2.Views
                 try
                 {
                     droplisproceso.DataSource = proce.consultarproces();
-                    droplisproceso.DataValueField = "idtipo_proceso";
+                    droplisproceso.DataValueField = "fk_tipoproceso";
                     droplisproceso.DataTextField = "nombre_tipo";
                     droplisproceso.DataBind();
 
 
 
                     Dropasesor.DataSource = proce.traerdocentes();
-                    Dropasesor.DataValueField = "id_usuario";
-                    Dropasesor.DataTextField = "nombre";
+                    Dropasesor.DataValueField = "idusuario";
+                    Dropasesor.DataTextField = "nombre1";
                     Dropasesor.DataBind();
 
 
@@ -60,7 +60,12 @@ namespace juefi2.Views
             Textradicado.Text = "";
             Textaccionante.Text = "";
             Textaccionado.Text = "";
-
+            
+            //if (file.ContentLength > 0) {
+            //    var fileName = Path.GetFileName(file.FileName);
+            //    var path = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName);
+            //    file.SaveAs(path);
+            //}
 
         }
 

@@ -40,16 +40,23 @@ namespace juefi2.Models
 
         public DataTable ConsultarCuenta(UsuarioModel obj)
         {
-            string sql = "SELECT id_usuario FROM usuario where usuario='" + obj.user + "' AND password = Md5('" + obj.contrasena + "');";
+            string sql = "SELECT idusuario FROM usuario where nombre_usuario='" + obj.user + "' AND password = Md5('" + obj.contrasena + "');";
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
         public bool registrarusuario(UsuarioModel obj)
         {
 
-            string sqlee = "INSERT INTO usuario (nombre1,nombre2,apellido1,apellido2,usuario,email,password )  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2 + "','" + obj.user + "','" + obj.correo_electronico + "', Md5('" + obj.contrasena + "'));";
+            string sqlee = "INSERT INTO usuario (nombre1,nombre2,apellido1,apellido2,nombre_usuario,correo_usuario,password)  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2 + "','" + obj.user + "','" + obj.correo_electronico + "', Md5('" + obj.contrasena + "'));";
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
+
+        //public bool registrarpersona(UsuarioModel obj)
+        //{
+
+        //    string sqleee = "INSERT INTO persona (nombre1,nombre2,apellido1,apellido2)  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2 + "'));";
+        //    return conn.EjecutarSql(sqleee, CommandType.Text);
+        //}
 
         //public string ConsultarNombresUsuario(int idusuario)
         //{
@@ -61,14 +68,14 @@ namespace juefi2.Models
         //}
         public bool Validaremail(string email)
         {
-            string sql = "SELECT id_usuario FROM usuario  where email='" + email + "';";
+            string sql = "SELECT idusuario FROM usuario  where correo_usuario='" + email + "';";
 
             return conn.EjecutarConsulta(sql, CommandType.Text).Rows.Count > 0;
         }
 
         public bool Validarusuario(string user)
         {
-            string sql = "SELECT id_usuario FROM usuario  where usuario='" + user + "';";
+            string sql = "SELECT idusuario FROM usuario  where nombre_usuario='" + user + "';";
 
             return conn.EjecutarConsulta(sql, CommandType.Text).Rows.Count > 0;
         }
@@ -76,12 +83,19 @@ namespace juefi2.Models
 
                 public DataTable validarinfousuario(UsuarioModel obj)
         {
-            string sql = "SELECT usu.id_usuario FROM usuario usu where usu.nombre_1_usuario='" + obj.nombre1 + "'usu.nombre_2_usuario='" + obj.nombre2 + "'usu.apellido_1_usuario='" + obj.apellido1 + "'usu.apellido_2_usuario='" + obj.apellido2 + "' AND usu.contrasena = Md5('" + obj.contrasena + "');";
+            string sql = "SELECT usu.idusuario FROM usuario usu where usu.nombre_1_usuario='" + obj.nombre1 + "'usu.nombre_2_usuario='" + obj.nombre2 + "'usu.apellido_1_usuario='" + obj.apellido1 + "'usu.apellido_2_usuario='" + obj.apellido2 + "' AND usu.contrasena = Md5('" + obj.contrasena + "');";
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
 
+        public string ConsultarNombresUsuario(int idusuario)
+        {
 
+            string sql = "SELECT nombre1, apellido1 FROM usuario where(idusuario='" + idusuario + "');";
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            string nombres = dt.Rows[0]["nombre1"].ToString() + "  " + dt.Rows[0]["apellido1"].ToString();
+            return nombres;
+        }
 
 
 
