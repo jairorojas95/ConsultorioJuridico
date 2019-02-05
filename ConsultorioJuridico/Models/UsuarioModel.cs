@@ -26,7 +26,7 @@ namespace juefi2.Models
         public string user { get; set; }
 
 
-        //public int rol { get; set; }
+        public string rol { get; set; }
 
 
         public string correo_electronico { get; set; }
@@ -47,7 +47,7 @@ namespace juefi2.Models
         public bool registrarusuario(UsuarioModel obj)
         {
 
-            string sqlee = "INSERT INTO usuario (nombre1,nombre2,apellido1,apellido2,nombre_usuario,correo_usuario,password)  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2 + "','" + obj.user + "','" + obj.correo_electronico + "', Md5('" + obj.contrasena + "'));";
+            string sqlee = "INSERT INTO usuario (nombre1,nombre2,apellido1,apellido2,nombre_usuario,correo_usuario,password,rol_idrol)  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2 + "','" + obj.user + "','" + obj.correo_electronico + "', Md5('" + obj.contrasena + " '),'" + obj.rol+ "');";
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
 
@@ -97,6 +97,23 @@ namespace juefi2.Models
             return nombres;
         }
 
+
+
+        public string ConsultarsUsuario(int idusuario)
+        {
+
+            string sql = "select tipo_rol from rol inner join  usuario on rol_idrol = idrol where (idusuario='" + idusuario + "');";
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            string nombreusuario = dt.Rows[0]["tipo_rol"].ToString() ;
+            return nombreusuario;
+        }
+
+        public DataTable consulartipo_rol()
+        {
+            string sql = "SELECT * FROM rol ; ";
+
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
 
 
 

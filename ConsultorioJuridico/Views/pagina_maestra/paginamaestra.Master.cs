@@ -19,7 +19,7 @@ namespace juefi2.Views.pagina_maestra
         {
             if (Session["idusuario"] == null)
             {
-                Response.Redirect("Login.aspx");
+                Response.Redirect("/Views/usuario/login.aspx");
             }
             else
             {
@@ -45,24 +45,20 @@ namespace juefi2.Views.pagina_maestra
             MenuController userc = new MenuController();
             string saludo = userc.GetNombresUsuario(Int32.Parse(Session["idusuario"].ToString())).ToUpper();
             //Session["NombreUsuario"] = saludo;
+            string sal = userc.GetNomUsuario(Int32.Parse(Session["idusuario"].ToString())).ToUpper();
             Label1.Text = saludo;
             Label2.Text = saludo;
             lblbnombre.Text = saludo;
+            Label3.Text = sal;
         }
 
-
-
-
-
-
-
-
+                               
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Session.Abandon();
             Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
-            Response.Redirect("../usuario/login.aspx");
+            Response.Redirect("/Views/usuario/login.aspx");
         }
 
     }

@@ -42,6 +42,13 @@ namespace juefi2.Controllers
             return true;
         }
 
+        public DataTable consultarrol()
+
+        {
+            return Usu.consulartipo_rol();
+
+        }
+
     }
 
 

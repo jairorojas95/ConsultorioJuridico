@@ -23,5 +23,11 @@ namespace juefi2.Controllers
             UsuarioModel p = new UsuarioModel();
             return p.ConsultarNombresUsuario(useres.cosultarPKPersona(idusuario));
         }
+
+        public string GetNomUsuario(int idusuario)
+        {
+            UsuarioModel p = new UsuarioModel();
+            return p.ConsultarsUsuario(useres.cosultarPKPersona(idusuario));
+        }
     }
 }

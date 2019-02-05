@@ -68,7 +68,7 @@
 	<div class="col-md-3 col-md-offset-4 login-form text-center">
         <br />
 
-	<img src="../../Content/imagenes/imagesinicio/logo.png"  height="50%" width="50%"/>
+	<img src="../../Content/imagenes/imagesinicio/logo.png"  height="100px" width="100px"/>
         <br />
          <br />
 

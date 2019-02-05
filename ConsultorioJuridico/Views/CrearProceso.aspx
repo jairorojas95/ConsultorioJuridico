@@ -8,13 +8,10 @@
     </div>
     <div class="content">
         <div class="col-md-8">
-
             <div class="box box-primary" style="background: #E0E6F8">
                 <div class="box-header with-border">
                     <center> <h3 class="box-title">Crear Nuevo Proceso</h3> </center>
                 </div>
-
-
                 <div class="box-body">
 
                     <div class="col-md-6  ">
@@ -24,22 +21,20 @@
                         </div>
                     </div>
 
-
                     <div class="col-md-6  ">
                         <div class="form-group">
                             <label>Asesor</label>
 
                             <asp:DropDownList ID="Dropasesor" CssClass="form-control select2" runat="server">
                             </asp:DropDownList>
-
                         </div>
                     </div>
-
 
                     <div class="col-md-6 ">
                         <div class="form-group">
 
                             <label>Accionado </label>
+                            <button style="background: #2E9AFE" data-toggle="modal" data-target="#miModal">Crear </button>
                             <asp:TextBox ID="Textaccionado" runat="server" CssClass=" form-control"></asp:TextBox>
 
                         </div>
@@ -48,67 +43,155 @@
 
                     <div class="col-md-6 ">
                         <div class="form-group">
-
                             <label>Accionante </label>
+                            <button style="background: #2E9AFE" data-toggle="modal" data-target="#miModal">Crear </button>
                             <asp:TextBox ID="Textaccionante" runat="server" CssClass=" form-control"></asp:TextBox>
-
+                          
                         </div>
                     </div>
-
-
                     <div class="col-md-6 ">
                         <div class="form-group">
 
                             <label>Radicado </label>
                             <asp:TextBox ID="Textradicado" runat="server" CssClass=" form-control"></asp:TextBox>
-
                         </div>
                     </div>
 
                     <div class="col-md-6 ">
-                        <div class="form-group"> 
-                            <label for="file">Filename:</label>                      
-                               <input type="file" name="UploadedFile"  id="file"/>
-                        </div>  
-                    </div>
-
-                    <div class="col-md-6 ">
                         <div class="form-group">
-                     <button type="button" class="btn btn-facebook " data-toggle="modal" data-target="#miModal">
-                        Abrir modal
-                    </button>
-
-                            </div>
-                       
-                          </div>
+                            <label for="file">Filename:</label>
+                            <input type="file" name="UploadedFile" id="file" />
+                        </div>
+                    </div>
                 </div>
 
                 <div class="box box-primary">
                     <div class="box-header with-border" style="background: #E0E6F8">
                         <center>  
-                    <asp:Button ID="Button1" style="background:#2E9AFE" Text="Crear Proceso" OnClick="guardar" runat="server"/>
-                   
+                    <asp:Button ID="Button1" style="background:#2E9AFE" Text="Crear Proceso" OnClick="guardar" runat="server"/>                   
                 </center>
                     </div>
                 </div>
 
+                <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">Tipo Persona</h4>
+                            </div>
+                            <div class="modal-body">
+                                <%--Texto del modal--%>
+                                <center>
+                    <asp:Table>
+                <tr>
+                    <th> <button type="button" class="btn btn-facebook "  data-toggle="modal" data-target="#dataRegister2" data-dismiss="modal">Persona Jurídica</button></th>
+                    <th><button type="button" class="btn btn-facebook "  data-toggle="modal" data-target="#dataRegister" data-dismiss="modal">Persona Natural</button></th>
+                </tr>
+                        </asp:Table>
+                    </center>
+                            </div>
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form id="guardarDatos">
+                    <div class="modal fade" id="dataRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-keyboard="false" data-backdrop="static">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="exampleModalLabel">Datos Persona</h4>
+                                </div>
+                                <div class="box-body">
+                                    <div class="modal-body">
+                                        <div id="datos_ajax_register"></div>
+                                        <div class="col-md-6  ">
+                                            <label for="nom1" class="control-label">Primer Nombre</label>
+                                           <asp:TextBox  runat="server" type="text" class="form-control" id="nombre1" name="codigo"  maxlength="45"/>
+                                        </div>
+                                        <div class="col-md-6  ">
+                                            <label for="nom2" class="control-label">Segundo Nombre</label>
+                                             <asp:TextBox runat="server" type="text" class="form-control" id="nombre2" name="nombre" maxlength="45"/>
+                                        </div>
+                                        <div class="col-md-6  ">
+                                            <label for="apelli1" class="control-label">Primer Apellido</label>
+                                           <asp:TextBox  runat="server" type="text" class="form-control" id="apellido1" name="moneda"  maxlength="45"/>
+                                        </div>
+                                        <div class="col-md-6  ">
+                                            <label for="apelli2" class="control-label">Segundo Apellido</label>
+                                           <asp:TextBox  runat="server" type="text" class="form-control" id="apellido2" name="capital"  maxlength="45"/>
+                                        </div>
+                                        <div class="col-md-6  ">
+                                                <label>Tipo de documento</label>
+                                                <asp:DropDownList ID="DropDowndocument" CssClass="form-control select2" runat="server"></asp:DropDownList>
+                                            </div>
+                                       
+                                        <div class="col-md-6  ">
+                                            <label for="T_doc" class="control-label"> Documento</label>
+                                            <asp:TextBox   runat="server" type="text" class="form-control" id="documento" name="continente"  maxlength="45"/>
+                                        </div>
+                                        <div class="col-md-6  ">
+                                            <label for="documento" class="control-label">Direccion</label>
+                                            <asp:TextBox   runat="server"  type="text" class="form-control" id="direccion" name="continente"  maxlength="45"/>
+                                        </div>
+                                        <div class="col-md-6  ">
+                                            <label for="tel" class="control-label">Telefono</label>
+                                        <asp:TextBox runat="server" type="text" class="form-control" id="telefono" name="continente"  maxlength="45"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                             <div class="box box-primary">
+                            <br />
+                            <center> 
+                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                            <button id="guardar_datos" type="submit" class="btn btn-primary" onclick="guardar_persona">Guardar datos</button>
+                                            <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#miModal">Regresar  </button>
+                               <center> 
+                                   <br />
+                        </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="modal fade" id="dataRegister2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-keyboard="false" data-backdrop="static">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="exampleModalLabel2">Datos Persona</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="datos_ajax_register2"></div>
+                                    <div class="form-group">
+                                        <label for="codigo0" class="control-label">Nit:</label>
+                                        <input type="text" class="form-control" id="codigo2" name="codigo" required maxlength="2">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nombre0" class="control-label">Nombre:</label>
+                                        <input type="text" class="form-control" id="nombre22" name="Nombre" required maxlength="45">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar datos</button>
+                                        <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#miModal">Regresar </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
             </div>
-
-        </div>
-
-        <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
-            <div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<h4 class="modal-title" id="myModalLabel">Esto es un modal</h4>
-			</div>
-			<div class="modal-body">
-				Texto del modal
-			</div>
         </div>
     </div>
-</div>
 </asp:Content>

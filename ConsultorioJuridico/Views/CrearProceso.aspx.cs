@@ -18,12 +18,14 @@ namespace juefi2.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+          
             if (!IsPostBack)
             {
                 try
                 {
                     droplisproceso.DataSource = proce.consultarproces();
-                    droplisproceso.DataValueField = "fk_tipoproceso";
+                    droplisproceso.DataValueField = "idtipo_proceso";
                     droplisproceso.DataTextField = "nombre_tipo";
                     droplisproceso.DataBind();
 
@@ -31,10 +33,13 @@ namespace juefi2.Views
 
                     Dropasesor.DataSource = proce.traerdocentes();
                     Dropasesor.DataValueField = "idusuario";
-                    Dropasesor.DataTextField = "nombre1";
+                    Dropasesor.DataTextField = "nombre";
                     Dropasesor.DataBind();
 
-
+                    DropDowndocument.DataSource = proce.consultardocumento();
+                    DropDowndocument.DataValueField = "idtipo_documento";
+                    DropDowndocument.DataTextField = "nombre_ducumento";
+                    DropDowndocument.DataBind();
 
                 }
                 catch (Exception ex)
@@ -42,11 +47,36 @@ namespace juefi2.Views
                 }
                                                
             }
+            
+        }
+
+        protected void guardar_persona(object sender, EventArgs e)
+        {
+            procemo.nombre1 = nombre1.Text;
+            procemo.nombre2 = nombre2.Text;
+            procemo.apellido1 = apellido1.Text;
+            procemo.apellido1 = apellido1.Text;
+            procemo.documento = documento.Text;
+            procemo.tipo_documento = DropDowndocument.SelectedValue;
+            procemo.telefono = telefono.Text;
+            procemo.direccion = direccion.Text;
+
+
+
+            nombre1.Text="";
+            nombre2.Text = "";
+            apellido1.Text = "";
+            apellido1.Text = "";
+            documento.Text = "";
+            telefono.Text = "";
+            direccion.Text = "";
 
         }
 
         protected void guardar(object sender, EventArgs e)
         {
+            
+
 
             procemo.radicado = Textradicado.Text;
             procemo.accionante = Textaccionante.Text;

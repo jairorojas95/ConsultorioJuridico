@@ -14,7 +14,7 @@
         <div class="toolbar">
             <div class="col-md-9 ">
                 <div class="toolbar__nav">
-                    <a href="../usuario/principal.aspx">
+                    <a href="/Views/principal.aspx">
                         <h5><i class="fa  fa-home "></i>Inicio</h5>
                     </a>
                     
@@ -37,7 +37,7 @@
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
-                                    <img src="../../Content/imagenes/imagesinicio/inicio_uni.png" alt="First slide" />
+                                    <img src="../../Content/imagenes/imagesinicio/consultorio.jpeg" alt="First slide" />
                                     <div class="carousel-caption">
                                     </div>
                                 </div>

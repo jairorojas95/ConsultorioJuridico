@@ -23,6 +23,14 @@ namespace juefi2.Controllers
             return true;
             
         }
+
+        public bool registropersona(ProcesoModel mod)
+        {
+
+            proce.registrarperonsanatural(mod);
+            return true;
+
+        }
         public DataTable traerhoja()
 
         {
@@ -48,6 +56,13 @@ namespace juefi2.Controllers
 
         {
             return proce.consultarproceso();
+
+        }
+
+        public DataTable consultardocumento()
+
+        {
+            return proce.consulartipo_documento();
 
         }
 

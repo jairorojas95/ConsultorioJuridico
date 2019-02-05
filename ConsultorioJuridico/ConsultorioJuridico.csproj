@@ -261,6 +261,7 @@
     <Content Include="Content\imagenes\calendar\november.jpg" />
     <Content Include="Content\imagenes\calendar\october.jpg" />
     <Content Include="Content\imagenes\calendar\september.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\consultorio.jpeg" />
     <Content Include="Content\imagenes\imagesinicio\fondo.JPG" />
     <Content Include="Content\imagenes\imagesinicio\fonfouni.jpg" />
     <Content Include="Content\imagenes\imagesinicio\inicio_uni.png" />
