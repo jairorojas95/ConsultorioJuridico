@@ -73,5 +73,10 @@ namespace juefi2.Controllers
             return true;
         }
 
+        public bool registrarpersonatest()
+        {
+            return true;
+        }
+
     }
 }

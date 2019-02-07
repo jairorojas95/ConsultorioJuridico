@@ -3,6 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
     <div class="content-header">
         <label id="error" runat="server"></label>
     </div>
@@ -46,7 +50,7 @@
                             <label>Accionante </label>
                             <button style="background: #2E9AFE" data-toggle="modal" data-target="#miModal">Crear </button>
                             <asp:TextBox ID="Textaccionante" runat="server" CssClass=" form-control"></asp:TextBox>
-                          
+
                         </div>
                     </div>
                     <div class="col-md-6 ">
@@ -68,7 +72,7 @@
                 <div class="box box-primary">
                     <div class="box-header with-border" style="background: #E0E6F8">
                         <center>  
-                    <asp:Button ID="Button1" style="background:#2E9AFE" Text="Crear Proceso" OnClick="guardar" runat="server"/>                   
+                   <asp:Button ID="Button1"  CssClass="btn btn-outline-primary" OnClick="guardar" style="background:#2E9AFE" runat="server" Text="Crear Proceso"></asp:Button>
                 </center>
                     </div>
                 </div>
@@ -100,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <form id="guardarDatos">
+                <form id="guardarDatos" method="post" action="">
                     <div class="modal fade" id="dataRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-keyboard="false" data-backdrop="static">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -113,53 +117,53 @@
                                         <div id="datos_ajax_register"></div>
                                         <div class="col-md-6  ">
                                             <label for="nom1" class="control-label">Primer Nombre</label>
-                                           <asp:TextBox  runat="server" type="text" class="form-control" id="nombre1" name="codigo"  maxlength="45"/>
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombre1" name="codigo" MaxLength="45" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="nom2" class="control-label">Segundo Nombre</label>
-                                             <asp:TextBox runat="server" type="text" class="form-control" id="nombre2" name="nombre" maxlength="45"/>
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombre2" name="nombre" MaxLength="45" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="apelli1" class="control-label">Primer Apellido</label>
-                                           <asp:TextBox  runat="server" type="text" class="form-control" id="apellido1" name="moneda"  maxlength="45"/>
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="apellido1" name="moneda" MaxLength="45" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="apelli2" class="control-label">Segundo Apellido</label>
-                                           <asp:TextBox  runat="server" type="text" class="form-control" id="apellido2" name="capital"  maxlength="45"/>
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="apellido2" name="capital" MaxLength="45" />
                                         </div>
                                         <div class="col-md-6  ">
-                                                <label>Tipo de documento</label>
-                                                <asp:DropDownList ID="DropDowndocument" CssClass="form-control select2" runat="server"></asp:DropDownList>
-                                            </div>
-                                       
+                                            <label>Tipo de documento</label>
+                                            <asp:DropDownList ID="DropDowndocument" CssClass="form-control select2" runat="server"></asp:DropDownList>
+                                        </div>
+
                                         <div class="col-md-6  ">
-                                            <label for="T_doc" class="control-label"> Documento</label>
-                                            <asp:TextBox   runat="server" type="text" class="form-control" id="documento" name="continente"  maxlength="45"/>
+                                            <label for="T_doc" class="control-label">Documento</label>
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="documento" name="continente" MaxLength="45" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="documento" class="control-label">Direccion</label>
-                                            <asp:TextBox   runat="server"  type="text" class="form-control" id="direccion" name="continente"  maxlength="45"/>
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="direccion" name="continente" MaxLength="45" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="tel" class="control-label">Telefono</label>
-                                        <asp:TextBox runat="server" type="text" class="form-control" id="telefono" name="continente"  maxlength="45"/>
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="telefono" name="continente" MaxLength="45" />
                                         </div>
                                     </div>
 
                                 </div>
 
                             </div>
-                             <div class="box box-primary">
-                            <br />
-                            <center> 
+                            <div class="box box-primary">
+                                <br />
+                                <center> 
                                          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                            <button id="guardar_datos" type="submit" class="btn btn-primary" onclick="guardar_persona">Guardar datos</button>
+                                            <button id="guardar_datos" type="submit" class="btn btn-primary"  runat="server">Guardar datos</button>
                                             <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#miModal">Regresar  </button>
                                <center> 
                                    <br />
+                            </div>
                         </div>
-                        </div>
-                       
+
                     </div>
 
                     <div class="modal fade" id="dataRegister2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-keyboard="false" data-backdrop="static">
@@ -194,4 +198,37 @@
             </div>
         </div>
     </div>
+    <script>
+    $("#guardar_datos").click(function () {
+        $.ajax({
+            url: 'Proceso/registrarpersonatest',
+            type: 'post',
+            cache: false,
+            data: getData(),
+            success: function (retorno) {
+
+                alert('exxito');
+            },
+            error: function (d) {
+                'muestrele algo diciendo error'
+            }
+        });
+
+    });
+
+    function getData() {
+        return {
+            Nombre1: $("#nombre1").val(),
+            Nombre2: $("#nombre2").val(),
+            Apellido1: $("#apellido1").val(),
+            DropDowndocument: $("#DropDowndocument").val(),
+            Documento: $("#documento").val(),
+            Direccion: $("#direccion").val(),
+            Telefono: $("#telefono").val()
+        };
+    }
+</script>
+
 </asp:Content>
+
+

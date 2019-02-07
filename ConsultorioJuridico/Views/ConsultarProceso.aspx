@@ -41,8 +41,8 @@
                                         <td><%# Eval("radicado_proceso") %></td>
                                         <td><%# Eval("accionante") %></td>
                                         <td><%# Eval("accionado") %></td>
-                                   <%--     <td><%# Eval("asesor") %></td>
-                                        <td><%# Eval("nombre_tipo") %></td>--%>
+                                        <td><%# Eval("asesor") %></td>
+                                        <td><%# Eval("nombre_tipo") %></td>
 
                                         <td>
                                             <asp:LinkButton ID="botonprueba" runat="server" hrf="#modal-default" Title="Editar proceso" CssClass="btn btn-success fa fa-fw fa-plus-square" CommandArgument='<%# Eval("idproceso") %>' CommandName="edit"> </asp:LinkButton></td>

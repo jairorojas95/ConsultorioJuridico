@@ -52,6 +52,7 @@ namespace juefi2.Views
 
         protected void guardar_persona(object sender, EventArgs e)
         {
+
             procemo.nombre1 = nombre1.Text;
             procemo.nombre2 = nombre2.Text;
             procemo.apellido1 = apellido1.Text;
@@ -63,7 +64,7 @@ namespace juefi2.Views
 
 
 
-            nombre1.Text="";
+            nombre1.Text = "";
             nombre2.Text = "";
             apellido1.Text = "";
             apellido1.Text = "";
@@ -75,7 +76,7 @@ namespace juefi2.Views
 
         protected void guardar(object sender, EventArgs e)
         {
-            
+
 
 
             procemo.radicado = Textradicado.Text;
@@ -90,7 +91,7 @@ namespace juefi2.Views
             Textradicado.Text = "";
             Textaccionante.Text = "";
             Textaccionado.Text = "";
-            
+
             //if (file.ContentLength > 0) {
             //    var fileName = Path.GetFileName(file.FileName);
             //    var path = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName);
@@ -99,14 +100,14 @@ namespace juefi2.Views
 
         }
 
-        protected void lieditar_Command(object sender, CommandEventArgs e)
-        {
-            Response.Write("<script> alert('hola " + e.CommandArgument + "') </script>");
-        }
+        //protected void lieditar_Command(object sender, CommandEventArgs e)
+        //{
+        //    Response.Write("<script> alert('hola " + e.CommandArgument + "') </script>");
+        //}
 
-        protected void consultaproceso_ItemCommand(object source, RepeaterCommandEventArgs e)
-        {
+        //protected void consultaproceso_ItemCommand(object source, RepeaterCommandEventArgs e)
+        //{
 
-        }
+        //}
     }
 }
