@@ -26,6 +26,8 @@
 
     <link href="../../Content/stilos/estiloadmin/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet" />
     <!-- Theme style -->
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../Content/stilos/estiloadmin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
 
     <link href="../../Content/stilos/estiloadmin/dist/css/AdminLTE.min.css" rel="stylesheet" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -42,6 +44,8 @@
 
     <link href="../../Content/stilos/estiloadmin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" />
     <!-- Daterange picker -->
+     <!-- Select2 -->
+  <link rel="stylesheet" href="../../Content/stilos/estiloadmin/bower_components/select2/dist/css/select2.min.css"/>
 
     <link href="../../Content/stilos/estiloadmin/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
     <!-- bootstrap wysihtml5 - text editor -->
@@ -255,6 +259,10 @@
     <!-- Sparkline -->
     <script src="../../Content/stilos/estiloadmin/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
     <!-- jvectormap -->
+    
+    <!-- DataTables -->
+    <script src="../../Content/stilos/estiloadmin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../Content/stilos/estiloadmin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
     <script src="../../Content/stilos/estiloadmin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
     <script src="../../Content/stilos/estiloadmin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
@@ -267,7 +275,11 @@
     <script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <!-- Bootstrap WYSIHTML5 -->
     <script src="../../Content/stilos/estiloadmin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-    <!-- Slimscroll -->
+   <!-- Select2 -->
+<script src="../../Content/stilos/estiloadmin/bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- InputMask -->
+    
+     <!-- Slimscroll -->
     <script src="../../Content/stilos/estiloadmin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
     <script src="../../Content/stilos/estiloadmin/bower_components/fastclick/lib/fastclick.js"></script>
@@ -278,7 +290,24 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../Content/stilos/estiloadmin/dist/js/demo.js"></script>
 
+    
+    <script>
+        $(function () {
 
+            $('.select2').select2()
+
+
+        $('#example1').DataTable()
+        $('#example2').DataTable({
+          'paging'      : true,
+          'lengthChange': false,
+          'searching'   : false,
+          'ordering'    : true,
+          'info'        : true,
+          'autoWidth'   : false
+        })
+      })
+    </script>
 
 
 

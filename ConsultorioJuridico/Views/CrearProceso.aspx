@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="CrearProceso.aspx.cs" Inherits="juefi2.Views.CrearProceso" %>
+﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="CrearProceso.aspx.cs" Inherits="juefi2.Views.CrearProceso" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <script
-  src="https://code.jquery.com/jquery-1.12.4.min.js"
-  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-  crossorigin="anonymous"></script>
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
     <div class="content-header">
         <label id="error" runat="server"></label>
     </div>
@@ -21,7 +21,7 @@
                     <div class="col-md-6  ">
                         <div class="form-group">
                             <label>Tipo de Proceso</label>
-                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="droplisproceso" CssClass="form-control " runat="server"></asp:DropDownList>
                         </div>
                     </div>
 
@@ -29,30 +29,40 @@
                         <div class="form-group">
                             <label>Asesor</label>
 
-                            <asp:DropDownList ID="Dropasesor" CssClass="form-control select2" runat="server">
+                            <asp:DropDownList ID="Dropasesor" CssClass="form-control " runat="server">
                             </asp:DropDownList>
                         </div>
                     </div>
 
-                    <div class="col-md-6 ">
+          
+          
+                    <div class="col-md-6  ">
                         <div class="form-group">
+                            <label>Accionante</label>
+                                <button style="background: #2E9AFE"  data-toggle="modal" data-target="#miModal">Crear </button>
 
-                            <label>Accionado </label>
-                            <button style="background: #2E9AFE" data-toggle="modal" data-target="#miModal">Crear </button>
-                            <asp:TextBox ID="Textaccionado" runat="server" CssClass=" form-control"></asp:TextBox>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 ">
-                        <div class="form-group">
-                            <label>Accionante </label>
-                            <button style="background: #2E9AFE" data-toggle="modal" data-target="#miModal">Crear </button>
-                            <asp:TextBox ID="Textaccionante" runat="server" CssClass=" form-control"></asp:TextBox>
-
+                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2" runat="server">
+                            </asp:DropDownList>
                         </div>
                     </div>
+
+
+                
+                    
+                    <div class="col-md-6  ">
+                        <div class="form-group">
+                            <label>Accionado</label>
+                                <button style="background: #2E9AFE"  data-toggle="modal" data-target="#miModal">Crear </button>
+
+                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2" runat="server">
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+
+                    
+
+
+
                     <div class="col-md-6 ">
                         <div class="form-group">
 
@@ -153,14 +163,12 @@
                                 </div>
 
                             </div>
-                            <div class="box box-primary">
+                            <div class="box box-primary text-center">
                                 <br />
-                                <center> 
-                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                            <button id="guardar_datos" type="submit" class="btn btn-primary"  runat="server">Guardar datos</button>
-                                            <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#miModal">Regresar  </button>
-                               <center> 
-                                   <br />
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <asp:LinkButton ID="guardar_datos" class="btn btn-primary" runat="server" OnClick="guardar_datos_Click">Guardar datos</asp:LinkButton>
+                                <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#miModal">Regresar  </button>
+                                <br />
                             </div>
                         </div>
 
@@ -170,7 +178,8 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    00
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title" id="exampleModalLabel2">Datos Persona</h4>
                                 </div>
                                 <div class="modal-body">
@@ -198,7 +207,7 @@
             </div>
         </div>
     </div>
-    <script>
+    <%--<script>
     $("#guardar_datos").click(function () {
         $.ajax({
             url: 'Proceso/registrarpersonatest',
@@ -227,8 +236,7 @@
             Telefono: $("#telefono").val()
         };
     }
-</script>
-
+</script>--%>
 </asp:Content>
 
 

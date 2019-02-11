@@ -13,13 +13,13 @@ namespace juefi2.Views {
     public partial class ConsultarProceso {
         
         /// <summary>
-        /// Control consultaproceso.
+        /// Control consultarproceso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater consultaproceso;
+        protected global::System.Web.UI.WebControls.Repeater consultarproceso;
         
         /// <summary>
         /// Control labelidproceso.

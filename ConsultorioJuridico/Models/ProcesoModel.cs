@@ -75,5 +75,13 @@ namespace juefi2.Models
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
 
+
+
+        public DataTable traeraccionante()
+        {
+            string sql = "SELECT  idpersona, concat(nombre1, ' ',nombre2, ' ',apellido1, ' ', apellido2) as nombre FROM persona  ; ";
+
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
     }
 }

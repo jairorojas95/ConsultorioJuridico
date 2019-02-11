@@ -40,22 +40,22 @@ namespace juefi2.Views {
         protected global::System.Web.UI.WebControls.DropDownList Dropasesor;
         
         /// <summary>
-        /// Control Textaccionado.
+        /// Control Dropaccionante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textaccionado;
+        protected global::System.Web.UI.WebControls.DropDownList Dropaccionante;
         
         /// <summary>
-        /// Control Textaccionante.
+        /// Control Dropaccionado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textaccionante;
+        protected global::System.Web.UI.WebControls.DropDownList Dropaccionado;
         
         /// <summary>
         /// Control Textradicado.
@@ -154,6 +154,6 @@ namespace juefi2.Views {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton guardar_datos;
+        protected global::System.Web.UI.WebControls.LinkButton guardar_datos;
     }
 }

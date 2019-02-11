@@ -18,8 +18,8 @@ namespace juefi2.Views
         {
             if (!IsPostBack)
             {
-                consultaproceso.DataSource = proce.consultarproce();
-                consultaproceso.DataBind();
+                consultarproceso.DataSource = proce.consultarproce();
+                consultarproceso.DataBind();
             }
         }
 

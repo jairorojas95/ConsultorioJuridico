@@ -7451,6 +7451,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="archivos\" />
     <Folder Include="Content\stilos\estiloiconos\" />
+    <Folder Include="Views\probador\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Content\stilos\estiloadmin\bower_components\fullcalendar\dist\fullcalendar.d.ts" />
