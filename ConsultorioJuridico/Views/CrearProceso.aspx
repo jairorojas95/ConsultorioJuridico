@@ -13,8 +13,9 @@
     <div class="content">
         <div class="col-md-8">
             <div class="box box-primary" style="background: #E0E6F8">
-                <div class="box-header with-border">
-                    <center> <h3 class="box-title">Crear Nuevo Proceso</h3> </center>
+                <div class="box-header with-border text-center">
+                    <h3 class="box-title">Crear Nuevo Proceso</h3>
+                    </center>
                 </div>
                 <div class="box-body">
 
@@ -34,32 +35,32 @@
                         </div>
                     </div>
 
-          
-          
+
+
                     <div class="col-md-6  ">
                         <div class="form-group">
                             <label>Accionante</label>
-                                <button style="background: #2E9AFE"  data-toggle="modal" data-target="#miModal">Crear </button>
-
-                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2" runat="server">
+                            <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
+                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server">
+                                <asp:ListItem Value="" Text="      ---- Seleccion ----     "> </asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>
 
 
-                
-                    
+
+
                     <div class="col-md-6  ">
                         <div class="form-group">
                             <label>Accionado</label>
-                                <button style="background: #2E9AFE"  data-toggle="modal" data-target="#miModal">Crear </button>
-
-                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2" runat="server">
+                            <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
+                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server">
+                                <asp:ListItem Value="" Text="      ---- Seleccion ----     "> </asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>
 
-                    
+
 
 
 
@@ -74,47 +75,51 @@
                     <div class="col-md-6 ">
                         <div class="form-group">
                             <label for="file">Filename:</label>
-                            <input type="file" name="UploadedFile" id="file" />
+                            <asp:FileUpload ID="MyFile" runat="server" />
                         </div>
                     </div>
                 </div>
 
-                <div class="box box-primary">
+                <div class="box box-primary text-center">
                     <div class="box-header with-border" style="background: #E0E6F8">
-                        <center>  
-                   <asp:Button ID="Button1"  CssClass="btn btn-outline-primary" OnClick="guardar" style="background:#2E9AFE" runat="server" Text="Crear Proceso"></asp:Button>
-                </center>
+
+                        <asp:Button ID="Btn_Guardar" CssClass="btn btn-outline-primary" OnClick="Btn_Guardar_proceso_Click" Style="background: #2E9AFE" runat="server" Text="Crear Proceso"></asp:Button>
+
                     </div>
                 </div>
 
-                <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+                <div class="modal fade" id="lamodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" runat="server" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title" id="myModalLabel">Tipo Persona</h4>
+                                <h4 class="modal-title text-center" id="myModalLabel">Tipo Persona</h4>
                             </div>
                             <div class="modal-body">
-                                <%--Texto del modal--%>
-                                <center>
-                    <asp:Table>
-                <tr>
-                    <th> <button type="button" class="btn btn-facebook "  data-toggle="modal" data-target="#dataRegister2" data-dismiss="modal">Persona Jurídica</button></th>
-                    <th><button type="button" class="btn btn-facebook "  data-toggle="modal" data-target="#dataRegister" data-dismiss="modal">Persona Natural</button></th>
-                </tr>
-                        </asp:Table>
-                    </center>
+
+                                <table>
+
+                                    <tr>
+
+                                        <th>
+                                            <button type="button" runat="server" class="btn btn-facebook text-center " data-toggle="modal" data-target="#dataRegister2" data-dismiss="modal">Persona Jurídica</button></th>
+                                        <th>
+                                            <button type="button" runat="server" class="btn btn-facebook text-center " data-toggle="modal" data-target="#dataRegister" data-dismiss="modal">Persona Natural</button></th>
+                                    </tr>
+
+                                </table>
+
                             </div>
                             <div class="modal-footer">
 
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <form id="guardarDatos" method="post" action="">
+                <form id="guardarDatos" method="post">
                     <div class="modal fade" id="dataRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-keyboard="false" data-backdrop="static">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -143,7 +148,10 @@
                                         </div>
                                         <div class="col-md-6  ">
                                             <label>Tipo de documento</label>
-                                            <asp:DropDownList ID="DropDowndocument" CssClass="form-control select2" runat="server"></asp:DropDownList>
+                                            <asp:DropDownList ID="DropDowndocument" CssClass="form-control text-center " AppendDataBoundItems="true" runat="server">
+                                                <asp:ListItem Value="" Text="      ---- Seleccion ----     "> </asp:ListItem>
+                                            </asp:DropDownList>
+
                                         </div>
 
                                         <div class="col-md-6  ">
@@ -167,7 +175,7 @@
                                 <br />
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                 <asp:LinkButton ID="guardar_datos" class="btn btn-primary" runat="server" OnClick="guardar_datos_Click">Guardar datos</asp:LinkButton>
-                                <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#miModal">Regresar  </button>
+                                <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#lamodal">Regresar  </button>
                                 <br />
                             </div>
                         </div>
@@ -178,35 +186,51 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    00
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title" id="exampleModalLabel2">Datos Persona</h4>
                                 </div>
                                 <div class="modal-body">
                                     <div id="datos_ajax_register2"></div>
-                                    <div class="form-group">
-                                        <label for="codigo0" class="control-label">Nit:</label>
-                                        <input type="text" class="form-control" id="codigo2" name="codigo" required maxlength="2">
+                                    <div class="col-md-6  ">
+                                        <label for="tel" class="control-label">Nit</label>
+                                        <asp:TextBox runat="server" type="text" class="form-control" ID="nit" name="continente" MaxLength="45" />
                                     </div>
-                                    <div class="form-group">
-                                        <label for="nombre0" class="control-label">Nombre:</label>
-                                        <input type="text" class="form-control" id="nombre22" name="Nombre" required maxlength="45">
+                                    <div class="col-md-6  ">
+                                        <label for="tel" class="control-label">Empresa</label>
+                                        <asp:TextBox runat="server" type="text" class="form-control" ID="empresa" name="continente" MaxLength="45" />
                                     </div>
+                                    <br />
+                                   
+                                    <div class="col-md-6  ">
+                                            <label>Tipo de documento</label>
+                                            <asp:DropDownList ID="DropDownRepresentante" CssClass="form-control " class="box box-primary text-center" AppendDataBoundItems="true" runat="server">
+                                                <asp:ListItem Value="" Text="      ---- Seleccion ----     "> </asp:ListItem>
+                                            </asp:DropDownList>
 
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                        <button type="submit" class="btn btn-primary">Guardar datos</button>
-                                        <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#miModal">Regresar </button>
-                                    </div>
+                                        </div>
+                                    
                                 </div>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <div class="box box-primary text-center">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                    <asp:LinkButton ID="Guardar_juridico" class="btn btn-primary" runat="server" OnClick="Guardar_juridico_Click"> Guardar datos</asp:LinkButton>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#lamodal">Regresar  </button>
+                                   
+                                </div> 
                             </div>
                         </div>
                     </div>
-                </form>
-
             </div>
+
+
         </div>
     </div>
+
     <%--<script>
     $("#guardar_datos").click(function () {
         $.ajax({

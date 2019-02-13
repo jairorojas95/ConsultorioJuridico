@@ -27,13 +27,18 @@ namespace juefi2.Models
         public string direccion { get; set; }
         public string telefono { get; set; }
         public string tipo_documento{ get; set; }
+        public string archivo { get; set; }
+
+        public string nit{ get; set; }
+        public string empresa { get; set; }
+        public string representante { get; set; }
 
 
 
         public bool registrarproceso(ProcesoModel obj)
         {
 
-            string sqlee = "INSERT INTO proceso (radicado_proceso,accionante,accionado )  VALUES('" + obj.radicado + "','" + obj.accionante + "','" + obj.accionado + "','" + obj.asesor + "','" + obj.tipo_proceso + "');";
+            string sqlee = "INSERT INTO proceso (radicado_proceso,accionante,accionado,usuario_idusuario,fk_tipoproceso,archivos )  VALUES('" + obj.radicado + "','" + obj.accionante + "','" + obj.accionado + "','" + obj.asesor + "','" + obj.tipo_proceso + "','" + obj.archivo + "');";
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
 
@@ -72,6 +77,13 @@ namespace juefi2.Models
         {
 
             string sqlee = "INSERT INTO persona (nombre1,nombre2,apellido1,apellido2,documento,direccion,telefono,fk_tipo_documento )  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2+ "','" + obj.documento+ "','"+ obj.direccion + "','" + obj.telefono+ "','" + obj.tipo_documento + "');";
+            return conn.EjecutarSql(sqlee, CommandType.Text);
+        }
+
+        public bool registrarperonsajuridica(ProcesoModel obj)
+        {
+
+            string sqlee = "INSERT INTO persona_juridica (nit,nombre_empresa,fk_persona )  VALUES('" + obj.nit + "','" + obj.empresa + "','"  + obj.representante + "');";
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
 

@@ -22,6 +22,19 @@ namespace juefi2.Views
         {
             if(!Page.IsPostBack)
             {
+                if (Request.Files["UploadedFile"] != null)
+                {
+                    HttpPostedFile MyFile = Request.Files["UploadedFile"];
+
+                    try
+                    {
+                        
+                    }
+                    catch (Exception BlueScreen)
+                    {
+                        //Handle errors 
+                    }
+                }
                 try
             {
                     droplisproceso.DataValueField = "idtipo_proceso";
@@ -36,17 +49,21 @@ namespace juefi2.Views
 
 
                    
-                    Dropaccionante.DataTextField = "idpersona";
-                    Dropaccionante.DataValueField = "nombre";
+                    Dropaccionante.DataTextField = "nombre";
+                    Dropaccionante.DataValueField = "idpersona";
                     Dropaccionante.DataSource = proce.traeraimplicados();
                     Dropaccionante.DataBind();
 
-                    Dropaccionado.DataTextField = "idpersona";
-                    Dropaccionado.DataValueField = "nombre";
+                    Dropaccionado.DataTextField = "nombre";
+                    Dropaccionado.DataValueField = "idpersona";
                     Dropaccionado.DataSource = proce.traeraimplicados();
                     Dropaccionado.DataBind();
-                                                       
-                      
+
+                    DropDownRepresentante.DataTextField = "nombre";
+                    DropDownRepresentante.DataValueField = "idpersona";
+                    DropDownRepresentante.DataSource = proce.traeraimplicados();
+                    DropDownRepresentante.DataBind();
+
                     DropDowndocument.DataValueField = "idtipo_documento";
                     DropDowndocument.DataTextField = "nombre_ducumento";
                     DropDowndocument.DataSource = proce.consultardocumento();
@@ -57,49 +74,9 @@ namespace juefi2.Views
             {
             }
             }
+
         }
-
-        //protected void guardar_persona(object sender, EventArgs e)
-        //{
-
-        //    procemo.nombre1 = nombre1.Text;
-        //    procemo.nombre2 = nombre2.Text;
-        //    procemo.apellido1 = apellido1.Text;
-        //    procemo.apellido1 = apellido1.Text;
-        //    procemo.documento = documento.Text;
-        //    procemo.tipo_documento = DropDowndocument.SelectedValue;
-        //    procemo.telefono = telefono.Text;
-        //    procemo.direccion = direccion.Text;
-
-
-
-        //}
-
-        protected void guardar(object sender, EventArgs e)
-        {
-
-
-
-            procemo.radicado = Textradicado.Text;
-            procemo.accionante = Dropaccionante.SelectedValue;
-            procemo.accionado = Dropaccionado.SelectedValue;
-            procemo.asesor = Dropasesor.SelectedValue;
-            procemo.tipo_proceso = droplisproceso.SelectedValue;
-
-            procemo.registrarproceso(procemo);
-            Response.Write("<script> alert('Registro Exitoso'); </script>");
-
-            Textradicado.Text = "";
         
-
-            //if (file.ContentLength > 0) {
-            //    var fileName = Path.GetFileName(file.FileName);
-            //    var path = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName);
-            //    file.SaveAs(path);
-            //}
-
-        }
-
         protected void guardar_datos_Click(object sender, EventArgs e)
         {
             procemo.nombre1 = nombre1.Text;
@@ -110,6 +87,7 @@ namespace juefi2.Views
             procemo.tipo_documento = DropDowndocument.SelectedValue;
             procemo.telefono = telefono.Text;
             procemo.direccion = direccion.Text;
+         
 
 
             if (proce.registropersona(procemo) == true)
@@ -130,6 +108,51 @@ namespace juefi2.Views
             }
 
 
+        }
+
+       
+        protected void Btn_Guardar_proceso_Click(object sender, EventArgs e)
+        {
+            if (MyFile.HasFile)
+            {
+                ViewState["Ruta"] = "~/archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
+                MyFile.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+
+            }
+            procemo.radicado = Textradicado.Text;
+            procemo.accionante = Dropaccionante.DataTextField;
+            procemo.accionado = Dropaccionado.DataTextField;
+            procemo.asesor = Dropasesor.SelectedValue;
+            procemo.tipo_proceso = droplisproceso.SelectedValue;
+            procemo.archivo = ViewState["Ruta"].ToString();
+            procemo.registrarproceso(procemo);
+            Response.Write("<script> alert('Registro Exitoso'); </script>");
+
+            Textradicado.Text = "";
+
+        }
+
+        protected void Guardar_juridico_Click(object sender, EventArgs e)
+        {
+            procemo.nit = nit.Text;
+            procemo.empresa = empresa.Text;
+            procemo.representante = DropDownRepresentante.SelectedValue;
+
+            if (proce.registropersonajuridica(procemo) == true)
+            {
+
+                nit.Text = "";
+                empresa.Text = "";
+
+
+            }
+            else
+            {
+                Response.Write("<script> alert('dfsdfsdfsdfs'); </script>");
+            }
+
+
+           
         }
 
         //protected void lieditar_Command(object sender, CommandEventArgs e)

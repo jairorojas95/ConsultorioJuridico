@@ -31,6 +31,14 @@ namespace juefi2.Controllers
             return true;
 
         }
+
+        public bool registropersonajuridica(ProcesoModel mod)
+        {
+
+            proce.registrarperonsajuridica(mod);
+            return true;
+
+        }
         public DataTable traerhoja()
 
         {
