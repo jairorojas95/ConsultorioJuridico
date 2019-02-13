@@ -6811,6 +6811,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\Asignarproceso.aspx" />
     <Content Include="Views\ConsultarProceso.aspx" />
     <Content Include="Views\CrearEntidad.aspx" />
     <Content Include="Views\CrearPersona.aspx" />
@@ -7342,12 +7343,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AsignarProcesoController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\ProcesoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AsignarProcesoModal.cs" />
     <Compile Include="Models\BD\conecMysql.cs" />
     <Compile Include="Models\ProcesoModel.cs" />
     <Compile Include="Models\pruebaModel.cs" />
@@ -7361,6 +7364,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Asignarproceso.aspx.cs">
+      <DependentUpon>Asignarproceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Asignarproceso.aspx.designer.cs">
+      <DependentUpon>Asignarproceso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ConsultarProceso.aspx.cs">
       <DependentUpon>ConsultarProceso.aspx</DependentUpon>

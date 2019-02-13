@@ -100,7 +100,11 @@
                                 <asp:TextBox ID="apellido1" runat="server" CssClass="form-control" placeholder="Primer Apellido"></asp:TextBox>
 
                             </div>
+                                   <div class="input-group">
+                                <span class="input-group-addon"><i class="fas fa-plus-square"></i></span>
+                                <asp:TextBox ID="semestre" runat="server" CssClass="form-control" placeholder="Semestre"></asp:TextBox>
 
+                            </div>
 
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fas fa-at"></i></span>

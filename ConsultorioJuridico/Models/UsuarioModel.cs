@@ -34,6 +34,9 @@ namespace juefi2.Models
 
         public string contrasena { get; set; }
 
+        public string semestre { get; set; }
+
+
 
         public string conficontrasena { get; set; }
 
@@ -47,7 +50,7 @@ namespace juefi2.Models
         public bool registrarusuario(UsuarioModel obj)
         {
 
-            string sqlee = "INSERT INTO usuario (nombre1,nombre2,apellido1,apellido2,nombre_usuario,correo_usuario,password,rol_idrol)  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2 + "','" + obj.user + "','" + obj.correo_electronico + "', Md5('" + obj.contrasena + "'),'2');";
+            string sqlee = "INSERT INTO usuario (nombre1,nombre2,apellido1,apellido2,nombre_usuario,correo_usuario,semestre,password,rol_idrol)  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2 + "','" + obj.user + "','" + obj.correo_electronico + "','" + obj.semestre + "', Md5('" + obj.contrasena + "'),'2');";
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
 

@@ -23,14 +23,15 @@ namespace juefi2.Views
             }
         }
 
-        protected void consultaproceso_ItemCommand(object source, RepeaterCommandEventArgs e)
-        {
-            if (e.CommandName.Equals("edit")) {
-                ScriptManager.RegisterStartupScript(this, this.GetType(),"hwa", "botondelmodel();", true);
-                labelidproceso.InnerText = e.CommandArgument.ToString();
+        //protected void consultaproceso_ItemCommand(object source, RepeaterCommandEventArgs e)
+        ////{
+        ////    if (e.CommandName.Equals("edit"))
+        ////    {
+        ////        ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "botondelmodel();", true);
+        ////        labelidproceso.InnerText = e.CommandArgument.ToString();
 
-            }
+        //    }
 
-        }
+        //}
     }
 }

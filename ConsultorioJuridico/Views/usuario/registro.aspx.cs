@@ -74,6 +74,7 @@ namespace juefi2.Views.usuario
                 us.apellido2 = apellido2.Text;
                 us.contrasena = contrasena.Text;
                 us.correo_electronico = email.Text;
+                us.semestre = semestre.Text;
                 us.user = usuario.Text;
            
                

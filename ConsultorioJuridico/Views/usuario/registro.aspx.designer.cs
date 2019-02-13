@@ -40,6 +40,15 @@ namespace juefi2.Views.usuario {
         protected global::System.Web.UI.WebControls.TextBox apellido1;
         
         /// <summary>
+        /// Control semestre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox semestre;
+        
+        /// <summary>
         /// Control email.
         /// </summary>
         /// <remarks>
