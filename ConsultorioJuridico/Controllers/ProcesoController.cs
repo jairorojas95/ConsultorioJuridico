@@ -74,6 +74,15 @@ namespace juefi2.Controllers
 
         }
 
+        public DataTable consultarestudiante()
+
+        {
+            return proce.consultarestudiante();
+
+        }
+
+
+
         public DataTable consultardocumento()
 
         {

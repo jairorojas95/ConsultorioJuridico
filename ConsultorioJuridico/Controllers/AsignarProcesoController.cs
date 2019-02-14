@@ -20,5 +20,11 @@ namespace juefi2.Controllers
 
         }
 
+        public DataTable traerproceso()
+
+        {
+            return asig.traerproceso();
+
+        }
     }
 }

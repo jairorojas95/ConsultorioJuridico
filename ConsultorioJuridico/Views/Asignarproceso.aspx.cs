@@ -1,4 +1,5 @@
 ﻿using juefi2.Controllers;
+using juefi2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace juefi2.Views
     {
 
         AsignarProcesoController proce = new AsignarProcesoController();
+        AsignarProcesoModal promodal = new AsignarProcesoModal();
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,7 +22,27 @@ namespace juefi2.Views
             {
                 asignarproceso.DataSource = proce.consultarusuario();
                 asignarproceso.DataBind();
+
+
+                try
+                {
+                    droplisproceso.DataTextField = "nombre";
+                    droplisproceso.DataValueField ="idproceso";
+                    droplisproceso.DataSource = proce.traerproceso();
+                    droplisproceso.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script> alert('pailas'); </script>");
+                }
+               
             }
+        }
+
+        protected void guardar_datos_Click(object sender, EventArgs e)
+        {
+            //promodal.fk_proce = droplisproceso.DataValueField;
+            //promodal.idusua = ;
         }
     }
 }

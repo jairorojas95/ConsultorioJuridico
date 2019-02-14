@@ -46,7 +46,9 @@
                             <td><%#Eval("asesor")%></td>
                             <td><%#Eval("nombre_tipo")%></td>
                           <<%--td><button type="button" class="fa fa-pencil" data-toggle="modal" data-target="#modal-default"></button></td>--%>
-                            <td><asp:LinkButton ID="Editar" runat="server" CssClass="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal-default"><i class="fa fa-pencil"></i></asp:LinkButton></td>
+                            <td><asp:LinkButton ID="Editar" runat="server" CssClass="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal-default"><i class="fa fa-pencil"></i></asp:LinkButton>
+                                <asp:LinkButton ID="asignar" runat="server" CssClass="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal-default22">Asignar</asp:LinkButton>
+                            </td>
                         </tr>
                     </ItemTemplate>
                     <FooterTemplate>
@@ -98,6 +100,32 @@
         </div>
         <!-- /.modal -->
 
-
+    <div class="modal fade" id="modal-default22" data-keyboard="false" data-backdrop="static">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center">Asignar Proceso</h4>
+                    <div class="col-md-6  ">
+                        <div class="form-group">
+                            <br />
+                            <label>Proceso</label><br />
+                            <asp:DropDownList ID="droplisestudiante" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server">
+                                <asp:ListItem >  --------------------------- seleccioné -------------------------</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+              </div>
+             
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
 
 </asp:Content>

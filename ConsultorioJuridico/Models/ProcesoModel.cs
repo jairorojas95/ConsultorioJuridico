@@ -65,9 +65,9 @@ namespace juefi2.Models
 
         public DataTable consultarproceso()
         {
-            string sql = "select idproceso ,radicado_proceso,accionante,accionado,concat(usuario.nombre1, ' ',usuario.nombre2, ' ',usuario.apellido1, ' ', usuario.apellido2)"
-                          + "as asesor,tipo_proceso.nombre_tipo as nombre_tipo from proceso"
-                          + " inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso  "
+            string sql = "select idproceso ,radicado_proceso,accionante,accionado,concat(usuario.nombre1, ' ',usuario.nombre2, ' ',usuario.apellido1, ' ', usuario.apellido2) "
+                          + "as asesor,tipo_proceso.nombre_tipo as nombre_tipo from proceso "
+                          + "inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso  "
                           + "inner join usuario on proceso.usuario_idusuario = usuario.idusuario;";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
@@ -92,6 +92,13 @@ namespace juefi2.Models
         public DataTable traeraccionante()
         {
             string sql = "SELECT  idpersona, concat(nombre1, ' ',nombre2, ' ',apellido1, ' ', apellido2) as nombre FROM persona  ; ";
+
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
+
+        public DataTable consultarestudiante()
+        {
+            string sql = "SELECT idusuario, concat(nombre1, ' ',nombre2, ' ',apellido1, ' ', apellido2,'-' ,' Semestre:',semestre) as nombre FROM usuario where rol_idrol =2  ; ";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }

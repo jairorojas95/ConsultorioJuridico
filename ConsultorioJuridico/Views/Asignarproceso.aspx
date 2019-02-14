@@ -74,14 +74,23 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Default Modal</h4>
+                    <h4 class="modal-title ">Asignar Proceso</h4>
+                    <div class="col-md-6  ">
+                        <div class="form-group">
+                            <br />
+                            <label>Proceso</label><br />
+                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server">
+                                <asp:ListItem >  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------- seleccioné ------ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+
+
                 </div>
-                <div class="modal-body">
-                    <p>One fine body&hellip;</p>
-                </div>
+
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+                     <asp:LinkButton ID="guardar_datos" class="btn btn-primary" runat="server" OnClick="guardar_datos_Click">Guardar datos</asp:LinkButton>
                 </div>
             </div>
             <!-- /.modal-content -->
