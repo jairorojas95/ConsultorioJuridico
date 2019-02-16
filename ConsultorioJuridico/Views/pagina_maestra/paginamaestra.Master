@@ -236,8 +236,6 @@
 
 
 
-    </form>
-
 
 
     <!-- jQuery 3 -->
@@ -306,10 +304,14 @@
           'info'        : true,
           'autoWidth'   : false
         })
-      })
+        })
+
+
+        function mostrarModal(url) {
+            $("#"+url).modal("show");
+        }
     </script>
-
-
-
+        
+    </form>
 </body>
 </html>

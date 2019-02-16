@@ -15,6 +15,7 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
+                                     <th>N°</th>
                                     <th>Nombre</th>
                                     <th>Semestre</th>
                                     <%-- <th>Radicado</th>
@@ -30,6 +31,7 @@
                     <ItemTemplate>
                         <tr>
 
+                             <td><%#Eval("idusuario")%></td>
                             <td><%#Eval("nombre")%></td>
                             <td><%#Eval("semestre")%></td>
                             <%--  <td><%#Eval("nombre2")%></td>
@@ -38,13 +40,14 @@
                             <td><%#Eval("asesor")%></td>
                             <td><%#Eval("nombre_tipo")%></td>--%>
                             <td>
-                                <asp:LinkButton ID="Editar" runat="server" CssClass="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal-default"><i class="fa fa-pencil"></i></asp:LinkButton></td>
+                                <asp:LinkButton ID="asignar" runat="server" CssClass="btn btn-primary btn-sm " OnCommand="asignar_Command" CommandArgument='<%#Eval("idusuario")%>' CommandName="id">Asignar</asp:LinkButton>
                         </tr>
                     </ItemTemplate>
                     <FooterTemplate>
                         </tbody>
                     <tfoot>
                         <tr>
+                             <th>N°</th>
                             <th>Nombre</th>
                             <th>Semestre</th>
                             <%--  <th>Radicado</th>
@@ -90,7 +93,7 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
-                     <asp:LinkButton ID="guardar_datos" class="btn btn-primary" runat="server" OnClick="guardar_datos_Click">Guardar datos</asp:LinkButton>
+                    <asp:Button ID="Asignar_Persona" runat="server" OnClick="guardar_datos_Click" CssClass="btn btn-primary" Text="Asignar"></asp:Button>
                 </div>
             </div>
             <!-- /.modal-content -->

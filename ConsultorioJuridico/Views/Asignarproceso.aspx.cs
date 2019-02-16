@@ -41,8 +41,16 @@ namespace juefi2.Views
 
         protected void guardar_datos_Click(object sender, EventArgs e)
         {
-            //promodal.fk_proce = droplisproceso.DataValueField;
-            //promodal.idusua = ;
+            promodal.fk_proce = droplisproceso.SelectedValue;
+           promodal.idusua = ViewState["id"].ToString();
+           proce.actualizarpersona(promodal);
+        }
+
+        protected void asignar_Command(object sender, CommandEventArgs e)
+        {
+             ViewState["id"] = e.CommandArgument;
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "mostrarModal('modal-default');", true);
+
         }
     }
-}
+    }

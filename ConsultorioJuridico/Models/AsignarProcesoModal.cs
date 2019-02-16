@@ -13,9 +13,10 @@ namespace juefi2.Models
         public string idusua { get; set; }
         public string fk_proce { get; set; }
 
+
         public DataTable consultarusuario()
         {
-            string sql = "SELECT semestre, concat(nombre1, ' ',nombre2, ' ',apellido1, ' ', apellido2) as nombre FROM usuario where rol_idrol =2  ; ";
+            string sql = "SELECT  idusuario, semestre, concat(nombre1, ' ',nombre2, ' ',apellido1, ' ', apellido2) as nombre FROM usuario where rol_idrol =2  ; ";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
@@ -29,19 +30,13 @@ namespace juefi2.Models
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
-        public DataTable actualizarproceso()
+        public bool actualizarproceso(AsignarProcesoModal obj)
         {
-            string sql = "";
-
-            return conn.EjecutarConsulta(sql, CommandType.Text);
-        }
-
-        public bool actualizrusuario(AsignarProcesoModal obj )
-        {
-            string sql = "update usuario set usuario.fk_proceso ='"+ obj.fk_proce + "'  where usuario.idusuario ='" + obj.idusua +"'; ";
+            string sql = "update proceso set proceso.asignacion ='si', proceso.usuario_proceso= '" + obj.idusua + "' where proceso.idproceso ='" + obj.fk_proce + "'; ";
 
             return conn.EjecutarSql(sql, CommandType.Text);
         }
+
 
 
 

@@ -22,6 +22,15 @@ namespace juefi2.Views {
         protected global::System.Web.UI.WebControls.Repeater consultarproceso;
         
         /// <summary>
+        /// Control guardar_datos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton guardar_datos;
+        
+        /// <summary>
         /// Control droplisestudiante.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,14 @@ namespace juefi2.Views {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList droplisestudiante;
+        
+        /// <summary>
+        /// Control Asignar_Persona.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Asignar_Persona;
     }
 }

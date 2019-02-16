@@ -33,6 +33,8 @@ namespace juefi2.Models
         public string empresa { get; set; }
         public string representante { get; set; }
 
+        public string fk_proce { get; set; }
+        public string idusua { get; set; }
 
 
         public bool registrarproceso(ProcesoModel obj)
@@ -102,5 +104,8 @@ namespace juefi2.Models
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
+
+        
+      
     }
 }

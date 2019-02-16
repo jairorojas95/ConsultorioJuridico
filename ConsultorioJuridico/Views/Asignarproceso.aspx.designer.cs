@@ -31,12 +31,12 @@ namespace juefi2.Views {
         protected global::System.Web.UI.WebControls.DropDownList droplisproceso;
         
         /// <summary>
-        /// Control guardar_datos.
+        /// Control Asignar_Persona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton guardar_datos;
+        protected global::System.Web.UI.WebControls.Button Asignar_Persona;
     }
 }

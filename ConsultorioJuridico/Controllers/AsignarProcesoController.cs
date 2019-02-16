@@ -26,5 +26,12 @@ namespace juefi2.Controllers
             return asig.traerproceso();
 
         }
+        public bool actualizarpersona(AsignarProcesoModal mod)
+        {
+
+            asig.actualizarproceso(mod);
+
+            return true;
+        }
     }
 }

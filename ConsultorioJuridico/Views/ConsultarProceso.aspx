@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="ConsultarProceso.aspx.cs" Inherits="juefi2.Views.ConsultarProceso" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -47,7 +46,7 @@
                             <td><%#Eval("nombre_tipo")%></td>
                           <<%--td><button type="button" class="fa fa-pencil" data-toggle="modal" data-target="#modal-default"></button></td>--%>
                             <td><asp:LinkButton ID="Editar" runat="server" CssClass="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal-default"><i class="fa fa-pencil"></i></asp:LinkButton>
-                                <asp:LinkButton ID="asignar" runat="server" CssClass="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal-default22">Asignar</asp:LinkButton>
+                                <asp:LinkButton ID="asignar" runat="server" CssClass="btn btn-primary btn-sm " OnCommand="asignar_Command" CommandArgument='<%#Eval("idproceso")%>' CommandName="id">Asignar</asp:LinkButton>
                             </td>
                         </tr>
                     </ItemTemplate>
@@ -91,7 +90,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                 <asp:LinkButton ID="guardar_datos" class="btn btn-primary" runat="server" OnClick="guardar_datos_Click"> Guardar </asp:LinkButton>
               </div>
             </div>
             <!-- /.modal-content -->
@@ -120,7 +119,7 @@
              
               <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <asp:Button ID="Asignar_Persona" runat="server" OnClick="guardar_datos_Click" CssClass="btn btn-primary" Text="Asignar"></asp:Button>
               </div>
             </div>
             <!-- /.modal-content -->
