@@ -105,5 +105,6 @@ C:\Users\JairoArturo\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\bi
 C:\Users\JairoArturo\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\bin\es\System.Web.WebPages.Razor.resources.dll
 C:\Users\JairoArturo\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\bin\es\System.Web.Optimization.resources.dll
 C:\Users\JairoArturo\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\JairoArturo\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\obj\Debug\ConsultorioJuridico.csprojResolveAssemblyReference.cache
 C:\Users\JairoArturo\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\obj\Debug\juefi2.dll
 C:\Users\JairoArturo\Documents\GitHub\Consultoriojuridico\ConsultorioJuridico\obj\Debug\juefi2.pdb

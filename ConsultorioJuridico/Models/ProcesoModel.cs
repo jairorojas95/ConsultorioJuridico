@@ -37,6 +37,8 @@ namespace juefi2.Models
         public string idusua { get; set; }
 
 
+
+
         public bool registrarproceso(ProcesoModel obj)
         {
 
@@ -104,8 +106,9 @@ namespace juefi2.Models
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
-
         
-      
+
+
+
     }
 }
