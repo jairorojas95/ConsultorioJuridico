@@ -13,67 +13,22 @@ namespace juefi2.Views {
     public partial class Vista1 {
         
         /// <summary>
-        /// Control Txtarea.
+        /// Control Droproceso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtarea;
+        protected global::System.Web.UI.WebControls.DropDownList Droproceso;
         
         /// <summary>
-        /// Control Textasesor.
+        /// Control agregarhojaderuta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textasesor;
-        
-        /// <summary>
-        /// Control Textaccionante.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textaccionante;
-        
-        /// <summary>
-        /// Control Textentidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textentidad;
-        
-        /// <summary>
-        /// Control Textaccionado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textaccionado;
-        
-        /// <summary>
-        /// Control Textclaseproceso.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textclaseproceso;
-        
-        /// <summary>
-        /// Control Textestudiante.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textestudiante;
+        protected global::System.Web.UI.WebControls.LinkButton agregarhojaderuta;
         
         /// <summary>
         /// Control Textradicado.
@@ -85,21 +40,12 @@ namespace juefi2.Views {
         protected global::System.Web.UI.WebControls.TextBox Textradicado;
         
         /// <summary>
-        /// Control Button1.
+        /// Control Asignar_Persona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// Control Button2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button Asignar_Persona;
     }
 }

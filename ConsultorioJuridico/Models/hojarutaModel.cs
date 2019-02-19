@@ -7,31 +7,27 @@ using System.Web;
 
 namespace juefi2.Models
 {
-    public class DiagnosticoModel
+    public class hojarutaModel
     {
-
         private conecMysql conn = new conecMysql();
 
-        public string idusuario { get; set; }
-        public string archivo{ get; set; }
-        public string fecha { get; set; }
+        public string folio { get; set; }
+        public string actuacion { get; set; }
         public string fk_proceso { get; set; }
 
 
-        public bool registrarDiagnostico(DiagnosticoModel obj)
+        public bool registrarhojaruta(hojarutaModel obj)
         {
 
-            string sqlee = "INSERT INTO diagnostico (archivo,fk_proceso )  VALUES('" + obj.archivo + "','"  + obj.fk_proceso+ "');";
+            string sqlee = "INSERT INTO hoja_ruta (folio,actuacion,proceso_idproceso)  VALUES('" + obj.folio + "','" + obj.actuacion + "','" + obj.fk_proceso + "');";
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
 
-
-        public DataTable consultaRD( string idusuario)
+        public DataTable consultaproceso(string idusuario)
         {
             string sql = "SELECT idproceso , concat( radicado_proceso,' -','    Proceso: ', tipo_proceso.nombre_tipo ) as nombre FROM proceso "
                          + " inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso "
-                         + " inner join usuario on proceso.usuario_idusuario = usuario.idusuario "
-                         + " where proceso.asignacion = 'si' and proceso.usuario_proceso = '"+ idusuario + "' ; ";
+                         + " where proceso.asignacion = 'si' and proceso.usuario_proceso = '" + idusuario + "' ; ";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }

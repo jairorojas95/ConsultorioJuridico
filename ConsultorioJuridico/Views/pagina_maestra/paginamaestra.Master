@@ -100,7 +100,7 @@
                     <div class="navbar-custom-menu">
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="../../Content/imagenes/imagesinicio/logo.png" class="user-image" alt="User Image"   height="25%" width="25%" >
+                                <img src="../../Content/imagenes/imagesinicio/logo.png" class="user-image" alt="User Image"   height="25%" width="25%" />
                                 <span class="hidden-xs"><asp:Label ID="Label2" runat="server" Text=""> </asp:Label></span>
                                 
                             </a>

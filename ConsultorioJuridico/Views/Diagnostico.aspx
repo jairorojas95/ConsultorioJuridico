@@ -19,22 +19,12 @@
                     </div>
                 </div>
                
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Fecha Diagnostico</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="date" class="form-control" id="datepicker" />
-                        </div>
-                    </div>
-                </div>
+               
                 
                 <div class="col-md-6 ">
                     <div class="form-group">
                         <label for="exampleInputFile">Cargar Diagnostico</label>
-                        <input type="file" id="exampleInputFile">
+                        <asp:FileUpload ID="MyFile" runat="server" />
                     </div>
                 </div>
 
@@ -45,7 +35,8 @@
         <div class="box box-primary">
             <div class="box-header with-border" style="background: #E0E6F8">
                 <center>  
-                    <asp:Button ID="Button1" style="background:#2E9AFE" Text="Crear Diagnostico"  runat="server"/>
+                    <asp:Button ID="Guardar_diagnostico" style="background:#2E9AFE" Text="Crear Diagnostico"  runat="server" OnClick="Guardar_diagnostico_Click"
+                        />
                    
                 </center>
             </div>

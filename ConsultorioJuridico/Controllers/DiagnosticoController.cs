@@ -13,6 +13,15 @@ namespace juefi2.Controllers
     {
         DiagnosticoModel diag = new DiagnosticoModel();
 
+
+        public bool registro_dignostico(DiagnosticoModel mod)
+        {
+
+            diag.registrarDiagnostico(mod);
+            return true;
+
+        }
+
         public DataTable llenardiagnostico( string idusuario) {
 
             return diag.consultaRD( idusuario );

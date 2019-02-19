@@ -7345,6 +7345,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AsignarProcesoController.cs" />
     <Compile Include="Controllers\DiagnosticoController.cs" />
+    <Compile Include="Controllers\hojarutaController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\ProcesoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -7354,6 +7355,7 @@
     <Compile Include="Models\AsignarProcesoModal.cs" />
     <Compile Include="Models\BD\conecMysql.cs" />
     <Compile Include="Models\DiagnosticoModel.cs" />
+    <Compile Include="Models\hojarutaModel.cs" />
     <Compile Include="Models\ProcesoModel.cs" />
     <Compile Include="Models\pruebaModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />

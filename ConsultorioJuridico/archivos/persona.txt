@@ -1,0 +1,86 @@
+<div class="col-md-8">
+
+        <div class="box box-primary" style="background:#E0E6F8">
+            <div class="box-header with-border">
+                
+               <center> <h3 class="box-title">Crear Asesor</h3></center>
+                   
+            </div>
+
+
+
+            <div class="box-body">
+
+                <div class="col-md-6 ">
+                    <div class="form-group">
+
+                        <label>Primer Nombre </label>
+                        <asp:TextBox ID="Txtnumero" runat="server" CssClass=" form-control"></asp:TextBox>
+
+                    </div>
+
+                </div>
+
+                 <div class="col-md-6 ">
+                <div class="form-group">
+
+                    <label>Segundo Nombre</label>
+                    <asp:TextBox ID="Textaccionado" runat="server" CssClass=" form-control"></asp:TextBox>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 ">
+                <div class="form-group">
+
+                    <label>Primer Apellido </label>
+                    <asp:TextBox ID="Textaccionante" runat="server" CssClass=" form-control"></asp:TextBox>
+
+                </div>
+            </div>
+                 <div class="col-md-6 ">
+                <div class="form-group">
+
+                    <label>Segundo Apellido </label>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass=" form-control"></asp:TextBox>
+
+                </div>
+
+            </div>
+
+                 
+            <div class="col-md-6 ">
+                <div class="form-group">
+
+                    <label>Usuario </label>
+                    <asp:TextBox ID="TextBox3" runat="server" CssClass=" form-control"></asp:TextBox>
+
+                </div>
+            </div>
+           
+
+            
+            <div class="col-md-6 ">
+                <div class="form-group">
+
+                    <label>Correo </label>
+                    <asp:TextBox ID="TextBox4" runat="server" CssClass=" form-control"></asp:TextBox>
+
+                </div>
+            </div>
+           
+            <div class="col-md-6 ">
+                <div class="form-group">
+
+                    <label>Identificacion </label>
+                    <asp:TextBox ID="TextBox2" runat="server" CssClass=" form-control"></asp:TextBox>
+
+                </div>
+            </div>
+
+            
+               
+                 </div>
+
+        </div>

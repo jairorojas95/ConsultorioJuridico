@@ -16,29 +16,62 @@ namespace juefi2.Views
 {
     public partial class Vista1 : System.Web.UI.Page
     {
-        ProcesoController prueba = new ProcesoController();
-        pruebaModel pru = new pruebaModel();
+        hojarutaController hojacont = new hojarutaController();
+        hojarutaModel hojamodel = new hojarutaModel();
         conecMysql conne = new conecMysql();
         public DataTable consultar = new DataTable();
         public DataRow darowConsulta;
-
+        public string id;
 
 
         public void cargar_datos() {
-            consultar = pru.hoja_ruta();
-            Txtarea.Text = consultar.Rows[0]["area"].ToString();
-            Textasesor.Text = consultar.Rows[0]["asesor"].ToString();         
-            Textaccionante.Text = consultar.Rows[0]["accionante"].ToString();
-            Textentidad.Text = consultar.Rows[0]["entidad"].ToString();
-            Textaccionado.Text = consultar.Rows[0]["accionado"].ToString();
-            Textclaseproceso.Text = consultar.Rows[0]["clase_proceso"].ToString();
-            Textestudiante.Text = consultar.Rows[0]["estudiante"].ToString();
-            Textradicado.Text = consultar.Rows[0]["radicado"].ToString();
+            //consultar = pru.hoja_ruta();
+            //Txtarea.Text = consultar.Rows[0]["area"].ToString();
+            //Textasesor.Text = consultar.Rows[0]["asesor"].ToString();         
+            //Textaccionante.Text = consultar.Rows[0]["accionante"].ToString();
+            //Textentidad.Text = consultar.Rows[0]["entidad"].ToString();
+            //Textaccionado.Text = consultar.Rows[0]["accionado"].ToString();
+            //Textclaseproceso.Text = consultar.Rows[0]["clase_proceso"].ToString();
+            //Textestudiante.Text = consultar.Rows[0]["estudiante"].ToString();
+            //Textradicado.Text = consultar.Rows[0]["radicado"].ToString();
 
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+
+                if (Request.Files["UploadedFile"] != null)
+                {
+                    HttpPostedFile MyFile = Request.Files["UploadedFile"];
+
+                    try
+                    {
+
+                    }
+                    catch (Exception BlueScreen)
+                    {
+                        //Handle errors 
+                    }
+                }
+                try
+                {
+                    Droproceso.DataValueField = "idproceso";
+                    Droproceso.DataTextField = "nombre";
+                    Droproceso.DataSource = hojacont.llenarproceso(Session["idusuario"].ToString());
+                    Droproceso.DataBind();
+                    id = Droproceso.SelectedValue;
+                    
+                }
+                catch (Exception ex)
+                {
+
+                }
+
+
+            }
+
 
         }
 
@@ -56,29 +89,30 @@ namespace juefi2.Views
             if (conne.Conectar()== true)
             {
 
-                pru.area = Txtarea.Text;
-                pru.asesor = Textasesor.Text;
-                pru.accionante = Textaccionante.Text;
-                pru.entidad = Textentidad.Text;
-                pru.accionado = Textaccionado.Text;
-                pru.clase_proceso = Textclaseproceso.Text;
-                pru.estudiante = Textestudiante.Text;
-                pru.radicado = Textradicado.Text;
-                prueba.registro_perosna(pru);
+                
+                //pru.area = Txtarea.Text;
+                //pru.asesor = Textasesor.Text;
+                //pru.accionante = Textaccionante.Text;
+                //pru.entidad = Textentidad.Text;
+                //pru.accionado = Textaccionado.Text;
+                //pru.clase_proceso = Textclaseproceso.Text;
+                //pru.estudiante = Textestudiante.Text;
+                //pru.radicado = Textradicado.Text;
+                //prueba.registro_perosna(pru);
 
-                Txtarea.Text = "";
-                Textasesor.Text = "";
-                Textaccionante.Text = "";
-                Textentidad.Text = "";
-                Textaccionado.Text = "";
-                Textclaseproceso.Text = "";
-                Textestudiante.Text = "";
-                Textradicado.Text = "";
-                Response.Write("<script> alert('Conexion exitosa'); </script>");
-                return;
+                //Txtarea.Text = "";
+                //Textasesor.Text = "";
+                //Textaccionante.Text = "";
+                //Textentidad.Text = "";
+                //Textaccionado.Text = "";
+                //Textclaseproceso.Text = "";
+                //Textestudiante.Text = "";
+                //Textradicado.Text = "";
+                //Response.Write("<script> alert('Conexion exitosa'); </script>");
+                //return;
             }
             else {
-                Response.Write("<script> alert('Conexion fallida'); </script>");
+                //Response.Write("<script> alert('Conexion fallida'); </script>");
                 return;
             }
 
@@ -89,6 +123,13 @@ namespace juefi2.Views
 
 
 
+        }
+
+        protected void agregarhojaderuta_Command(object sender, CommandEventArgs e)
+        {
+
+            ViewState["id"] = e.CommandArgument;
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "mostrarModal('modal_cierre');", true);
         }
     }
 }
