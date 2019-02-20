@@ -115,7 +115,7 @@ namespace juefi2.Views
         {
             if (MyFile.HasFile)
             {
-                ViewState["Ruta"] = "~/archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
+                ViewState["Ruta"] = "archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
                 MyFile.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
 
             }

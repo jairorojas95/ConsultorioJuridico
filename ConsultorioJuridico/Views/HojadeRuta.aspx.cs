@@ -14,7 +14,7 @@ using System.Data;
 
 namespace juefi2.Views
 {
-    public partial class Vista1 : System.Web.UI.Page
+    public partial class Vista1 : Page
     {
         hojarutaController hojacont = new hojarutaController();
         hojarutaModel hojamodel = new hojarutaModel();
@@ -24,23 +24,13 @@ namespace juefi2.Views
         public string id;
 
 
-        public void cargar_datos() {
-            //consultar = pru.hoja_ruta();
-            //Txtarea.Text = consultar.Rows[0]["area"].ToString();
-            //Textasesor.Text = consultar.Rows[0]["asesor"].ToString();         
-            //Textaccionante.Text = consultar.Rows[0]["accionante"].ToString();
-            //Textentidad.Text = consultar.Rows[0]["entidad"].ToString();
-            //Textaccionado.Text = consultar.Rows[0]["accionado"].ToString();
-            //Textclaseproceso.Text = consultar.Rows[0]["clase_proceso"].ToString();
-            //Textestudiante.Text = consultar.Rows[0]["estudiante"].ToString();
-            //Textradicado.Text = consultar.Rows[0]["radicado"].ToString();
-
-        }
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                agregarhojaderuta.Enabled = false;
 
                 if (Request.Files["UploadedFile"] != null)
                 {
@@ -61,6 +51,10 @@ namespace juefi2.Views
                     Droproceso.DataTextField = "nombre";
                     Droproceso.DataSource = hojacont.llenarproceso(Session["idusuario"].ToString());
                     Droproceso.DataBind();
+                    if (Droproceso.SelectedIndex != 1) {
+                        agregarhojaderuta.Enabled = true;
+
+                    }
                     id = Droproceso.SelectedValue;
                     
                 }
@@ -69,67 +63,41 @@ namespace juefi2.Views
 
                 }
 
+               
 
             }
 
 
         }
-
-        protected void consulta(object sender, EventArgs e)
+               
+        
+               protected void agregarhojaderuta_Command(object sender, CommandEventArgs e)
         {
-
-            cargar_datos();
-
+            if(!Droproceso.SelectedValue.Equals("0")) {
+                ViewState["id"] = Droproceso.SelectedValue;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "mostrarModal('modal_cierre');", true);
+            }
         }
 
-
-
-        protected void guardar (object sender, EventArgs e)
+        protected void guardar_hoja_Click(object sender, EventArgs e)
         {
-            if (conne.Conectar()== true)
-            {
+            hojamodel.fk_proceso = ViewState["id"].ToString();
+            hojamodel.folio = Textfolio.Text;
+            hojamodel.actuacion = actuac.Text;
+            hojacont.registro_hojaruta(hojamodel);
 
-                
-                //pru.area = Txtarea.Text;
-                //pru.asesor = Textasesor.Text;
-                //pru.accionante = Textaccionante.Text;
-                //pru.entidad = Textentidad.Text;
-                //pru.accionado = Textaccionado.Text;
-                //pru.clase_proceso = Textclaseproceso.Text;
-                //pru.estudiante = Textestudiante.Text;
-                //pru.radicado = Textradicado.Text;
-                //prueba.registro_perosna(pru);
-
-                //Txtarea.Text = "";
-                //Textasesor.Text = "";
-                //Textaccionante.Text = "";
-                //Textentidad.Text = "";
-                //Textaccionado.Text = "";
-                //Textclaseproceso.Text = "";
-                //Textestudiante.Text = "";
-                //Textradicado.Text = "";
-                //Response.Write("<script> alert('Conexion exitosa'); </script>");
-                //return;
-            }
-            else {
-                //Response.Write("<script> alert('Conexion fallida'); </script>");
-                return;
-            }
-
-
-
-
-
-
+            Textfolio.Text = "";
+            actuac.Text = "";
 
 
         }
 
-        protected void agregarhojaderuta_Command(object sender, CommandEventArgs e)
+        protected void Droproceso_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            ViewState["id"] = e.CommandArgument;
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "mostrarModal('modal_cierre');", true);
+            if(!Droproceso.SelectedValue.Equals("0")) {
+                hojaruta.DataSource = hojacont.consultarproce(Droproceso.SelectedValue);
+                hojaruta.DataBind();
+            }
         }
     }
 }

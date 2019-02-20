@@ -31,21 +31,39 @@ namespace juefi2.Views {
         protected global::System.Web.UI.WebControls.LinkButton agregarhojaderuta;
         
         /// <summary>
-        /// Control Textradicado.
+        /// Control hojaruta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textradicado;
+        protected global::System.Web.UI.WebControls.Repeater hojaruta;
         
         /// <summary>
-        /// Control Asignar_Persona.
+        /// Control Textfolio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Asignar_Persona;
+        protected global::System.Web.UI.WebControls.TextBox Textfolio;
+        
+        /// <summary>
+        /// Control actuac.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox actuac;
+        
+        /// <summary>
+        /// Control guardar_hoja.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button guardar_hoja;
     }
 }

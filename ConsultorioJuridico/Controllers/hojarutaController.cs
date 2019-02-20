@@ -26,5 +26,12 @@ namespace juefi2.Controllers
             return true;
 
         }
+
+        public DataTable consultarproce(string id)
+
+        {
+            return hoja.consultarproceso(id);
+
+        }
     }
 }
