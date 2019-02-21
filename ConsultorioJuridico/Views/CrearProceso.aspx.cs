@@ -115,13 +115,13 @@ namespace juefi2.Views
         {
             if (MyFile.HasFile)
             {
-                ViewState["Ruta"] = "archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
+                ViewState["Ruta"] = "~/archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
                 MyFile.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
 
             }
             procemo.radicado = Textradicado.Text;
-            procemo.accionante = Dropaccionante.DataTextField;
-            procemo.accionado = Dropaccionado.DataTextField;
+            procemo.accionante = Dropaccionante.SelectedItem.Text;
+            procemo.accionado = Dropaccionado.SelectedItem.Text;
             procemo.asesor = Dropasesor.SelectedValue;
             procemo.tipo_proceso = droplisproceso.SelectedValue;
             procemo.archivo = ViewState["Ruta"].ToString();

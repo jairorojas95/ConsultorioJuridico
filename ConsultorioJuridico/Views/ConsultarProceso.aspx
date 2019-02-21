@@ -25,6 +25,7 @@
                                     <th>accionado</th>
                                     <th>Aseso</th>
                                     <th>Tipo proceso</th>
+                                     <th>Archivo</th>
                                     <th>edit</th>
                                 </tr>
                             </thead>
@@ -44,7 +45,9 @@
                             <td><%#Eval("accionado")%></td>
                             <td><%#Eval("asesor")%></td>
                             <td><%#Eval("nombre_tipo")%></td>
-                          <<%--td><button type="button" class="fa fa-pencil" data-toggle="modal" data-target="#modal-default"></button></td>--%>
+                                <td> <a href='<%# Page.ResolveUrl( Eval("archivos").ToString()) %>'  target="_blank">Ver/Descargar</a></td>
+                             </td>
+                          <%--td><button type="button" class="fa fa-pencil" data-toggle="modal" data-target="#modal-default"></button></td>--%>
                             <td><asp:LinkButton ID="Editar" runat="server" CssClass="btn btn-primary btn-sm " data-toggle="modal" data-target="#modal-default"><i class="fa fa-pencil"></i></asp:LinkButton>
                                 <asp:LinkButton ID="asignar" runat="server" CssClass="btn btn-primary btn-sm " OnCommand="asignar_Command" CommandArgument='<%#Eval("idproceso")%>' CommandName="id">Asignar</asp:LinkButton>
                             </td>
@@ -60,6 +63,7 @@
                             <th>accionado</th>
                             <th>Aseso</th>
                             <th>Tipo proceso</th>
+                             <th>Archivo</th>
                             <th>edit</th>
                         </tr>
                     </tfoot>
