@@ -8,7 +8,7 @@
         <div class="box box-primary">
             <div class="toolbar__nav">
                 <a href="/Views/principal.aspx">
-                    <h5><i class="fa fa-home"></i>Inicio <span>>> </span><a href='#'><i class="fa fa-search-minus"></i>Consultar Proceso</h5>
+                    <h5><i class="fa fa-home">&nbsp;</i>Inicio <span>>> </span><a href='#'><i class="fa fa-search-minus">&nbsp;</i>Consultar Proceso</h5>
                     <br />
                 </a>
             </div>

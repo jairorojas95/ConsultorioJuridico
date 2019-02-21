@@ -14,6 +14,8 @@ namespace juefi2.Models
         public string folio { get; set; }
         public string actuacion { get; set; }
         public string fk_proceso { get; set; }
+        public string observacion { get; set; }
+        public string id { get; set; }
 
 
         public bool registrarhojaruta(hojarutaModel obj)
@@ -34,8 +36,8 @@ namespace juefi2.Models
 
         public DataTable consultarproceso(string id)
         {
-            string sql = "select idproceso ,radicado_proceso,accionante,accionado,concat(usuario.nombre1, ' ', usuario.nombre2, ' ', usuario.apellido1, ' ', usuario.apellido2) "
-                       + " as asesor,tipo_proceso.nombre_tipo as nombre_tipo, hoja_ruta.folio as folio,hoja_ruta.actuacion as actuacion "
+            string sql = "select idproceso ,radicado_proceso,accionante,accionado , concat(usuario.nombre1, ' ', usuario.nombre2, ' ', usuario.apellido1, ' ', usuario.apellido2) "
+                       + " as asesor,tipo_proceso.nombre_tipo as nombre_tipo,hoja_ruta.idhoja_ruta as idhoja, hoja_ruta.folio as folio,hoja_ruta.actuacion as actuacion, hoja_ruta.observaciones as observacion"
                        + " from proceso "
                        + " inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso "
                        + " inner join usuario on proceso.usuario_idusuario = usuario.idusuario "
@@ -51,5 +53,14 @@ namespace juefi2.Models
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
+
+        public bool actualizarhojaruta(hojarutaModel obj)
+        {
+
+            string sql = "update hoja_ruta set hoja_ruta.observaciones = '" + obj.observacion + "' where hoja_ruta.idhoja_ruta = '" + obj.id + "';";
+
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
+
     }
 }

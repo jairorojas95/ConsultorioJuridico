@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Crear Nuevo Proceso" EnableEventValidation="false" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="CrearProceso.aspx.cs" Inherits="juefi2.Views.CrearProceso" %>
+﻿<%@ Page Title="Registrar Proceso" EnableEventValidation="false" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="CrearProceso.aspx.cs" Inherits="juefi2.Views.CrearProceso" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -9,7 +9,7 @@
         <div class="box box-primary">
             <div class="toolbar__nav">
                 <a href="/Views/principal.aspx">
-                    <h5><i class="fa fa-home"></i>Inicio <span>>> </span><a href='#'><i class="fa fa-institution"></i>Crear Nuevo Proceso</h5>
+                    <h5><i class="fa fa-home">&nbsp;</i>Inicio <span>>> </span><a href='#'><i class="fa fa-institution">&nbsp;</i>Registrar Proceso</h5>
                     <br />
                 </a>
             </div>
@@ -21,7 +21,7 @@
         <div class="col-md-8">
             <div class="box box-primary" >
                 <div class="box-header with-border text-center">
-                    <b class="box-title">Crear Nuevo Proceso</b>
+                    <b class="box-title">Registrar Proceso</b>
                     </center>
                 </div>
                 <div class="box-body">
@@ -90,7 +90,7 @@
                 <div class="box box-primary text-center">
                     <div class="box-header with-border">
 
-                        <asp:Button ID="Btn_Guardar" CssClass="btn btn-primary" OnClick="Btn_Guardar_proceso_Click"  runat="server" Text="Crear Proceso"></asp:Button>
+                        <asp:Button ID="Btn_Guardar" CssClass="btn btn-primary" OnClick="Btn_Guardar_proceso_Click"  runat="server" Text="Registrar Proceso"></asp:Button>
 
                     </div>
                 </div>

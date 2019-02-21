@@ -69,5 +69,18 @@ namespace juefi2.Views
             }
 
         }
+
+        protected void observacion_Command(object sender, CommandEventArgs e)
+        {
+            ViewState["id"] = e.CommandArgument.ToString();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "mostrarModal('modal-default22');", true);
+        }
+
+        protected void Agregar_observacion_Click(object sender, EventArgs e)
+        {
+            hojamodel.observacion = observa.Text;
+            hojamodel.id = ViewState["id"].ToString();
+            hojacont.actualizarhoja(hojamodel);
+        }
     }
 }

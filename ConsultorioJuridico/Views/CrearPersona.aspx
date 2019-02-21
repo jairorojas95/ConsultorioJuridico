@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Crear persona" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="CrearPersona.aspx.cs" Inherits="juefi2.Views.CrearPersona" %>
+﻿<%@ Page Title="Crear Usuario" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="CrearPersona.aspx.cs" Inherits="juefi2.Views.CrearPersona" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -9,7 +9,7 @@
         <div class="box box-primary">
             <div class="toolbar__nav">
                 <a href="/Views/principal.aspx">
-                    <h5><i class="fa fa-home"></i>Inicio <span>>> </span><a href='#'><i class="fa fa-child"></i>Crear persona</h5>
+                    <h5><i class="fa fa-home">&nbsp;</i>Inicio <span>>> </span><a href='#'><i class="fa fa-child">&nbsp;</i>Crear Usuario</h5>
                     <br />
                 </a>
             </div>
@@ -26,7 +26,7 @@
         <div class="box box-primary" >
             <div class="box-header with-border">
 
-                <center> <b class="box-title">Crear persona</b></center>
+                <center> <b class="box-title">Crear Usuario</b></center>
 
             </div>
 
@@ -128,7 +128,7 @@
         <div class="box box-primary">
             <div class="box-header with-border" >
                 <center>  
-                   <asp:Button ID="Button1"  CssClass="btn btn-primary" OnClick="guardar"  runat="server" Text="Crear Persona"></asp:Button>
+                   <asp:Button ID="Button1"  CssClass="btn btn-primary" OnClick="guardar"  runat="server" Text="Crear Usuario"></asp:Button>
                 </center>
             </div>
         </div>

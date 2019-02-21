@@ -40,5 +40,12 @@ namespace juefi2.Controllers
             return hoja.traerestudiante();
 
         }
+        public bool actualizarhoja(hojarutaModel mod)
+        {
+
+            hoja.actualizarhojaruta(mod);
+
+            return true;
+        }
     }
 }

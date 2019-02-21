@@ -11,7 +11,7 @@
             <div class="col-md-9 ">
                 <div class="toolbar__nav">
                     <a href="/Views/principal.aspx">
-                        <h5><i class="fa  fa-home "></i>Inicio</h5>
+                        <h5><i class="fa  fa-home ">&nbsp;</i>Inicio</h5>
                     </a>
                 </div>
             </div>

@@ -4,28 +4,25 @@
     <title>Hoja de Ruta</title>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    
-        <div class="col-md-13 ">
+
+    <div class="col-md-13">
         <div class="box box-primary">
-            <div class="toolbar__nav">
+            <div class="toolbar-nav">
                 <a href="/Views/principal.aspx">
-                    <h5><i class="fa fa-home"></i>Inicio <span>>> </span><a href='#'><i class="fa fa-edit"></i>Hoja de Ruta</h5>
+                    <h5><i class="fa fa-home">&nbsp;</i>Inicio <span>>> </span><a href='#'><i class="fa fa-edit">&nbsp;</i>Hoja de Ruta</h5>
                     <br />
                 </a>
             </div>
         </div>
     </div>
-    
 
     <div class="box">
         <div class="box-header text-center">
             <b class="box-title text-center">Hoja de Ruta</b>
         </div>
-        <!-- /.box-header -->
-
         <section class="content">
             <div class="box-body">
-                <div class="col-md-4  ">
+                <div class="col-md-4">
                     <div class="form-group">
 
                         <label>Proceso</label><br />
@@ -60,6 +57,7 @@
                                 <th>Tipo proceso</th>
                                 <th>folio</th>
                                 <th>Actuacion</th>
+                                <th>Observación</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,12 +65,6 @@
                 <ItemTemplate>
 
                     <tr>
-                        <%--<td><%#Eval("idproceso")%></td>
-                            <td><%#Eval("radicado_proceso")%></td>
-                            <td><%#Eval("accionante")%></td>
-                            <td><%#Eval("accionado")%></td>
-                            <td><%#Eval("asesor")%></td>
-                            <td><%#Eval("nombre_tipo")%></td>--%>
                         <td><%#Eval("idproceso")%></td>
                         <td><%#Eval("radicado_proceso")%></td>
                         <td><%#Eval("accionante")%></td>
@@ -81,6 +73,7 @@
                         <td><%#Eval("nombre_tipo")%></td>
                         <td><%#Eval("folio")%></td>
                         <td><%#Eval("actuacion")%></td>
+                        <td><%#Eval("observacion")%></td>
 
                     </tr>
                 </ItemTemplate>
@@ -96,56 +89,58 @@
                             <th>Tipo proceso</th>
                             <th>folio</th>
                             <th>Actuacion</th>
+                            <th>Observación</th>
                         </tr>
                     </tfoot>
 
                     </table>
                 </FooterTemplate>
             </asp:Repeater>
+        </section>
     </div>
-    </section>
 
 
-                <div class="modal fade" id="modal_cierre" data-keyboard="false" data-backdrop="static">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title ">Hoja de Cierre</h4>
 
-                                <div id="datos_ajax_register">
-                                    <div class="row">
+    <div class="modal fade" id="modal_cierre" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title ">Hoja de Cierre</h4>
 
-                                        <div class="col-md-6 ">
-                                            <br />
-                                            <div class="form-group">
+                    <div id="datos_ajax_register">
+                        <div class="row">
 
-                                                <label>Folio </label>
-                                                <asp:TextBox ID="Textfolio" runat="server" CssClass=" form-control"></asp:TextBox>
-                                            </div>
-                                        </div>
+                            <div class="col-md-6 ">
+                                <br />
+                                <div class="form-group">
 
-                                        <div class="col-md-12  ">
-                                            <div class="form-group">
-                                                <label>Actuación</label>
-                                                <asp:TextBox ID="actuac" runat="server" class="form-control" Rows="3" placeholder="Enter ..."></asp:TextBox>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
-                                        <asp:Button ID="guardar_hoja" runat="server" CssClass="btn btn-primary" OnClick="guardar_hoja_Click" Text="Guardar"></asp:Button>
-                                    </div>
+                                    <label>Folio </label>
+                                    <asp:TextBox ID="Textfolio" runat="server" CssClass=" form-control"></asp:TextBox>
                                 </div>
-                                <!-- /.modal-content -->
                             </div>
-                            <!-- /.modal-dialog -->
+
+                            <div class="col-md-12  ">
+                                <div class="form-group">
+                                    <label>Actuación</label>
+                                    <asp:TextBox ID="actuac" runat="server" class="form-control" Rows="3" placeholder="Enter ..."></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+                            <asp:Button ID="guardar_hoja" runat="server" CssClass="btn btn-primary" OnClick="guardar_hoja_Click" Text="Guardar"></asp:Button>
                         </div>
                     </div>
-                    <!-- /.modal -->
+
                 </div>
+
+            </div>
+        </div>
+
+    </div>
 </asp:Content>
 
 

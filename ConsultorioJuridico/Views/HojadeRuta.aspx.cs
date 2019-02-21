@@ -45,6 +45,8 @@ namespace juefi2.Views
                 }
                 try
                 {
+
+                    Droproceso.Items.Clear();
                     Droproceso.DataValueField = "idproceso";
                     Droproceso.DataTextField = "nombre";
                     Droproceso.DataSource = hojacont.llenarproceso(Session["idusuario"].ToString());
@@ -54,7 +56,7 @@ namespace juefi2.Views
 
                     //}
                     //id = Droproceso.SelectedValue;
-                    
+
                 }
                 catch (Exception ex)
                 {
