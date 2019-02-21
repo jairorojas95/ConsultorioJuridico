@@ -1,11 +1,30 @@
-﻿<%@ Page   Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="Asignarproceso.aspx.cs" Inherits="juefi2.Views.Asignarproceso" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="Asignarproceso.aspx.cs" Inherits="juefi2.Views.Asignarproceso" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+    
+
     <section class="content">
         <div class="box">
-            <div class="box-header text-center">
+            <div class="box">
+                <header class="content__title">
+                    <div class="toolbar">
+                        <div class="col-md-9 ">
+                            <div class="toolbar__nav">
+                                <a href="/Views/principal.aspx">
+                                    <h5><i class="fa fa-home"></i>Inicio >> <i class="fa fa-institution"></i>Asignar Proceso</h5> 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+
+
+            <div class="box-header ">
                 <h3 class="box-title">Asignar Proceso</h3>
             </div>
             <!-- /.box-header -->
@@ -15,7 +34,7 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                     <th>N°</th>
+                                    <th>N°</th>
                                     <th>Nombre</th>
                                     <th>Semestre</th>
                                     <%-- <th>Radicado</th>
@@ -31,7 +50,7 @@
                     <ItemTemplate>
                         <tr>
 
-                             <td><%#Eval("idusuario")%></td>
+                            <td><%#Eval("idusuario")%></td>
                             <td><%#Eval("nombre")%></td>
                             <td><%#Eval("semestre")%></td>
                             <%--  <td><%#Eval("nombre2")%></td>
@@ -47,7 +66,7 @@
                         </tbody>
                     <tfoot>
                         <tr>
-                             <th>N°</th>
+                            <th>N°</th>
                             <th>Nombre</th>
                             <th>Semestre</th>
                             <%--  <th>Radicado</th>
@@ -83,7 +102,7 @@
                             <br />
                             <label>Proceso</label><br />
                             <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server">
-                                <asp:ListItem >  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------- seleccioné ------ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </asp:ListItem>
+                                <asp:ListItem>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------- seleccioné ------ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>

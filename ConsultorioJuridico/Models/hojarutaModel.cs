@@ -23,7 +23,7 @@ namespace juefi2.Models
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
 
-        public DataTable consultaproceso(string idusuario)
+        public DataTable consultaprocesodelestudinate(string idusuario)
         {
             string sql = "SELECT idproceso , concat( radicado_proceso,' -','    Proceso: ', tipo_proceso.nombre_tipo ) as nombre FROM proceso "
                          + " inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso "
@@ -40,6 +40,14 @@ namespace juefi2.Models
                        + " inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso "
                        + " inner join usuario on proceso.usuario_idusuario = usuario.idusuario "
                        + " inner join hoja_ruta on proceso.idproceso = hoja_ruta.proceso_idproceso where  idproceso = "+ id +"; ";
+
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
+
+        public DataTable traerestudiante()
+        {
+            string sql = "select idusuario , concat(usuario.nombre1, ' ', usuario.nombre2, ' ', usuario.apellido1, ' ', usuario.apellido2) as nombre "
+                       + "from usuario where usuario.rol_idrol = 2;";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }

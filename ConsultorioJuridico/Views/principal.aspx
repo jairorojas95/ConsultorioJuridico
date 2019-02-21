@@ -7,21 +7,14 @@
     
     
     <header class="content__title">
-
-
-
-
         <div class="toolbar">
             <div class="col-md-9 ">
                 <div class="toolbar__nav">
                     <a href="/Views/principal.aspx">
                         <h5><i class="fa  fa-home "></i>Inicio</h5>
                     </a>
-                    
-
                 </div>
             </div>
-
         </div>
     </header>
 

@@ -6823,6 +6823,7 @@
     <Content Include="Views\principal.aspx" />
     <Content Include="Views\usuario\registro.aspx" />
     <Content Include="Views\HojadeRuta.aspx" />
+    <Content Include="Views\ConsultarHojaruta.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -7459,6 +7460,13 @@
     </Compile>
     <Compile Include="Views\HojadeRuta.aspx.designer.cs">
       <DependentUpon>HojadeRuta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultarHojaruta.aspx.cs">
+      <DependentUpon>ConsultarHojaruta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultarHojaruta.aspx.designer.cs">
+      <DependentUpon>ConsultarHojaruta.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

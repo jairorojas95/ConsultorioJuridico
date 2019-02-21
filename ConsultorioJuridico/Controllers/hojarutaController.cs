@@ -16,7 +16,7 @@ namespace juefi2.Controllers
         public DataTable llenarproceso(string idusuario)
         {
 
-            return hoja.consultaproceso(idusuario);
+            return hoja.consultaprocesodelestudinate(idusuario);
 
         }
         public bool registro_hojaruta(hojarutaModel mod)
@@ -31,6 +31,13 @@ namespace juefi2.Controllers
 
         {
             return hoja.consultarproceso(id);
+
+        }
+
+        public DataTable ctraerestudiante()
+
+        {
+            return hoja.traerestudiante();
 
         }
     }

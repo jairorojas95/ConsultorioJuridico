@@ -19,8 +19,6 @@ namespace juefi2.Views
         hojarutaController hojacont = new hojarutaController();
         hojarutaModel hojamodel = new hojarutaModel();
         conecMysql conne = new conecMysql();
-        public DataTable consultar = new DataTable();
-        public DataRow darowConsulta;
         public string id;
 
 
@@ -51,11 +49,11 @@ namespace juefi2.Views
                     Droproceso.DataTextField = "nombre";
                     Droproceso.DataSource = hojacont.llenarproceso(Session["idusuario"].ToString());
                     Droproceso.DataBind();
-                    if (Droproceso.SelectedIndex != 1) {
-                        agregarhojaderuta.Enabled = true;
+                    //if (Droproceso.SelectedIndex != 1) {
+                    //    agregarhojaderuta.Enabled = true;
 
-                    }
-                    id = Droproceso.SelectedValue;
+                    //}
+                    //id = Droproceso.SelectedValue;
                     
                 }
                 catch (Exception ex)
@@ -97,6 +95,7 @@ namespace juefi2.Views
             if(!Droproceso.SelectedValue.Equals("0")) {
                 hojaruta.DataSource = hojacont.consultarproce(Droproceso.SelectedValue);
                 hojaruta.DataBind();
+                
             }
         }
     }
