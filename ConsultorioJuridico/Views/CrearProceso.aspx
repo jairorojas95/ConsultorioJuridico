@@ -1,20 +1,27 @@
-﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="CrearProceso.aspx.cs" Inherits="juefi2.Views.CrearProceso" %>
+﻿<%@ Page Title="Crear Nuevo Proceso" EnableEventValidation="false" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="CrearProceso.aspx.cs" Inherits="juefi2.Views.CrearProceso" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"></script>
-    <div class="content-header">
-        <label id="error" runat="server"></label>
+
+
+        <div class="col-md-8 ">
+        <div class="box box-primary">
+            <div class="toolbar__nav">
+                <a href="/Views/principal.aspx">
+                    <h5><i class="fa fa-home"></i>Inicio <span>>> </span><a href='#'><i class="fa fa-institution"></i>Crear Nuevo Proceso</h5>
+                    <br />
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="content">
+    
+    
+     <div class="content">
         <div class="col-md-8">
-            <div class="box box-primary" style="background: #E0E6F8">
+            <div class="box box-primary" >
                 <div class="box-header with-border text-center">
-                    <h3 class="box-title">Crear Nuevo Proceso</h3>
+                    <b class="box-title">Crear Nuevo Proceso</b>
                     </center>
                 </div>
                 <div class="box-body">
@@ -81,9 +88,9 @@
                 </div>
 
                 <div class="box box-primary text-center">
-                    <div class="box-header with-border" style="background: #E0E6F8">
+                    <div class="box-header with-border">
 
-                        <asp:Button ID="Btn_Guardar" CssClass="btn btn-outline-primary" OnClick="Btn_Guardar_proceso_Click" Style="background: #2E9AFE" runat="server" Text="Crear Proceso"></asp:Button>
+                        <asp:Button ID="Btn_Guardar" CssClass="btn btn-primary" OnClick="Btn_Guardar_proceso_Click"  runat="server" Text="Crear Proceso"></asp:Button>
 
                     </div>
                 </div>

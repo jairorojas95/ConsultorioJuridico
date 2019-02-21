@@ -1,31 +1,30 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="Asignarproceso.aspx.cs" Inherits="juefi2.Views.Asignarproceso" %>
+﻿<%@ Page Title="Asignar Proceso" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="Asignarproceso.aspx.cs" Inherits="juefi2.Views.Asignarproceso" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+  
+    </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    
 
+    <div class="col-md-12 ">
+        <div class="box box-primary">
+            <div class="toolbar__nav">
+                <a href="/Views/principal.aspx">
+                    <h5><i class="fa fa-home"></i>Inicio <span>>> </span><a href='#'><i class="fa fa-institution"></i>Asignar Proceso</h5>
+                    <br />
+                </a>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <br />
+    
     <section class="content">
         <div class="box">
-            <div class="box">
-                <header class="content__title">
-                    <div class="toolbar">
-                        <div class="col-md-9 ">
-                            <div class="toolbar__nav">
-                                <a href="/Views/principal.aspx">
-                                    <h5><i class="fa fa-home"></i>Inicio >> <i class="fa fa-institution"></i>Asignar Proceso</h5> 
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-            </div>
-
-
-
-            <div class="box-header ">
-                <h3 class="box-title">Asignar Proceso</h3>
+            <div class="box-header text-center">
+                <b class="box-title">Asignar Proceso</b>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

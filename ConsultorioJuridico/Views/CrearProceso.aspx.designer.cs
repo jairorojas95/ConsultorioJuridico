@@ -13,15 +13,6 @@ namespace juefi2.Views {
     public partial class CrearProceso {
         
         /// <summary>
-        /// Control error.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl error;
-        
-        /// <summary>
         /// Control droplisproceso.
         /// </summary>
         /// <remarks>

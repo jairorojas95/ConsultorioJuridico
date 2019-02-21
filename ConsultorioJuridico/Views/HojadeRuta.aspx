@@ -1,12 +1,25 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="HojadeRuta.aspx.cs" Inherits="juefi2.Views.Vista1" %>
+﻿<%@ Page Title="Hoja de Ruta" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="HojadeRuta.aspx.cs" Inherits="juefi2.Views.Vista1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Hoja de Ruta</title>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    
+        <div class="col-md-13 ">
+        <div class="box box-primary">
+            <div class="toolbar__nav">
+                <a href="/Views/principal.aspx">
+                    <h5><i class="fa fa-home"></i>Inicio <span>>> </span><a href='#'><i class="fa fa-edit"></i>Hoja de Ruta</h5>
+                    <br />
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
     <div class="box">
-        <div class="box-header">
-            <h3 class="box-title text-center">Hoja de Ruta</h3>
+        <div class="box-header text-center">
+            <b class="box-title text-center">Hoja de Ruta</b>
         </div>
         <!-- /.box-header -->
 

@@ -1,11 +1,24 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="Diagnostico.aspx.cs" Inherits="juefi2.Views.Diagnostico" %>
+﻿<%@ Page Title="Diagnostico" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="Diagnostico.aspx.cs" Inherits="juefi2.Views.Diagnostico" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Diagnostico</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+    <div class="col-md-10 ">
+        <div class="box box-primary">
+            <div class="toolbar__nav">
+                <a href="/Views/principal.aspx">
+                    <h5><i class="fa fa-home"></i>Inicio <span>>> </span><a href='#'><i class="fa fa-book"></i>Diagnostico</h5>
+                    <br />
+                </a>
+            </div>
+        </div>
+    </div>
+    <br />
+
+
     <div class="col-md-10">
-        <div class="box box-primary" style="background: #E0E6F8">
+        <div class="box box-primary">
             <div class="box-header with-border">
                 <center><h3 class="box-title">Diagnostico</h3></center>
             </div>
@@ -18,9 +31,9 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-               
-               
-                
+
+
+
                 <div class="col-md-6 ">
                     <div class="form-group">
                         <label for="exampleInputFile">Cargar Diagnostico</label>
@@ -28,20 +41,19 @@
                     </div>
                 </div>
 
-
-
             </div>
-        </div>
-        <div class="box box-primary">
-            <div class="box-header with-border" style="background: #E0E6F8">
-                <center>  
-                    <asp:Button ID="Guardar_diagnostico" style="background:#2E9AFE" Text="Crear Diagnostico"  runat="server" OnClick="Guardar_diagnostico_Click"
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <center>  
+                    <asp:Button ID="Guardar_diagnostico" CssClass="btn btn-primary" Text="Crear Diagnostico"  runat="server" OnClick="Guardar_diagnostico_Click"
                         />
                    
                 </center>
+                </div>
             </div>
         </div>
     </div>
+
 
 
 

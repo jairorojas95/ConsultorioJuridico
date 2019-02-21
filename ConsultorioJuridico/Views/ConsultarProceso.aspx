@@ -1,16 +1,26 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="ConsultarProceso.aspx.cs" Inherits="juefi2.Views.ConsultarProceso" %>
+﻿<%@ Page Title="Consultar Proceso" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="ConsultarProceso.aspx.cs" Inherits="juefi2.Views.ConsultarProceso" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-
+      <div class="col-md-12 ">
+        <div class="box box-primary">
+            <div class="toolbar__nav">
+                <a href="/Views/principal.aspx">
+                    <h5><i class="fa fa-home"></i>Inicio <span>>> </span><a href='#'><i class="fa fa-search-minus"></i>Consultar Proceso</h5>
+                    <br />
+                </a>
+            </div>
+        </div>
+    </div>
+     <br />
 
 
     <section class="content">
         <div class="box">
-            <div class="box-header">
-                <h3 class="box-title">Consultar Proceso</h3>
+            <div class="box-header text-center">
+                <b class="box-title" >Consultar Proceso</b>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
