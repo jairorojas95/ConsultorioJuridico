@@ -27,5 +27,34 @@ namespace juefi2.Controllers
             return diag.consultaRD( idusuario );
 
         }
+
+        public DataTable consultarproce(string id)
+
+        {
+            return diag.consultarDiagnostico(id);
+
+        }
+
+        public DataTable ctraerestudiante()
+
+        {
+            return diag.traerestudiante();
+
+        }
+
+        public DataTable llenarproceso(string idusuario)
+        {
+
+            return diag.consultaprocesodelestudinate(idusuario);
+
+        }
+
+        public bool actualizardignostico(DiagnosticoModel mod)
+        {
+
+            diag.actualizardiagnostico(mod);
+
+            return true;
+        }
     }
 }

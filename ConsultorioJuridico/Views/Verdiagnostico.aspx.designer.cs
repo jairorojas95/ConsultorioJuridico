@@ -10,60 +10,42 @@
 namespace juefi2.Views {
     
     
-    public partial class HojaCierre {
+    public partial class Verdiagnostico {
         
         /// <summary>
-        /// Control Droproceso.
+        /// Control Dropestudiante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Droproceso;
+        protected global::System.Web.UI.WebControls.DropDownList Dropestudiante;
         
         /// <summary>
-        /// Control datepicker1.
+        /// Control diagnostico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datepicker1;
+        protected global::System.Web.UI.WebControls.Repeater diagnostico;
         
         /// <summary>
-        /// Control Editar.
+        /// Control observa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Editar;
+        protected global::System.Web.UI.WebControls.TextBox observa;
         
         /// <summary>
-        /// Control terminacion.
+        /// Control Agregar_observacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox terminacion;
-        
-        /// <summary>
-        /// Control asunto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox asunto;
-        
-        /// <summary>
-        /// Control Asignar_Persona.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Asignar_Persona;
+        protected global::System.Web.UI.WebControls.Button Agregar_observacion;
     }
 }

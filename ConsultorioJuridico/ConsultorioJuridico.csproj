@@ -6812,6 +6812,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\Asignarproceso.aspx" />
+    <Content Include="Views\ConsultarDiagnosticoEstudiante.aspx" />
     <Content Include="Views\ConsultarProceso.aspx" />
     <Content Include="Views\CrearEntidad.aspx" />
     <Content Include="Views\CrearPersona.aspx" />
@@ -6824,6 +6825,7 @@
     <Content Include="Views\usuario\registro.aspx" />
     <Content Include="Views\HojadeRuta.aspx" />
     <Content Include="Views\ConsultarHojaruta.aspx" />
+    <Content Include="Views\Verdiagnostico.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -7346,6 +7348,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AsignarProcesoController.cs" />
     <Compile Include="Controllers\DiagnosticoController.cs" />
+    <Compile Include="Controllers\HojaCierreController.cs" />
     <Compile Include="Controllers\hojarutaController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\ProcesoController.cs" />
@@ -7356,6 +7359,7 @@
     <Compile Include="Models\AsignarProcesoModal.cs" />
     <Compile Include="Models\BD\conecMysql.cs" />
     <Compile Include="Models\DiagnosticoModel.cs" />
+    <Compile Include="Models\HojaCierreModal.cs" />
     <Compile Include="Models\hojarutaModel.cs" />
     <Compile Include="Models\ProcesoModel.cs" />
     <Compile Include="Models\pruebaModel.cs" />
@@ -7376,6 +7380,13 @@
     </Compile>
     <Compile Include="Views\Asignarproceso.aspx.designer.cs">
       <DependentUpon>Asignarproceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultarDiagnosticoEstudiante.aspx.cs">
+      <DependentUpon>ConsultarDiagnosticoEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultarDiagnosticoEstudiante.aspx.designer.cs">
+      <DependentUpon>ConsultarDiagnosticoEstudiante.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ConsultarProceso.aspx.cs">
       <DependentUpon>ConsultarProceso.aspx</DependentUpon>
@@ -7467,6 +7478,13 @@
     </Compile>
     <Compile Include="Views\ConsultarHojaruta.aspx.designer.cs">
       <DependentUpon>ConsultarHojaruta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Verdiagnostico.aspx.cs">
+      <DependentUpon>Verdiagnostico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Verdiagnostico.aspx.designer.cs">
+      <DependentUpon>Verdiagnostico.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

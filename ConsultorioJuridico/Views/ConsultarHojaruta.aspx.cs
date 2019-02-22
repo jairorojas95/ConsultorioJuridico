@@ -45,6 +45,7 @@ namespace juefi2.Views
 
                     try
                     {
+                        Droproceso.Items.Clear();
                         Droproceso.DataValueField = "idproceso";
                         Droproceso.DataTextField = "nombre";
                         Droproceso.DataSource = hojacont.llenarproceso(Dropestudiante.SelectedValue.ToString());
@@ -81,6 +82,8 @@ namespace juefi2.Views
             hojamodel.observacion = observa.Text;
             hojamodel.id = ViewState["id"].ToString();
             hojacont.actualizarhoja(hojamodel);
+
+            observa.Text = "";
         }
     }
 }

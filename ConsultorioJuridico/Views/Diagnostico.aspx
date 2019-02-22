@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="col-md-10 ">
+    <div class="col-md-12 ">
         <div class="box box-primary">
             <div class="toolbar__nav">
                 <a href="/Views/principal.aspx">
@@ -17,7 +17,7 @@
     <br />
 
 
-    <div class="col-md-10">
+    <div class="col-md-12">
         <div class="box box-primary">
             <div class="box-header with-border">
                 <center><h3 class="box-title">Diagnostico</h3></center>
@@ -51,8 +51,9 @@
                 </center>
                 </div>
             </div>
-        </div>
-    </div>
+
+
+
 
 
 
