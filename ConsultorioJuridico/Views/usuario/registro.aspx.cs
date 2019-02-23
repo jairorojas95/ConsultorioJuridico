@@ -73,16 +73,16 @@ namespace juefi2.Views.usuario
                 us.apellido1 = apellido1.Text;
                 us.apellido2 = apellido2.Text;
                 us.contrasena = contrasena.Text;
-                us.correo_electronico = email.Text;
-                us.semestre = semestre.Text;
-                us.user = usuario.Text;
+                us.semestre = semestre.SelectedItem.ToString();
+            us.correo_electronico = email.Text;
+            us.user = usuario.Text;
            
                
 
                 if (!(validarNombre(nombre1.Text, true) && validarNombre(nombre2.Text, false) &&
                      validarNombre(apellido1.Text, true) && validarNombre(apellido2.Text, false)))
                 {
-                    Response.Write("<script> alert('Verifique los nombres y apellidos'); </script>");
+                    Response.Write("<script> alert('Verifique Datos'); </script>");
                     return;
                 }
 

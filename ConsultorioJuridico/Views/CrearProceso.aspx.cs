@@ -76,7 +76,29 @@ namespace juefi2.Views
             }
 
         }
-        
+
+
+        protected bool validarNombre(string h, bool requerido)
+        {
+            h = h.ToUpper();
+            if (requerido)
+            {
+                if (h.Length < 3) return false;
+            }
+            else
+            {
+                if (h.Length > 0 && h.Length < 3) return false;
+            }
+            for (int i = 0; i < h.Length; i++)
+            {
+                if (h[i] < 'A' || h[i] > 'Z')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         protected void guardar_datos_Click(object sender, EventArgs e)
         {
             procemo.nombre1 = nombre1.Text;
@@ -117,6 +139,7 @@ namespace juefi2.Views
             {
                 ViewState["Ruta"] = "~/archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
                 MyFile.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+                procemo.archivo = ViewState["Ruta"].ToString();
 
             }
             procemo.radicado = Textradicado.Text;
@@ -124,11 +147,34 @@ namespace juefi2.Views
             procemo.accionado = Dropaccionado.SelectedItem.Text;
             procemo.asesor = Dropasesor.SelectedValue;
             procemo.tipo_proceso = droplisproceso.SelectedValue;
-            procemo.archivo = ViewState["Ruta"].ToString();
-            procemo.registrarproceso(procemo);
-            Response.Write("<script> alert('Registro Exitoso'); </script>");
+          
+           
 
-            Textradicado.Text = "";
+
+         
+           
+        
+            if (procemo.registrarproceso(procemo) == true)
+            {
+
+                Response.Write("<script> alert('Registro Exitoso'); </script>");
+
+                Textradicado.Text = "";
+
+            }
+            else
+            {
+
+
+                Response.Write("<script> alert('verifique Datos  '); </script>");
+                return;
+            }
+
+
+
+
+           
+
 
         }
 
@@ -143,12 +189,11 @@ namespace juefi2.Views
 
                 nit.Text = "";
                 empresa.Text = "";
-
-
+                
             }
             else
             {
-                Response.Write("<script> alert('dfsdfsdfsdfs'); </script>");
+                Response.Write("<script> alert('Verifique Datos'); </script>");
             }
 
 

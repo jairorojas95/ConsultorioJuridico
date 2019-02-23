@@ -71,13 +71,7 @@ namespace juefi2.Views
         }
                
         
-               protected void agregarhojaderuta_Command(object sender, CommandEventArgs e)
-        {
-            if(!Droproceso.SelectedValue.Equals("0")) {
-                ViewState["id"] = Droproceso.SelectedValue;
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "mostrarModal('modal_cierre');", true);
-            }
-        }
+      
 
         protected void guardar_hoja_Click(object sender, EventArgs e)
         {
@@ -98,6 +92,15 @@ namespace juefi2.Views
                 hojaruta.DataSource = hojacont.consultarproce(Droproceso.SelectedValue);
                 hojaruta.DataBind();
                 
+            }
+        }
+
+        protected void agregarhojaderuta_Command(object sender, CommandEventArgs e)
+        {
+             if(!Droproceso.SelectedValue.Equals("0")) {
+
+                ViewState["id"] = Droproceso.SelectedValue;
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "mostrarModal('modal_cierre');", true);
             }
         }
     }

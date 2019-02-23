@@ -23,9 +23,10 @@ namespace juefi2.Views
             {
                 try
                 {
-                    DropRol.DataSource = p.consultarrol();
+                   
                     DropRol.DataValueField = "idrol";
                     DropRol.DataTextField = "tipo_rol";
+                    DropRol.DataSource = p.consultarrol();
                     DropRol.DataBind();
 
                                   
@@ -90,12 +91,7 @@ namespace juefi2.Views
 
 
 
-            if (!(validarNombre(nombre1.Text, true) && validarNombre(nombre2.Text, false) &&
-                 validarNombre(apellido1.Text, true) && validarNombre(apellido2.Text, false)))
-            {
-                Response.Write("<script> alert('Verifique los nombres y apellidos'); </script>");
-                return;
-            }
+            
 
             if (!validarCorreo(email.Text))
             {
@@ -134,6 +130,10 @@ namespace juefi2.Views
             }
             if (p.Registrarse(us) == true)
             {
+
+                Response.Write("<script> alert('Registro Exitoso'); </script>");
+              
+
                 nombre1.Text = "";
                  nombre2.Text = "";
                 apellido1.Text = "";
@@ -141,6 +141,8 @@ namespace juefi2.Views
                 contrasena.Text = "";
                 email.Text = "";
                 usuario.Text = "";
+
+                return;
 
 
             }

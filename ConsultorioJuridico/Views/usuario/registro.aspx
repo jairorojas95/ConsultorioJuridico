@@ -100,15 +100,21 @@
                                 <asp:TextBox ID="apellido1" runat="server" CssClass="form-control" placeholder="Primer Apellido"></asp:TextBox>
 
                             </div>
-                                   <div class="input-group">
+
+                            <div class="input-group">
                                 <span class="input-group-addon"><i class="fas fa-plus-square"></i></span>
-                                <asp:TextBox ID="semestre" runat="server" CssClass="form-control" placeholder="Semestre"></asp:TextBox>
+                                <asp:DropDownList ID="semestre" runat="server" CssClass="form-control" >
+                                    <asp:ListItem Value="" > </asp:ListItem>
+                                    <asp:ListItem Value="1"> 7 </asp:ListItem>
+                                    <asp:ListItem Value="2"> 8 </asp:ListItem>
+                                    <asp:ListItem Value="3"> 9 </asp:ListItem>
+                                    <asp:ListItem Value="4">10</asp:ListItem>
+                                </asp:DropDownList>
 
                             </div>
 
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fas fa-at"></i></span>
-
                                 <asp:TextBox ID="email" runat="server" CssClass="form-control" placeholder="Correo Electronico" TextMode="email"></asp:TextBox>
                             </div>
 

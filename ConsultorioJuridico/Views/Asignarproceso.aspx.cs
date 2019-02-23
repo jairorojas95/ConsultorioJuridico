@@ -18,25 +18,19 @@ namespace juefi2.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+           
                 asignarproceso.DataSource = proce.consultarusuario();
                 asignarproceso.DataBind();
 
 
-                try
-                {
+               
                     droplisproceso.DataTextField = "nombre";
                     droplisproceso.DataValueField ="idproceso";
                     droplisproceso.DataSource = proce.traerproceso();
                     droplisproceso.DataBind();
-                }
-                catch (Exception ex)
-                {
-                    Response.Write("<script> alert('pailas'); </script>");
-                }
+              
                
-            }
+            
         }
 
         protected void guardar_datos_Click(object sender, EventArgs e)

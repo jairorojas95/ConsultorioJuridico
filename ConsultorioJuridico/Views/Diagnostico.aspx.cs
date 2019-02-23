@@ -54,11 +54,29 @@ namespace juefi2.Views
             {
                 ViewState["Ruta"] = "~/archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
                 MyFile.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
-
+                diagmode.archivo = ViewState["Ruta"].ToString();
             }
-            diagmode.archivo= ViewState["Ruta"].ToString();
-            diagmode.fk_proceso= DropRadicado.SelectedValue;
-            diag.registro_dignostico(diagmode);
+
+
+            if (DropRadicado.SelectedIndex <= 0 )
+            {
+
+                Response.Write("<script> alert('Verifique Datos'); </script>");
+            }
+
+
+
+            diagmode.fk_proceso = DropRadicado.SelectedValue;
+
+
+            if (diag.registro_dignostico(diagmode) == true )
+            {
+                Response.Write("<script> alert('Registro Exitoso'); </script>");
+            }
+            else
+            {
+                Response.Write("<script> alert('dfsdfsdfsdfs'); </script>");
+            }
 
 
         }
