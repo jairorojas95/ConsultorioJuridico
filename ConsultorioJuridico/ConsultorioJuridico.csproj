@@ -6813,6 +6813,8 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\Asignarproceso.aspx" />
     <Content Include="Views\ConsultarDiagnosticoEstudiante.aspx" />
+    <Content Include="Views\consultarhoja-cierre-estudinate.aspx" />
+    <Content Include="Views\Consultarhojacierre.aspx" />
     <Content Include="Views\ConsultarProceso.aspx" />
     <Content Include="Views\CrearEntidad.aspx" />
     <Content Include="Views\CrearPersona.aspx" />
@@ -7387,6 +7389,20 @@
     </Compile>
     <Compile Include="Views\ConsultarDiagnosticoEstudiante.aspx.designer.cs">
       <DependentUpon>ConsultarDiagnosticoEstudiante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\consultarhoja-cierre-estudinate.aspx.cs">
+      <DependentUpon>consultarhoja-cierre-estudinate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\consultarhoja-cierre-estudinate.aspx.designer.cs">
+      <DependentUpon>consultarhoja-cierre-estudinate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Consultarhojacierre.aspx.cs">
+      <DependentUpon>Consultarhojacierre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Consultarhojacierre.aspx.designer.cs">
+      <DependentUpon>Consultarhojacierre.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ConsultarProceso.aspx.cs">
       <DependentUpon>ConsultarProceso.aspx</DependentUpon>

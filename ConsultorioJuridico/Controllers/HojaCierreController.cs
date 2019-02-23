@@ -27,5 +27,35 @@ namespace juefi2.Controllers
             return true;
 
         }
+
+        public DataTable consultarhoja(string idusuario)
+        {
+
+            return hojcie.consultarhojacierre(idusuario);
+
+        }
+
+        public DataTable ctraerestudiante()
+
+        {
+            return hojcie.traerestudiante();
+
+        }
+
+        public bool actualizarhojacierre(HojaCierreModal mod)
+        {
+
+            hojcie.actualizarhojacierre(mod);
+
+            return true;
+        }
+
+        public bool actualizaproceso(HojaCierreModal mod)
+        {
+
+            hojcie.actualizarproceso(mod);
+
+            return true;
+        }
     }
 }
