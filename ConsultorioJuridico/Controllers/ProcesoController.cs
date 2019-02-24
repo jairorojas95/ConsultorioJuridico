@@ -77,6 +77,14 @@ namespace juefi2.Controllers
 
         }
 
+
+        public DataTable consultarproestudiante(string id)
+
+        {
+            return proce.consultarproceestudiante(id);
+
+        }
+
         public DataTable consultarestudiante()
 
         {

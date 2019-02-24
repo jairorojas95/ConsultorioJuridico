@@ -87,6 +87,17 @@ namespace juefi2.Models
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
+
+        public DataTable consultarproceestudiante(string id)
+        {
+            string sql = "select idproceso ,radicado_proceso,accionante,accionado,concat(usuario.nombre1, ' ',usuario.nombre2, ' ',usuario.apellido1, ' ', usuario.apellido2) "
+                          + "as asesor,tipo_proceso.nombre_tipo as nombre_tipo,archivos from proceso "
+                          + "inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso  "
+                          + "inner join usuario on proceso.usuario_idusuario = usuario.idusuario where  proceso.usuario_proceso='" + id + "' and proceso.asignacion='si' and proceso.estado='abierto'";
+
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
+
         public bool registrarperonsanatural(ProcesoModel obj)
         {
 

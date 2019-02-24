@@ -6817,6 +6817,7 @@
     <Content Include="Views\Consultarhojacierre.aspx" />
     <Content Include="Views\ConsultarProceso.aspx" />
     <Content Include="Views\consultarprocesodocente.aspx" />
+    <Content Include="Views\consultarproceso_estudiante.aspx" />
     <Content Include="Views\CrearEntidad.aspx" />
     <Content Include="Views\CrearPersona.aspx" />
     <Content Include="Views\CrearProceso.aspx" />
@@ -7419,6 +7420,13 @@
     </Compile>
     <Compile Include="Views\consultarprocesodocente.aspx.designer.cs">
       <DependentUpon>consultarprocesodocente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\consultarproceso_estudiante.aspx.cs">
+      <DependentUpon>consultarproceso_estudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\consultarproceso_estudiante.aspx.designer.cs">
+      <DependentUpon>consultarproceso_estudiante.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\CrearEntidad.aspx.cs">
       <DependentUpon>CrearEntidad.aspx</DependentUpon>
