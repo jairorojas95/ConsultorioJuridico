@@ -10,7 +10,7 @@
 namespace juefi2.Views {
     
     
-    public partial class ConsultarProceso {
+    public partial class consultarprocesodocente {
         
         /// <summary>
         /// Control consultarproceso.

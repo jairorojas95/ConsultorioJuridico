@@ -34,10 +34,10 @@ namespace juefi2.Controllers
 
         }
 
-        public DataTable ctraerestudiante()
+        public DataTable ctraerestudiante( string id)
 
         {
-            return hoja.traerestudiante();
+            return hoja.traerestudiante(id);
 
         }
         public bool actualizarhoja(hojarutaModel mod)

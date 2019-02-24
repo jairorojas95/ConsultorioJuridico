@@ -21,7 +21,7 @@ namespace juefi2.Models
                         sql += idusuario + @"  AND usuario.rol_idrol = rol.idrol
                         INNER JOIN permiso ON permiso.fk_rol = rol.idrol
                         INNER JOIN menu ON menu.idmenu = permiso.menu_idmenu
-                        ORDER BY menu.item;";
+                        ORDER BY menu.idmenu;";
 
 
 

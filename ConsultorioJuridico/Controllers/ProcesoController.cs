@@ -12,17 +12,17 @@ namespace juefi2.Controllers
 {
     public class ProcesoController : ApiController
     {
-        pruebaModel pru = new pruebaModel();
+        
         ProcesoModel proce = new ProcesoModel();
 
 
-        public bool registro_perosna(pruebaModel mod)
-        {
+        //public bool registro_perosna(dinamicasModel mod)
+        //{
 
-            pru.registraPersona(mod);
-            return true;
+        //    pru.registraPersona(mod);
+        //    return true;
             
-        }
+        //}
 
         public bool registropersona(ProcesoModel mod)
         {
@@ -39,12 +39,7 @@ namespace juefi2.Controllers
             return true;
 
         }
-        public DataTable traerhoja()
-
-        {
-            return pru.hoja_ruta();
-
-        }
+        
 
         public DataTable consultarproces()
 
@@ -71,6 +66,14 @@ namespace juefi2.Controllers
 
         {
             return proce.consultarproceso();
+
+        }
+
+
+        public DataTable consultarprocedocente(string id)
+
+        {
+            return proce.consultarprocesodocente( id);
 
         }
 

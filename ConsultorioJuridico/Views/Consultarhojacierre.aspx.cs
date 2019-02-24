@@ -21,7 +21,7 @@ namespace juefi2.Views
                 {
                     Dropestudiante.DataValueField = "idusuario";
                     Dropestudiante.DataTextField = "nombre";
-                    Dropestudiante.DataSource = hojacont.ctraerestudiante();
+                    Dropestudiante.DataSource = hojacont.ctraerestudiante(Session["idusuario"].ToString());
                     Dropestudiante.DataBind();
 
                 }

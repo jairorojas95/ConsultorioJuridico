@@ -35,10 +35,10 @@ namespace juefi2.Controllers
 
         }
 
-        public DataTable ctraerestudiante()
+        public DataTable ctraerestudiante(string id)
 
         {
-            return diag.traerestudiante();
+            return diag.traerestudiante(id);
 
         }
 

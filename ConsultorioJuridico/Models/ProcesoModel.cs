@@ -77,6 +77,16 @@ namespace juefi2.Models
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
+        public DataTable consultarprocesodocente(string id)
+        {
+            string sql = "select idproceso ,radicado_proceso,accionante,accionado,concat(usuario.nombre1, ' ',usuario.nombre2, ' ',usuario.apellido1, ' ', usuario.apellido2) "
+                          + "as asesor,tipo_proceso.nombre_tipo as nombre_tipo,archivos from proceso "
+                          + "inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso  "
+                          + "inner join usuario on proceso.usuario_proceso = usuario.idusuario where  proceso.usuario_idusuario='" + id+"' and proceso.asignacion='si' and proceso.estado='abierto'";
+
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
+
         public bool registrarperonsanatural(ProcesoModel obj)
         {
 

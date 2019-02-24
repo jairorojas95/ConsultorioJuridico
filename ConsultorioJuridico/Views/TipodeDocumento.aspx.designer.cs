@@ -13,21 +13,30 @@ namespace juefi2.Views {
     public partial class TipodeDocumento {
         
         /// <summary>
-        /// Control Txtarea.
+        /// Control Dropdocument.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtarea;
+        protected global::System.Web.UI.WebControls.DropDownList Dropdocument;
         
         /// <summary>
-        /// Control Button3.
+        /// Control Txnuevodocumen.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.TextBox Txnuevodocumen;
+        
+        /// <summary>
+        /// Control guardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button guardar;
     }
 }

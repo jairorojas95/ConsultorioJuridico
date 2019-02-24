@@ -1,9 +1,9 @@
-﻿<%@ Page Title="Consultar Proceso" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="ConsultarProceso.aspx.cs" Inherits="juefi2.Views.ConsultarProceso" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="consultarprocesodocente.aspx.cs" Inherits="juefi2.Views.consultarprocesodocente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
+    
       <div class="col-md-12 ">
         <div class="box box-primary">
             <div class="toolbar__nav">
@@ -33,7 +33,7 @@
                                     <th>Radicado</th>
                                     <th>accionante</th>
                                     <th>accionado</th>
-                                    <th>Aseso</th>
+                                    <th>Estudiante</th>
                                     <th>Tipo proceso</th>
                                      <th>Archivo</th>
                                    <%-- <th>edit</th>--%>
@@ -71,7 +71,7 @@
                             <th>Radicado</th>
                             <th>accionante</th>
                             <th>accionado</th>
-                            <th>Aseso</th>
+                            <th>Estudiante</th>
                             <th>Tipo proceso</th>
                              <th>Archivo</th>
                           <%--  <th>edit</th>--%>
@@ -86,9 +86,5 @@
         </div>
         <!-- /.box -->
     </section>
-
- <%--<a href="#modal-default" class="btn btn-default" id="idmodelddd" data-toggle="modal" data-target="#modal-default"><i class="fa fa-pencil"></i></a>--%>
-
-       
 
 </asp:Content>

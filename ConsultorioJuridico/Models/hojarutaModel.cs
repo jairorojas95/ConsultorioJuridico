@@ -46,10 +46,12 @@ namespace juefi2.Models
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
-        public DataTable traerestudiante()
+        public DataTable traerestudiante(string idsesor )
         {
-            string sql = "select idusuario , concat(usuario.nombre1, ' ', usuario.nombre2, ' ', usuario.apellido1, ' ', usuario.apellido2) as nombre "
-                       + "from usuario where usuario.rol_idrol = 2;";
+            string sql =   " select DISTINCT usuario.idusuario , concat(usuario.nombre1, ' ', usuario.nombre2, ' ', usuario.apellido1, ' ', usuario.apellido2) as nombre "
+                         + "   from proceso "
+                         + "   inner join usuario on usuario.idusuario = proceso.usuario_proceso"
+                         + "   where usuario.rol_idrol = 2  and proceso.usuario_idusuario = '"+ idsesor +"' and proceso.asignacion = 'si'"; 
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }

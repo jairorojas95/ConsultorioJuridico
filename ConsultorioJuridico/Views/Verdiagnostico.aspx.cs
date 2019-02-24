@@ -22,7 +22,7 @@ namespace juefi2.Views
                 {
                     Dropestudiante.DataValueField = "idusuario";
                     Dropestudiante.DataTextField = "nombre";
-                    Dropestudiante.DataSource = diag.ctraerestudiante();
+                    Dropestudiante.DataSource = diag.ctraerestudiante(Session["idusuario"].ToString());
                     Dropestudiante.DataBind();
 
                 }
