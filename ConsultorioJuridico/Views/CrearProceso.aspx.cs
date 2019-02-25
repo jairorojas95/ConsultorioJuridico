@@ -154,7 +154,7 @@ namespace juefi2.Views
          
            
         
-            if (procemo.registrarproceso(procemo) == true)
+            if (proce.Registraproceso(procemo) == true)
             {
 
                 Response.Write("<script> alert('Registro Exitoso'); </script>");
