@@ -200,6 +200,16 @@ namespace juefi2.Views
            
         }
 
+        protected void sss(object sender, EventArgs e)
+        {
+            Response.Write("console.log('s1')");
+        }
+
+        protected void Dropaccionante_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Response.Write("console.log('s2')");
+        }
+
         //protected void lieditar_Command(object sender, CommandEventArgs e)
         //{
         //    Response.Write("<script> alert('hola " + e.CommandArgument + "') </script>");

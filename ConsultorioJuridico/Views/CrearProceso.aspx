@@ -48,7 +48,7 @@
                         <div class="form-group">
                             <label>Accionante</label>
                             <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
-                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server">
+                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" OnSelectedIndexChanged="sss">
                                 <asp:ListItem Value="" Text="      ---- Seleccion ----     "> </asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -61,7 +61,7 @@
                         <div class="form-group">
                             <label>Accionado</label>
                             <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
-                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server">
+                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" OnSelectedIndexChanged="sss">
                                 <asp:ListItem Value="" Text="      ---- Seleccion ----     "> </asp:ListItem>
                             </asp:DropDownList>
                         </div>

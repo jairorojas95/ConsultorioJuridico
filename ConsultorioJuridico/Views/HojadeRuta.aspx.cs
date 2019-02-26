@@ -28,7 +28,6 @@ namespace juefi2.Views
         {
             if (!IsPostBack)
             {
-                agregarhojaderuta.Enabled = false;
 
                 if (Request.Files["UploadedFile"] != null)
                 {
