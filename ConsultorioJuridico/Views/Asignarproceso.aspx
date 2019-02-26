@@ -36,12 +36,12 @@
                                     <th>N°</th>
                                     <th>Nombre</th>
                                     <th>Semestre</th>
-                                    <%-- <th>Radicado</th>
-                                    <th>accionante</th>
+                                     <th>Cantidad</th>
+                                  <%--  <th>accionante</th>
                                     <th>accionado</th>
                                     <th>Aseso</th>
-                                    <th>Tipo proceso</th>--%>
-                                    <th>Asignar</th>
+                                    <th>Tipo proceso</th>
+                                    <th>Asignar</th>--%>
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,6 +52,7 @@
                             <td><%#Eval("idusuario")%></td>
                             <td><%#Eval("nombre")%></td>
                             <td><%#Eval("semestre")%></td>
+                             <td><%#Eval("cantidad")%></td>
                             <%--  <td><%#Eval("nombre2")%></td>
                             <td><%#Eval("accionante")%></td>
                             <td><%#Eval("accionado")%></td>
@@ -68,6 +69,7 @@
                             <th>N°</th>
                             <th>Nombre</th>
                             <th>Semestre</th>
+                              <th>Cantidad</th>
                             <%--  <th>Radicado</th>
                             <th>accionante</th>
                             <th>accionado</th>

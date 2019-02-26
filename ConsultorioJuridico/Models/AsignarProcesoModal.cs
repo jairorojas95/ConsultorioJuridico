@@ -16,7 +16,12 @@ namespace juefi2.Models
 
         public DataTable consultarusuario()
         {
-            string sql = "SELECT  idusuario, semestre, concat(nombre1, ' ',nombre2, ' ',apellido1, ' ', apellido2) as nombre FROM usuario where rol_idrol =2  ; ";
+            string sql = " SELECT idusuario, concat(nombre1, ' ', nombre2, ' ', apellido1, ' ', apellido2) as nombre , usuario.semestre as Semestre, "
+                        + " COUNT(proceso.usuario_proceso) as cantidad "
+                        + " FROM usuario "
+                        + " left JOIN  proceso ON  proceso.usuario_proceso = usuario.idusuario "
+                        + " where usuario.rol_idrol = '2' "
+                        + " GROUP BY usuario.idusuario; ";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
