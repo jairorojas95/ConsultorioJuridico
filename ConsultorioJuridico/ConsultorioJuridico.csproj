@@ -59,6 +59,11 @@
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -6823,6 +6828,7 @@
     <Content Include="Views\CrearProceso.aspx" />
     <Content Include="Views\Diagnostico.aspx" />
     <Content Include="Views\HojaCierre.aspx" />
+    <Content Include="Views\probador\WebForm1.aspx" />
     <Content Include="Views\TipodeDocumento.aspx" />
     <Content Include="Views\usuario\login.aspx" />
     <Content Include="Views\principal.aspx" />
@@ -7338,6 +7344,17 @@
     </Content>
     <Content Include="Views\pagina_maestra\paginamaestra.Master" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\probador\1111.xsc">
+      <DependentUpon>1111.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\probador\1111.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>1111.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\probador\1111.xss">
+      <DependentUpon>1111.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -7470,6 +7487,24 @@
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.designer.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
     </Compile>
+    <Compile Include="Views\probador\1111.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>1111.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\probador\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\probador\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\probador\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\TipodeDocumento.aspx.cs">
       <DependentUpon>TipodeDocumento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -7524,7 +7559,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="archivos\" />
     <Folder Include="Content\stilos\estiloiconos\" />
-    <Folder Include="Views\probador\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Content\stilos\estiloadmin\bower_components\fullcalendar\dist\fullcalendar.d.ts" />
@@ -7532,6 +7566,13 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\probador\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
