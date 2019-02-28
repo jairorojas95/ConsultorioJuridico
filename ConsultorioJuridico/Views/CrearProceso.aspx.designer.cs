@@ -67,13 +67,13 @@ namespace juefi2.Views {
         protected global::System.Web.UI.WebControls.FileUpload MyFile;
         
         /// <summary>
-        /// Control Btn_Guardar.
+        /// Control BTnguardar222.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_Guardar;
+        protected global::System.Web.UI.WebControls.LinkButton BTnguardar222;
         
         /// <summary>
         /// Control nombre1.

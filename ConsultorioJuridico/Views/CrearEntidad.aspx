@@ -30,7 +30,7 @@
                     <div class="form-group">
 
                         <label>Procesos</label><br />
-                        <asp:DropDownList ID="Dropproceso" CssClass="form-control select2 text-center"   AppendDataBoundItems="true"  runat="server" AutoPostBack="true" required>
+                        <asp:DropDownList ID="Dropproceso" CssClass="form-control select2 text-center"   AppendDataBoundItems="true"  runat="server" AutoPostBack="true" >
                             <asp:ListItem Value=""> ------- seleccioné ------ </asp:ListItem>
 
                         </asp:DropDownList>

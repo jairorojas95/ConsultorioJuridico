@@ -21,10 +21,6 @@ namespace juefi2.Views
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           
-
-
-
             if (!Page.IsPostBack)
             {
                 if (Request.Files["UploadedFile"] != null)
@@ -137,56 +133,7 @@ namespace juefi2.Views
 
         }
 
-       
-        protected void Btn_Guardar_proceso_Click(object sender, EventArgs e)
-        {
-            if (MyFile.HasFile)
-            {
-                ViewState["Ruta"] = "~/archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
-                MyFile.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
-                procemo.archivo = ViewState["Ruta"].ToString();
-
-            }
-            procemo.radicado = Textradicado.Text;
-            procemo.accionante = Dropaccionante.SelectedItem.Text;
-            procemo.accionado = Dropaccionado.SelectedItem.Text;
-            procemo.asesor = Dropasesor.SelectedValue;
-            procemo.tipo_proceso = droplisproceso.SelectedValue;
-         
-        
-            if (proce.Registraproceso(procemo) == true)
-            {
-                Response.Write("<script> alert('Registro Exitoso'); </script>");
-                Textradicado.Text = "";
-                Dropasesor.SelectedIndex = 0;
-                droplisproceso.SelectedIndex = 0;
-                Dropaccionado.SelectedIndex = 0;
-                Dropaccionante.SelectedIndex = 0;
-            }
-            else
-            {
-                Response.Write("<script> alert('verifique Datos  '); </script>");
-                return;
-            }
-        }
-
-        //public bool validar()
-        //{
-        //    bool bien = false;
-        //    if(Textradicado.Text.Length == 0)
-        //    {
-        //        Response.Write("<script> alert('verifique Datos  '); </script>");
-        //    }else if (Dropasesor.SelectedIndex.Equals(0))
-        //    {
-        //        Response.Write("<script> alert('verifique Datos  '); </script>");
-        //    }else
-        //    {
-        //        bien = true;
-        //    }
-
-
-        //    return bien;
-        //}
+    
 
         protected void Guardar_juridico_Click(object sender, EventArgs e)
         {
@@ -221,14 +168,62 @@ namespace juefi2.Views
 
         }
 
-        //protected void lieditar_Command(object sender, CommandEventArgs e)
+        //protected void Btn_Guardar_Click(object sender, EventArgs e)
         //{
-        //    Response.Write("<script> alert('hola " + e.CommandArgument + "') </script>");
+        //    if (MyFile.HasFile)
+        //    {
+        //        ViewState["Ruta"] = "~/archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
+        //        MyFile.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+        //        procemo.archivo = ViewState["Ruta"].ToString();
+
+        //    }
+        //    procemo.radicado = Textradicado.Text;
+        //    procemo.accionante = Dropaccionante.SelectedItem.Text;
+        //    procemo.accionado = Dropaccionado.SelectedItem.Text;
+        //    procemo.asesor = Dropasesor.SelectedValue;
+        //    procemo.tipo_proceso = droplisproceso.SelectedValue;
+        //    proce.Registraproceso(procemo);
         //}
 
-        //protected void consultaproceso_ItemCommand(object source, RepeaterCommandEventArgs e)
-        //{
+        protected void BTnguardar222_Click(object sender, EventArgs e)
+        {
 
-        //}
+
+            if (MyFile.HasFile)
+            {
+                ViewState["Ruta"] = "~/archivos/" + System.IO.Path.GetFileName(MyFile.FileName);
+                MyFile.SaveAs(Server.MapPath(ViewState["Ruta"].ToString()));
+                procemo.archivo = ViewState["Ruta"].ToString();
+
+            }
+            procemo.radicado = Textradicado.Text;
+            procemo.accionante = Dropaccionante.SelectedItem.Text;
+            procemo.accionado = Dropaccionado.SelectedItem.Text;
+            procemo.asesor = Dropasesor.SelectedValue;
+            procemo.tipo_proceso = droplisproceso.SelectedValue;
+            
+       
+
+        if (proce.Registraproceso(procemo) == true)
+        {
+            Response.Write("<script> alert('Registro Exitoso'); </script>");
+
+
+
+            Textradicado.Text = "";
+            Dropasesor.SelectedIndex = 0;
+            droplisproceso.SelectedIndex = 0;
+            Dropaccionado.SelectedIndex = 0;
+            Dropaccionante.SelectedIndex = 0;
+
+        }
+        else
+        {
+            Response.Write("<script> alert('verifique Datos  '); </script>");
+            return;
+        }
+
+
+    }
     }
 }

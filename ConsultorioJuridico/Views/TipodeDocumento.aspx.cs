@@ -16,10 +16,15 @@ namespace juefi2.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Dropdocument.DataTextField = "nombre_ducumento";
-            Dropdocument.DataValueField = "idtipo_documento";
-            Dropdocument.DataSource = dinacont.consultardocm();
-            Dropdocument.DataBind();
+            if (!IsPostBack)
+            {
+                Dropdocument.Items.Clear();
+                Dropdocument.DataTextField = "nombre_ducumento";
+                Dropdocument.DataValueField = "idtipo_documento";
+                Dropdocument.DataSource = dinacont.consultardocm();
+                Dropdocument.DataBind();
+            }
+        
         }
 
         protected void guardar_Click(object sender, EventArgs e)
@@ -28,9 +33,10 @@ namespace juefi2.Views
 
             if (dinacont.registro_docum(dianmode) == true)
             {
-
-                Response.Write("<script> alert('Registro Exitoso'); </script>");
-                Txnuevodocumen.Text = "";
+                Response.Redirect("../Views/TipodeDocumento.aspx");
+                //Response.Write("<script> alert('Registro Exitoso'); </script>");
+                //Txnuevodocumen.Text = "";
+                
 
                 return;
 

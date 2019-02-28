@@ -29,7 +29,7 @@
                     <div class="col-md-6  ">
                         <div class="form-group">
                             <label>Tipo de Proceso</label>
-                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center " required AppendDataBoundItems="true" runat="server" AutoPostBack="true">
+                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center "  AppendDataBoundItems="true" runat="server" AutoPostBack="true" required>
                                 <asp:ListItem Value=""> ---- Seleccion ----</asp:ListItem>
                             </asp:DropDownList>
 
@@ -40,7 +40,7 @@
                         <div class="form-group">
                             <label>Asesor</label>
 
-                            <asp:DropDownList ID="Dropasesor" CssClass="form-control select2 text-center " required AppendDataBoundItems="true" runat="server">
+                            <asp:DropDownList ID="Dropasesor" CssClass="form-control select2 text-center "  AppendDataBoundItems="true" runat="server" required>
                                 <asp:ListItem Value="">      ---- Seleccion ----     </asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -52,7 +52,7 @@
                         <div class="form-group">
                             <label>Accionante</label>
                             <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
-                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2 text-center" AppendDataBoundItems="true" required runat="server" OnSelectedIndexChanged="Dropaccionante_SelectedIndexChanged1" AutoPostBack="true" >
+                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2 text-center" AppendDataBoundItems="true"  runat="server" required OnSelectedIndexChanged="Dropaccionante_SelectedIndexChanged1" AutoPostBack="true" >
                                 <asp:ListItem Value="">  ---- Seleccion ---- </asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -65,7 +65,7 @@
                         <div class="form-group">
                             <label>Accionado</label>
                             <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
-                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" required>
+                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" required >
                                 <asp:ListItem Value="">      ---- Seleccion ----     </asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -79,14 +79,14 @@
                         <div class="form-group">
 
                             <label>Radicado </label>
-                            <asp:TextBox ID="Textradicado" runat="server" required CssClass=" form-control"></asp:TextBox>
+                            <asp:TextBox ID="Textradicado" runat="server"  CssClass=" form-control" required></asp:TextBox>
                         </div>
                     </div>
 
                     <div class="col-md-6 ">
                         <div class="form-group">
                             <label for="file">Filename:</label>
-                            <asp:FileUpload ID="MyFile" required runat="server" />
+                            <asp:FileUpload ID="MyFile"  runat="server" required />
                         </div>
                     </div>
                 </div>
@@ -94,9 +94,10 @@
                 <div class="box box-primary text-center">
                     <div class="box-header with-border">
 
-                        <asp:Button ID="Btn_Guardar" CssClass="btn btn-primary" OnClick="Btn_Guardar_proceso_Click" runat="server" Text="Registrar Proceso"></asp:Button>
-
+                        <%--<asp:Button ID="Btn_Guardar" CssClass="btn btn-primary" OnClick="Btn_Guardar_Click" runat="server" Text="Registrar Proceso"></asp:Button>--%>
+                        <asp:LinkButton ID="BTnguardar222" CssClass="btn btn-primary" OnClick="BTnguardar222_Click" runat="server" Text="guardar"></asp:LinkButton>
                     </div>
+                    
                 </div>
 
                 <div class="modal fade" id="lamodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
