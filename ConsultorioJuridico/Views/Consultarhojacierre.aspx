@@ -64,9 +64,10 @@
                         <td><%#Eval("terminancion")%></td>
                         <td><%#Eval("asunto")%></td>
                         <td>
-                            <asp:LinkButton ID="observacion" runat="server" CssClass="btn btn-primary btn-sm " OnCommand="observacion_Command" CommandArgument='<%#Eval("idhoja_cierre")%>' CommandName="id">Observacion</asp:LinkButton>
-                            <asp:LinkButton ID="aceptar" runat="server" CssClass="btn btn-primary btn-sm" OnCommand="aceptar_Command" CommandArgument='<%#Eval("idproceso")%>' CommandName="id">Aceptar </asp:LinkButton>
+                            <asp:LinkButton ID="aceptar" runat="server" CssClass="btn btn-primary btn-sm" OnCommand="aceptar_Command1" CommandArgument='<%#Eval("idproceso")%>' CommandName="id">Aceptar </asp:LinkButton>
 
+                            <asp:LinkButton ID="observacion" runat="server" CssClass="btn btn-primary btn-sm " OnCommand="observacion_Command" CommandArgument='<%#Eval("idhoja_cierre")%>' CommandName="id">Observacion</asp:LinkButton>
+                            
                         </td>
 
                     </tr>

@@ -62,6 +62,13 @@ namespace juefi2.Controllers
 
         }
 
+        public DataTable traeraimplicados2(string id)
+
+        {
+            return proce.traeraccionante22(id);
+
+        }
+
         public DataTable consultarproce()
 
         {

@@ -1,0 +1,136 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/PrivateViews/admin.Master" AutoEventWireup="true" CodeBehind="Noticia.aspx.cs" Inherits="Proyecto.Views.PrivateViews.Noticia" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <section class="content-header">
+        <div class="col-xs-6"><h3 style="margin-top:5px">NOTICIAS</h3></div>
+        <div class="col-xs-6 text-right"><a href="registrar_noticia.aspx" class="btn btn-success">Registrar nueva</a></div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Todas las noticias</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive">
+                        <asp:Repeater ID="Rep_Noticias" runat="server">
+                            <HeaderTemplate>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>NOMBRE</th>
+                                            <th>FECHA DE PUBLICACIÓN</th>
+                                            <th>ESTADO</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                    <tr>
+                                        <td><%#Eval("NOMBRE")%></td>
+                                        <td><%#Eval("FECHA")%></td>
+                                        <td><%#Eval("ESTADO")%></td>
+                                        <td>
+                                           <a href="Detalle_Noticia.aspx?Valor=<%#Eval("ID")%>"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                       </td>
+                                    </tr>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                       <th>NOMBRE</th>
+                                       <th>FECHA DE PUBLICACIÓN</th>
+                                       <th>ESTADO</th>
+                                       <th></th>
+                                    </tr>
+                                </tfoot>
+                                </table>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    
+</asp:Content>
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+        <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Consultar Proceso</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive">
+                        <asp:Repeater ID="Rep_Noticias" runat="server">
+                            <HeaderTemplate>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>N°</th>
+                                            <th>Radicado</th>
+                                            <th>accionante</th>
+                                            <th>accionado</th>
+                                            <th>Aseso</th>
+                                            <th>Tipo proceso</th>
+                                            <th>edit</th>
+
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                    <tr>
+                                       <td><%# Eval("idproceso") %></td>
+                                        <td><%# Eval("radicado_proceso") %></td>
+                                        <td><%# Eval("accionante") %></td>
+                                        <td><%# Eval("accionado") %></td>
+                                        <td><%# Eval("asesor") %></td>
+                                        <td><%# Eval("nombre_tipo") %></td>
+
+                                        
+                                       </td>
+                                    </tr>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>N°</th>
+                                            <th>Radicado</th>
+                                            <th>accionante</th>
+                                            <th>accionado</th>
+                                            <th>Aseso</th>
+                                            <th>Tipo proceso</th>
+                                            <th>edit</th>
+                                       <th></th>
+                                    </tr>
+                                </tfoot>
+                                </table>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>

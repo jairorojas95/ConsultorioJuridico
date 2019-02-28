@@ -28,9 +28,9 @@
                 <div class="col-md-6  ">
                     <div class="form-group">
 
-                        <label>Estudiantes</label><br />
-                        <asp:DropDownList ID="Dropdocument" CssClass="form-control select2 text-center" runat="server" AutoPostBack="true">
-                            <asp:ListItem Value="0"> ------- seleccioné ------ </asp:ListItem>
+                        <label>Documento</label><br />
+                        <asp:DropDownList ID="Dropdocument" CssClass="form-control select2 text-center"  AppendDataBoundItems="true"  runat="server" AutoPostBack="true" required>
+                            <asp:ListItem Value=""> ------- seleccioné ------ </asp:ListItem>
 
                         </asp:DropDownList>
                     </div>
@@ -40,8 +40,8 @@
 
                 <div class="col-md-6 ">
                     <div class="form-group">
-                        <label>Nombre del Nuevo Proceso</label>
-                        <asp:TextBox ID="Txnuevodocumen" runat="server" CssClass=" form-control"></asp:TextBox>
+                        <label>Nombre del Nuevo Documento</label>
+                        <asp:TextBox ID="Txnuevodocumen" runat="server" CssClass=" form-control" required></asp:TextBox>
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@
                 <div class="col-md-6 ">
                     <div class="form-group">
                         <br />
-                        <center> <asp:Button ID="guardar"  CssClass="btn btn-primary" runat="server" Text="Crear Tipo Proceso" OnClick="guardar_Click"></asp:Button>
+                        <center> <asp:Button ID="guardar"  CssClass="btn btn-primary" runat="server" Text="Crear Tipo Proceso" OnClick="guardar_Click" ></asp:Button>
                     </div>
                 </div>
             </div>

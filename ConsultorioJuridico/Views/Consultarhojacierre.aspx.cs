@@ -15,6 +15,15 @@ namespace juefi2.Views
         HojaCierreController hojacont = new HojaCierreController();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Dropestudiante.SelectedValue.Equals("0"))
+            {
+
+
+                diagnostico.DataSource = hojacont.consultarhoja(Dropestudiante.SelectedValue);
+                diagnostico.DataBind();
+
+            }
+
             if (!IsPostBack)
             {
                 try
@@ -44,14 +53,7 @@ namespace juefi2.Views
 
         protected void Dropestudiante_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!Dropestudiante.SelectedValue.Equals("0"))
-            {
-
-
-                diagnostico.DataSource = hojacont.consultarhoja(Dropestudiante.SelectedValue);
-                diagnostico.DataBind();
-
-            }
+           
         }
 
         protected void Agregar_observacion_Click(object sender, EventArgs e)
@@ -63,14 +65,13 @@ namespace juefi2.Views
             observa.Text = "";
         }
 
-        protected void aceptar_Command(object sender, CommandEventArgs e)
+       
+
+        protected void aceptar_Command1(object sender, CommandEventArgs e)
         {
-           
-                ViewState["idproce"] = e.CommandArgument.ToString();
-                hojamodal.id = ViewState["idproce"].ToString();
-                hojacont.actualizaproceso(hojamodal);
-
-
+            ViewState["idproce"] = e.CommandArgument.ToString();
+            hojamodal.id = ViewState["idproce"].ToString();
+            hojacont.actualizaproceso(hojamodal);
 
         }
     }

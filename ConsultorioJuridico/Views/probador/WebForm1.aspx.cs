@@ -27,11 +27,12 @@ namespace juefi2.Views.probador
                                              + " inner join tipo_proceso on tipo_proceso.idtipo_proceso = proceso.fk_tipoproceso ; ", CommandType.Text);
 
 
-            opt.SetDataSource(objdattable);
+          opt.SetDataSource(objdattable);
            CrystalReportViewer1.ReportSource = opt;
            CrystalReportViewer1.Width = 800;
            CrystalReportViewer1.Height = 800;
 
         }
     }
+        
 }

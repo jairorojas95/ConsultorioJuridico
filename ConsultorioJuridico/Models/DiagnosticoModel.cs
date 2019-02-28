@@ -33,7 +33,7 @@ namespace juefi2.Models
             string sql = "SELECT idproceso , concat( radicado_proceso,' -','    Proceso: ', tipo_proceso.nombre_tipo ) as nombre FROM proceso "
                          + " inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso "
                          + " inner join usuario on proceso.usuario_idusuario = usuario.idusuario "
-                         + " where proceso.asignacion = 'si' and proceso.usuario_proceso = '"+ idusuario + "' ; ";
+                         + " where proceso.asignacion = 'si' and proceso.usuario_proceso = '"+ idusuario + "' and estado='abierto' ; ";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
@@ -50,7 +50,7 @@ namespace juefi2.Models
                        + " inner join diagnostico on proceso.idproceso = diagnostico.fk_proceso "
                        + "inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso "
                        + " inner join usuario on proceso.usuario_idusuario = usuario.idusuario "
-                       + " WHERE proceso.usuario_proceso = " + id + "; ";
+                       + " WHERE proceso.usuario_proceso = " + id + " and estado='abierto'; ";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }

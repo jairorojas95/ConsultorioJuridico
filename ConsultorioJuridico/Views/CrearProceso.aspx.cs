@@ -20,7 +20,12 @@ namespace juefi2.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
+
+           
+
+
+
+            if (!Page.IsPostBack)
             {
                 if (Request.Files["UploadedFile"] != null)
                 {
@@ -35,44 +40,44 @@ namespace juefi2.Views
                         //Handle errors 
                     }
                 }
+
+
                 try
-            {
-                    droplisproceso.DataValueField = "idtipo_proceso";
-                    droplisproceso.DataTextField = "nombre_tipo";
-                    droplisproceso.DataSource = proce.consultarproces();
-                    droplisproceso.DataBind();
-                                                                      
-                    Dropasesor.DataValueField = "idusuario";
-                    Dropasesor.DataTextField = "nombre";
-                    Dropasesor.DataSource = proce.traerdocentes();
-                    Dropasesor.DataBind();
+                {
 
-
-                   
                     Dropaccionante.DataTextField = "nombre";
                     Dropaccionante.DataValueField = "idpersona";
                     Dropaccionante.DataSource = proce.traeraimplicados();
                     Dropaccionante.DataBind();
-
-                    Dropaccionado.DataTextField = "nombre";
-                    Dropaccionado.DataValueField = "idpersona";
-                    Dropaccionado.DataSource = proce.traeraimplicados();
-                    Dropaccionado.DataBind();
 
                     DropDownRepresentante.DataTextField = "nombre";
                     DropDownRepresentante.DataValueField = "idpersona";
                     DropDownRepresentante.DataSource = proce.traeraimplicados();
                     DropDownRepresentante.DataBind();
 
+
+                    droplisproceso.DataValueField = "idtipo_proceso";
+                    droplisproceso.DataTextField = "nombre_tipo";
+                    droplisproceso.DataSource = proce.consultarproces();
+                    droplisproceso.DataBind();
+
+
+                    Dropasesor.DataValueField = "idusuario";
+                    Dropasesor.DataTextField = "nombre";
+                    Dropasesor.DataSource = proce.traerdocentes();
+                    Dropasesor.DataBind();
+
+
                     DropDowndocument.DataValueField = "idtipo_documento";
                     DropDowndocument.DataTextField = "nombre_ducumento";
                     DropDowndocument.DataSource = proce.consultardocumento();
                     DropDowndocument.DataBind();
 
-            }
-            catch (Exception ex)
-            {
-            }
+                }
+                catch (Exception ex)
+                {
+                }
+
             }
 
         }
@@ -147,36 +152,41 @@ namespace juefi2.Views
             procemo.accionado = Dropaccionado.SelectedItem.Text;
             procemo.asesor = Dropasesor.SelectedValue;
             procemo.tipo_proceso = droplisproceso.SelectedValue;
-          
-           
-
-
          
-           
         
             if (proce.Registraproceso(procemo) == true)
             {
-
                 Response.Write("<script> alert('Registro Exitoso'); </script>");
-
                 Textradicado.Text = "";
-
+                Dropasesor.SelectedIndex = 0;
+                droplisproceso.SelectedIndex = 0;
+                Dropaccionado.SelectedIndex = 0;
+                Dropaccionante.SelectedIndex = 0;
             }
             else
             {
-
-
                 Response.Write("<script> alert('verifique Datos  '); </script>");
                 return;
             }
-
-
-
-
-           
-
-
         }
+
+        //public bool validar()
+        //{
+        //    bool bien = false;
+        //    if(Textradicado.Text.Length == 0)
+        //    {
+        //        Response.Write("<script> alert('verifique Datos  '); </script>");
+        //    }else if (Dropasesor.SelectedIndex.Equals(0))
+        //    {
+        //        Response.Write("<script> alert('verifique Datos  '); </script>");
+        //    }else
+        //    {
+        //        bien = true;
+        //    }
+
+
+        //    return bien;
+        //}
 
         protected void Guardar_juridico_Click(object sender, EventArgs e)
         {
@@ -200,14 +210,15 @@ namespace juefi2.Views
            
         }
 
-        protected void sss(object sender, EventArgs e)
-        {
-            Response.Write("console.log('s1')");
-        }
+      
 
-        protected void Dropaccionante_SelectedIndexChanged(object sender, EventArgs e)
+        protected void Dropaccionante_SelectedIndexChanged1(object sender, EventArgs e)
         {
-            Response.Write("console.log('s2')");
+            Dropaccionado.DataTextField = "nombre";
+            Dropaccionado.DataValueField = "idpersona";
+            Dropaccionado.DataSource = proce.traeraimplicados2(Dropaccionante.SelectedValue);
+            Dropaccionado.DataBind();
+
         }
 
         //protected void lieditar_Command(object sender, CommandEventArgs e)

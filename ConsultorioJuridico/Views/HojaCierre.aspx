@@ -30,7 +30,7 @@
                 <div class="col-md-6 ">
                     <div class="form-group">
                         <label>Proceso</label>
-                        <asp:DropDownList ID="Droproceso" CssClass="form-control select2" AppendDataBoundItems="true" runat="server">
+                        <asp:DropDownList ID="Droproceso" CssClass="form-control select2" AppendDataBoundItems="true" runat="server" required>
                             <asp:ListItem >------seleccioné------</asp:ListItem>
                             </asp:DropDownList>
                     </div>
@@ -42,7 +42,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <asp:TextBox  runat="server" TextMode="Date" CssClass="form-control" ID="datepicker1" />
+                            <asp:TextBox  runat="server" TextMode="Date" CssClass="form-control" ID="datepicker1" required />
                         </div>
                     </div>
                 </div>
@@ -68,12 +68,12 @@
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Motivo de Terminación</label>
-                                    <asp:TextBox runat="server" CssClass="form-control rounded-0" ID="terminacion" TextMode="MultiLine" Rows="10"></asp:TextBox>
+                                    <asp:TextBox runat="server" CssClass="form-control rounded-0" ID="terminacion" TextMode="MultiLine" Rows="10" required></asp:TextBox>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="comment">Naturaleza del Asunto</label>
-                                    <asp:TextBox  runat="server" CssClass="form-control" Rows="5" TextMode="MultiLine" ID="asunto"></asp:TextBox>
+                                    <asp:TextBox  runat="server" CssClass="form-control" Rows="5" TextMode="MultiLine" ID="asunto" required></asp:TextBox>
                                 </div>
                             </div>
                         </div>

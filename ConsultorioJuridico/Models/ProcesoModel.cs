@@ -121,6 +121,13 @@ namespace juefi2.Models
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
+        public DataTable traeraccionante22(string id)
+        {
+            string sql = "SELECT  idpersona, concat(nombre1, ' ',nombre2, ' ',apellido1, ' ', apellido2) as nombre FROM persona where idpersona != '"+id+"' ; ";
+
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
+
         public DataTable consultarestudiante()
         {
             string sql = "SELECT idusuario, concat(nombre1, ' ',nombre2, ' ',apellido1, ' ', apellido2,'-' ,' Semestre:',semestre) as nombre FROM usuario where rol_idrol =2  ; ";

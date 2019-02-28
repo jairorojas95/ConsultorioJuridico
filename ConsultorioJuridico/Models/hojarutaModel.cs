@@ -29,7 +29,7 @@ namespace juefi2.Models
         {
             string sql = "SELECT idproceso , concat( radicado_proceso,' -','    Proceso: ', tipo_proceso.nombre_tipo ) as nombre FROM proceso "
                          + " inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso "
-                         + " where proceso.asignacion = 'si' and proceso.usuario_proceso = '" + idusuario + "' ; ";
+                         + " where proceso.asignacion = 'si' and proceso.usuario_proceso = '" + idusuario + "'  and estado='abierto' ; ";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
@@ -41,7 +41,7 @@ namespace juefi2.Models
                        + " from proceso "
                        + " inner join tipo_proceso on proceso.fk_tipoproceso = tipo_proceso.idtipo_proceso "
                        + " inner join usuario on proceso.usuario_idusuario = usuario.idusuario "
-                       + " inner join hoja_ruta on proceso.idproceso = hoja_ruta.proceso_idproceso where  idproceso = "+ id +"; ";
+                       + " inner join hoja_ruta on proceso.idproceso = hoja_ruta.proceso_idproceso where  idproceso = "+ id + " and estado='abierto'; ";
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
@@ -51,7 +51,7 @@ namespace juefi2.Models
             string sql =   " select DISTINCT usuario.idusuario , concat(usuario.nombre1, ' ', usuario.nombre2, ' ', usuario.apellido1, ' ', usuario.apellido2) as nombre "
                          + "   from proceso "
                          + "   inner join usuario on usuario.idusuario = proceso.usuario_proceso"
-                         + "   where usuario.rol_idrol = 2  and proceso.usuario_idusuario = '"+ idsesor +"' and proceso.asignacion = 'si'"; 
+                         + "   where usuario.rol_idrol = 2  and proceso.usuario_idusuario = '"+ idsesor + "' and proceso.asignacion = 'si' ;"; 
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }

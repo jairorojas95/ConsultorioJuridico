@@ -26,7 +26,7 @@
                     <div class="form-group">
 
                         <label>Proceso</label><br />
-                        <asp:DropDownList ID="Droproceso" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" OnSelectedIndexChanged="Droproceso_SelectedIndexChanged" AutoPostBack="true">
+                        <asp:DropDownList ID="Droproceso" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" OnSelectedIndexChanged="Droproceso_SelectedIndexChanged" AutoPostBack="true" required>
                             <asp:ListItem Value="0"> ------- seleccioné ------ </asp:ListItem>
 
                         </asp:DropDownList>

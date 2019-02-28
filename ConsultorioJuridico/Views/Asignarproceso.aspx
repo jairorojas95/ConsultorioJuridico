@@ -102,8 +102,8 @@
                         <div class="form-group">
                             <br />
                             <label>Proceso</label><br />
-                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center" sAppendDataBoundItems="true" runat="server">
-                                <asp:ListItem>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------- seleccioné ------ &nbsp;&nbsp;&nbsp;&nbsp;&nbp; </asp:ListItem>
+                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center" AppendDataBoundItems="true"  sAppendDataBoundItems="true" runat="server" required>
+                              <asp:ListItem Value=""> ---- Seleccion ----</asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>
