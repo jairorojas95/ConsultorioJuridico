@@ -15,7 +15,7 @@ namespace juefi2.Models
         public string accionante { get; set; }
         public string accionado{ get; set; }
         public string tipo_proceso { get; set; }
-        public string asesor { get; set; }
+        public string asunto { get; set; }
 
 
 
@@ -42,7 +42,7 @@ namespace juefi2.Models
         public bool registrarproceso(ProcesoModel obj)
         {
 
-            string sqlee = "INSERT INTO proceso (radicado_proceso,accionante,accionado,usuario_idusuario,fk_tipoproceso,archivos )  VALUES('" + obj.radicado + "','" + obj.accionante + "','" + obj.accionado + "','" + obj.asesor + "','" + obj.tipo_proceso + "','" + obj.archivo + "');";
+            string sqlee = "INSERT INTO proceso (radicado_proceso,accionante,accionado,asunto,fk_tipoproceso,archivos )  VALUES('" + obj.radicado + "','" + obj.accionante + "','" + obj.accionado + "','" + obj.asunto + "','" + obj.tipo_proceso + "','" + obj.archivo + "');";
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
 

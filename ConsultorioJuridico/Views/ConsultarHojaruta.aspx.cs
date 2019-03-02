@@ -29,7 +29,7 @@ namespace juefi2.Views
                     Dropestudiante.DataBind();
                     
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
 
                 }
@@ -51,7 +51,7 @@ namespace juefi2.Views
                         Droproceso.DataSource = hojacont.llenarproceso(Dropestudiante.SelectedValue.ToString());
                         Droproceso.DataBind();
                     }
-                    catch (Exception ex)
+                    catch (Exception )
                     {
 
                     }

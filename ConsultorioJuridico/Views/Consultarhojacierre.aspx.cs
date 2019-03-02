@@ -34,7 +34,7 @@ namespace juefi2.Views
                     Dropestudiante.DataBind();
 
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
 
                 }

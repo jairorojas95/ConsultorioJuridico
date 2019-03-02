@@ -31,7 +31,7 @@ namespace juefi2.Views
 
                                   
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                 }
 

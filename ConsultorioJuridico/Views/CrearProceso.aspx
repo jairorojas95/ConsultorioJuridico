@@ -9,7 +9,7 @@
         <div class="box box-primary">
             <div class="toolbar__nav">
                 <a href="/Views/principal.aspx">
-                    <h5><i class="fa fa-home">&nbsp;</i>Inicio <span>>> </span><a href='#'><i class="fa fa-institution">&nbsp;</i>Registrar Proceso</h5>
+                    <h5><i class="fa fa-home">&nbsp;</i>Inicio <span>>> </span><a href='#' /><i class="fa fa-institution">&nbsp;</i>Registrar Proceso</h5>
                     <br />
                 </a>
             </div>
@@ -22,29 +22,31 @@
             <div class="box box-primary">
                 <div class="box-header with-border text-center">
                     <b class="box-title">Registrar Proceso</b>
-                    </center>
+
                 </div>
                 <div class="box-body">
 
                     <div class="col-md-6  ">
-                        <div class="form-group">
+                        <div class="form-group ">
                             <label>Tipo de Proceso</label>
-                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center "  AppendDataBoundItems="true" runat="server" AutoPostBack="true" required>
+                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center " AppendDataBoundItems="true" runat="server" required="">
                                 <asp:ListItem Value=""> ---- Seleccion ----</asp:ListItem>
                             </asp:DropDownList>
 
                         </div>
                     </div>
 
-                    <div class="col-md-6  ">
-                        <div class="form-group">
-                            <label>Asesor</label>
+               
 
-                            <asp:DropDownList ID="Dropasesor" CssClass="form-control select2 text-center "  AppendDataBoundItems="true" runat="server" required>
-                                <asp:ListItem Value="">      ---- Seleccion ----     </asp:ListItem>
-                            </asp:DropDownList>
+
+                           <div class="col-md-6 ">
+                        <div class="form-group">
+
+                            <label>Radicado </label>
+                            <asp:TextBox ID="Textradicado" runat="server" CssClass=" form-control" required=""></asp:TextBox>
                         </div>
                     </div>
+
 
 
 
@@ -52,7 +54,7 @@
                         <div class="form-group">
                             <label>Accionante</label>
                             <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
-                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2 text-center" AppendDataBoundItems="true"  runat="server" required OnSelectedIndexChanged="Dropaccionante_SelectedIndexChanged1" AutoPostBack="true" >
+                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" required="" OnSelectedIndexChanged="Dropaccionante_SelectedIndexChanged1" AutoPostBack="true">
                                 <asp:ListItem Value="">  ---- Seleccion ---- </asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -65,7 +67,7 @@
                         <div class="form-group">
                             <label>Accionado</label>
                             <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
-                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" required >
+                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" required="">
                                 <asp:ListItem Value="">      ---- Seleccion ----     </asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -75,18 +77,18 @@
 
 
 
-                    <div class="col-md-6 ">
+             
+                    <div class="col-md-12 ">
                         <div class="form-group">
-
-                            <label>Radicado </label>
-                            <asp:TextBox ID="Textradicado" runat="server"  CssClass=" form-control" required></asp:TextBox>
+                            <label for="comment">Naturaleza del Asunto</label>
+                            <asp:TextBox runat="server" CssClass="form-control" Rows="5" TextMode="MultiLine" ID="asunto" required=""></asp:TextBox>
                         </div>
                     </div>
 
                     <div class="col-md-6 ">
                         <div class="form-group">
-                            <label for="file">Filename:</label>
-                            <asp:FileUpload ID="MyFile"  runat="server" required />
+                            <label for="file">Archivo Soporte:</label>
+                            <asp:FileUpload ID="MyFile" runat="server" required="" accept="application/msword, application/pdf" />
                         </div>
                     </div>
                 </div>
@@ -97,7 +99,7 @@
                         <%--<asp:Button ID="Btn_Guardar" CssClass="btn btn-primary" OnClick="Btn_Guardar_Click" runat="server" Text="Registrar Proceso"></asp:Button>--%>
                         <asp:LinkButton ID="BTnguardar222" CssClass="btn btn-primary" OnClick="BTnguardar222_Click" runat="server" Text="guardar"></asp:LinkButton>
                     </div>
-                    
+
                 </div>
 
                 <div class="modal fade" id="lamodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
@@ -139,28 +141,29 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title" id="exampleModalLabel">Datos Persona</h4>
                                 </div>
+
                                 <div class="box-body">
                                     <div class="modal-body">
                                         <div id="datos_ajax_register"></div>
                                         <div class="col-md-6  ">
                                             <label for="nom1" class="control-label">Primer Nombre</label>
-                                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombre1" name="codigo" MaxLength="45" required />
+                                            <asp:TextBox runat="server"  class="form-control" ID="nombre1" name="codigo" MaxLength="45" required="" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="nom2" class="control-label">Segundo Nombre</label>
-                                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombre2" name="nombre" MaxLength="45" required />
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombre2" name="nombre" MaxLength="45" required="" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="apelli1" class="control-label">Primer Apellido</label>
-                                            <asp:TextBox runat="server" type="text" class="form-control" ID="apellido1" name="moneda" MaxLength="45" required />
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="apellido1" name="moneda" MaxLength="45" required="" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="apelli2" class="control-label">Segundo Apellido</label>
-                                            <asp:TextBox runat="server" type="text" class="form-control" ID="apellido2" name="capital" MaxLength="45" required />
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="apellido2" name="capital" MaxLength="45" required="" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label>Tipo de documento</label>
-                                            <asp:DropDownList ID="DropDowndocument" CssClass="form-control text-center " AppendDataBoundItems="true" runat="server" required>
+                                            <asp:DropDownList ID="DropDowndocument" CssClass="form-control text-center " AppendDataBoundItems="true" runat="server" required="">
                                                 <asp:ListItem Value="" Text="      ---- Seleccion ----     "> </asp:ListItem>
                                             </asp:DropDownList>
 
@@ -168,15 +171,15 @@
 
                                         <div class="col-md-6  ">
                                             <label for="T_doc" class="control-label">Documento</label>
-                                            <asp:TextBox runat="server" type="text" class="form-control" ID="documento" name="continente" MaxLength="45" required />
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="documento" name="continente" MaxLength="45" required="" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="documento" class="control-label">Direccion</label>
-                                            <asp:TextBox runat="server" type="text" class="form-control" ID="direccion" name="continente" MaxLength="45" required />
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="direccion" name="continente" MaxLength="45" required="" />
                                         </div>
                                         <div class="col-md-6  ">
                                             <label for="tel" class="control-label">Telefono</label>
-                                            <asp:TextBox runat="server" type="text" class="form-control" ID="telefono" name="continente" MaxLength="45"  />
+                                            <asp:TextBox runat="server" type="text" class="form-control" ID="telefono" name="continente" MaxLength="45" />
                                         </div>
                                     </div>
 
@@ -193,6 +196,7 @@
                         </div>
 
                     </div>
+               
 
                     <div class="modal fade" id="dataRegister2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-keyboard="false" data-backdrop="static">
                         <div class="modal-dialog" role="document">
@@ -206,17 +210,17 @@
                                     <div id="datos_ajax_register2"></div>
                                     <div class="col-md-6  ">
                                         <label for="tel" class="control-label">Nit</label>
-                                        <asp:TextBox runat="server" type="text" class="form-control" ID="nit" name="continente" MaxLength="45" required />
+                                        <asp:TextBox runat="server" type="text" class="form-control" ID="nit" name="continente" MaxLength="45" required="" />
                                     </div>
                                     <div class="col-md-6  ">
                                         <label for="tel" class="control-label">Empresa</label>
-                                        <asp:TextBox runat="server" type="text" class="form-control" ID="empresa" name="continente" MaxLength="45" required />
+                                        <asp:TextBox runat="server" type="text" class="form-control" ID="empresa" name="continente" MaxLength="45" required="" />
                                     </div>
                                     <br />
 
                                     <div class="col-md-6  ">
                                         <label>Tipo de documento</label>
-                                        <asp:DropDownList ID="DropDownRepresentante" CssClass="form-control " class="box box-primary text-center" AppendDataBoundItems="true" runat="server" required>
+                                        <asp:DropDownList ID="DropDownRepresentante" CssClass="form-control " class="box box-primary text-center" AppendDataBoundItems="true" runat="server" required="">
                                             <asp:ListItem Value="" Text="      ---- Seleccion ----     "> </asp:ListItem>
                                         </asp:DropDownList>
 
@@ -238,7 +242,7 @@
                         </div>
                     </div>
             </div>
-
+          
 
         </div>
     </div>

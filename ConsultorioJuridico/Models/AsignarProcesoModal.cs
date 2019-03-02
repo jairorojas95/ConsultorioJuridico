@@ -12,6 +12,8 @@ namespace juefi2.Models
         private conecMysql conn = new conecMysql();
         public string idusua { get; set; }
         public string fk_proce { get; set; }
+        public string docente{ get; set; }
+
 
 
         public DataTable consultarusuario()
@@ -37,7 +39,7 @@ namespace juefi2.Models
 
         public bool actualizarproceso(AsignarProcesoModal obj)
         {
-            string sql = "update proceso set proceso.asignacion ='si', proceso.usuario_proceso= '" + obj.idusua + "' where proceso.idproceso ='" + obj.fk_proce + "'; ";
+            string sql = "update proceso set proceso.asignacion ='si', proceso.usuario_proceso= '" + obj.idusua + "' , proceso.usuario_idusuario='"+ obj.docente+"' where proceso.idproceso ='" + obj.fk_proce + "'; ";
 
             return conn.EjecutarSql(sql, CommandType.Text);
         }

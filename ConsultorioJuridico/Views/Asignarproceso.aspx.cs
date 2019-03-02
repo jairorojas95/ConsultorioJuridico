@@ -14,29 +14,37 @@ namespace juefi2.Views
 
         AsignarProcesoController proce = new AsignarProcesoController();
         AsignarProcesoModal promodal = new AsignarProcesoModal();
-        
+        ProcesoController proceso = new ProcesoController();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
            
                 asignarproceso.DataSource = proce.consultarusuario();
                 asignarproceso.DataBind();
 
+            if (!IsPostBack)
+            {
+                droplisproceso.DataTextField = "nombre";
+                droplisproceso.DataValueField = "idproceso";
+                droplisproceso.DataSource = proce.traerproceso();
+                droplisproceso.DataBind();
 
-               
-                    droplisproceso.DataTextField = "nombre";
-                    droplisproceso.DataValueField ="idproceso";
-                    droplisproceso.DataSource = proce.traerproceso();
-                    droplisproceso.DataBind();
-              
-               
-            
+                Dropasesor.DataValueField = "idusuario";
+                Dropasesor.DataTextField = "nombre";
+                Dropasesor.DataSource = proceso.traerdocentes();
+                Dropasesor.DataBind();
+            }
+
+
+
         }
 
         protected void guardar_datos_Click(object sender, EventArgs e)
         {
             promodal.fk_proce = droplisproceso.SelectedValue;
            promodal.idusua = ViewState["id"].ToString();
+            promodal.docente = Dropasesor.SelectedValue;
            proce.actualizarpersona(promodal);
         }
 

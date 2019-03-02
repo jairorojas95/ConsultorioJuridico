@@ -37,7 +37,7 @@ namespace juefi2.Views
                     {
 
                     }
-                    catch (Exception BlueScreen)
+                    catch (Exception )
                     {
                         //Handle errors 
                     }
@@ -57,7 +57,7 @@ namespace juefi2.Views
                     //id = Droproceso.SelectedValue;
 
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
 
                 }

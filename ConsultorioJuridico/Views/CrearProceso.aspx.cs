@@ -31,7 +31,7 @@ namespace juefi2.Views
                     {
                         
                     }
-                    catch (Exception BlueScreen)
+                    catch (Exception )
                     {
                         //Handle errors 
                     }
@@ -58,10 +58,7 @@ namespace juefi2.Views
                     droplisproceso.DataBind();
 
 
-                    Dropasesor.DataValueField = "idusuario";
-                    Dropasesor.DataTextField = "nombre";
-                    Dropasesor.DataSource = proce.traerdocentes();
-                    Dropasesor.DataBind();
+                  
 
 
                     DropDowndocument.DataValueField = "idtipo_documento";
@@ -70,7 +67,7 @@ namespace juefi2.Views
                     DropDowndocument.DataBind();
 
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
                 }
 
@@ -129,11 +126,16 @@ namespace juefi2.Views
             {
                 Response.Write("<script> alert('dfsdfsdfsdfs'); </script>");
             }
+            Dropaccionante.Items.Clear();
+            Dropaccionante.DataTextField = "nombre";
+            Dropaccionante.DataValueField = "idpersona";
+            Dropaccionante.DataSource = proce.traeraimplicados();
+            Dropaccionante.DataBind();
 
-
+            //Response.Redirect("../Views/CrearProceso.aspx");
         }
 
-    
+
 
         protected void Guardar_juridico_Click(object sender, EventArgs e)
         {
@@ -153,8 +155,8 @@ namespace juefi2.Views
                 Response.Write("<script> alert('Verifique Datos'); </script>");
             }
 
+            //Response.Redirect("../Views/CrearProceso.aspx");
 
-           
         }
 
       
@@ -199,7 +201,7 @@ namespace juefi2.Views
             procemo.radicado = Textradicado.Text;
             procemo.accionante = Dropaccionante.SelectedItem.Text;
             procemo.accionado = Dropaccionado.SelectedItem.Text;
-            procemo.asesor = Dropasesor.SelectedValue;
+            procemo.asunto = asunto.Text;
             procemo.tipo_proceso = droplisproceso.SelectedValue;
             
        
@@ -211,7 +213,7 @@ namespace juefi2.Views
 
 
             Textradicado.Text = "";
-            Dropasesor.SelectedIndex = 0;
+            asunto.Text = "";
             droplisproceso.SelectedIndex = 0;
             Dropaccionado.SelectedIndex = 0;
             Dropaccionante.SelectedIndex = 0;

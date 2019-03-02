@@ -22,13 +22,13 @@ namespace juefi2.Views {
         protected global::System.Web.UI.WebControls.DropDownList droplisproceso;
         
         /// <summary>
-        /// Control Dropasesor.
+        /// Control Textradicado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Dropasesor;
+        protected global::System.Web.UI.WebControls.TextBox Textradicado;
         
         /// <summary>
         /// Control Dropaccionante.
@@ -49,13 +49,13 @@ namespace juefi2.Views {
         protected global::System.Web.UI.WebControls.DropDownList Dropaccionado;
         
         /// <summary>
-        /// Control Textradicado.
+        /// Control asunto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textradicado;
+        protected global::System.Web.UI.WebControls.TextBox asunto;
         
         /// <summary>
         /// Control MyFile.

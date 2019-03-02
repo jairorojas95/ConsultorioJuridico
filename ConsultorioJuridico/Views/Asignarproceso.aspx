@@ -98,12 +98,25 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title ">Asignar Proceso</h4>
-                    <div class="col-md-6  ">
+                  
+                    
+                    
+                      <div class="col-md-6  ">
                         <div class="form-group">
                             <br />
                             <label>Proceso</label><br />
                             <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center" AppendDataBoundItems="true"  sAppendDataBoundItems="true" runat="server" required>
                               <asp:ListItem Value=""> ---- Seleccion ----</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+
+                      <div class="col-md-6  ">
+                        <div class="form-group">
+                            <label>Asesor</label>
+
+                            <asp:DropDownList ID="Dropasesor" CssClass="form-control select2 text-center "  AppendDataBoundItems="true" runat="server" required>
+                                <asp:ListItem Value="">      ---- Seleccion ----     </asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>

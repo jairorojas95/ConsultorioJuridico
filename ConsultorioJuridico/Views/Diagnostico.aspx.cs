@@ -26,7 +26,7 @@ namespace juefi2.Views
                     {
 
                     }
-                    catch (Exception BlueScreen)
+                    catch (Exception )
                     {
                         //Handle errors 
                     }
@@ -38,7 +38,7 @@ namespace juefi2.Views
                     DropRadicado.DataSource = diag.llenardiagnostico(Session["idusuario"].ToString());
                     DropRadicado.DataBind();
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
                     
                 }

@@ -27,7 +27,7 @@ namespace juefi2.Views
                     Droproceso.DataBind();
                    
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
 
                 }

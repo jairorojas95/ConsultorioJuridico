@@ -31,6 +31,15 @@ namespace juefi2.Views {
         protected global::System.Web.UI.WebControls.DropDownList droplisproceso;
         
         /// <summary>
+        /// Control Dropasesor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Dropasesor;
+        
+        /// <summary>
         /// Control Asignar_Persona.
         /// </summary>
         /// <remarks>
