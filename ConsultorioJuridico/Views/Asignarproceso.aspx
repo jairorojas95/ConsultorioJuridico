@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="Asignar Proceso" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="Asignarproceso.aspx.cs" Inherits="juefi2.Views.Asignarproceso" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  
-    </asp:Content>
+</asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -20,7 +19,7 @@
     <br />
 
     <br />
-    
+
     <section class="content">
         <div class="box">
             <div class="box-header text-center">
@@ -36,8 +35,8 @@
                                     <th>N°</th>
                                     <th>Nombre</th>
                                     <th>Semestre</th>
-                                     <th>Cantidad</th>
-                                  <%--  <th>accionante</th>
+                                    <th>Cantidad</th>
+                                    <%--  <th>accionante</th>
                                     <th>accionado</th>
                                     <th>Aseso</th>
                                     <th>Tipo proceso</th>
@@ -52,7 +51,7 @@
                             <td><%#Eval("idusuario")%></td>
                             <td><%#Eval("nombre")%></td>
                             <td><%#Eval("semestre")%></td>
-                             <td><%#Eval("cantidad")%></td>
+                            <td><%#Eval("cantidad")%></td>
                             <%--  <td><%#Eval("nombre2")%></td>
                             <td><%#Eval("accionante")%></td>
                             <td><%#Eval("accionado")%></td>
@@ -69,7 +68,7 @@
                             <th>N°</th>
                             <th>Nombre</th>
                             <th>Semestre</th>
-                              <th>Cantidad</th>
+                            <th>Cantidad</th>
                             <%--  <th>Radicado</th>
                             <th>accionante</th>
                             <th>accionado</th>
@@ -80,10 +79,15 @@
                     </tfoot>
 
                         </table>
+                        
+                        <asp:LinkButton ID="btnreporte" CssClass="btn btn-primary" OnClick="btnreporte_Click" runat="server" Text="Generar Reporte"></asp:LinkButton>
                     </FooterTemplate>
                 </asp:Repeater>
             </div>
-            <!-- /.box-body -->
+            <div class="col-md-6  ">
+                <div class="form-group">
+                </div>
+            </div>
         </div>
         <!-- /.box -->
     </section>
@@ -98,24 +102,24 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title ">Asignar Proceso</h4>
-                  
-                    
-                    
-                      <div class="col-md-6  ">
+
+
+
+                    <div class="col-md-6  ">
                         <div class="form-group">
                             <br />
                             <label>Proceso</label><br />
-                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center" AppendDataBoundItems="true"  sAppendDataBoundItems="true" runat="server" required>
-                              <asp:ListItem Value=""> ---- Seleccion ----</asp:ListItem>
+                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center" AppendDataBoundItems="true" sAppendDataBoundItems="true" runat="server" required>
+                                <asp:ListItem Value=""> ---- Seleccion ----</asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>
 
-                      <div class="col-md-6  ">
+                    <div class="col-md-6  ">
                         <div class="form-group">
                             <label>Asesor</label>
 
-                            <asp:DropDownList ID="Dropasesor" CssClass="form-control select2 text-center "  AppendDataBoundItems="true" runat="server" required>
+                            <asp:DropDownList ID="Dropasesor" CssClass="form-control select2 text-center " AppendDataBoundItems="true" runat="server" required>
                                 <asp:ListItem Value="">      ---- Seleccion ----     </asp:ListItem>
                             </asp:DropDownList>
                         </div>

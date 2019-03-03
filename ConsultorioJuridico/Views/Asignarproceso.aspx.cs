@@ -19,9 +19,9 @@ namespace juefi2.Views
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           
-                asignarproceso.DataSource = proce.consultarusuario();
-                asignarproceso.DataBind();
+
+            asignarproceso.DataSource = proce.consultarusuario();
+            asignarproceso.DataBind();
 
             if (!IsPostBack)
             {
@@ -43,16 +43,27 @@ namespace juefi2.Views
         protected void guardar_datos_Click(object sender, EventArgs e)
         {
             promodal.fk_proce = droplisproceso.SelectedValue;
-           promodal.idusua = ViewState["id"].ToString();
+            promodal.idusua = ViewState["id"].ToString();
             promodal.docente = Dropasesor.SelectedValue;
-           proce.actualizarpersona(promodal);
+            proce.actualizarpersona(promodal);
         }
 
         protected void asignar_Command(object sender, CommandEventArgs e)
         {
-             ViewState["id"] = e.CommandArgument;
+            ViewState["id"] = e.CommandArgument;
             ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", "mostrarModal('modal-default');", true);
 
         }
+
+
+
+
+        protected void btnreporte_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script type='text/javascript'>window.open('./probador/ReporteAsignar.aspx');</script>");
+            //Response.Write("<script type='text/javascript'>window.open('../probador/reporte.aspx');</script>");
+
+        }
+
     }
-    }
+}

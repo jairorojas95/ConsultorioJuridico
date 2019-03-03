@@ -79,6 +79,7 @@
                     </tfoot>
 
                         </table>
+                         <asp:LinkButton ID="btnreporte" CssClass="btn btn-primary" OnClick="btnreporte_Click" runat="server" Text="Generar Reporte"></asp:LinkButton>
                     </FooterTemplate>
                 </asp:Repeater>
             </div>

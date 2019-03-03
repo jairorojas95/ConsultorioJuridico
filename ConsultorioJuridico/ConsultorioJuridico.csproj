@@ -6828,6 +6828,8 @@
     <Content Include="Views\CrearProceso.aspx" />
     <Content Include="Views\Diagnostico.aspx" />
     <Content Include="Views\HojaCierre.aspx" />
+    <Content Include="Views\probador\ReporteProceso.aspx" />
+    <Content Include="Views\probador\ReporteAsignar.aspx" />
     <Content Include="Views\probador\WebForm1.aspx" />
     <Content Include="Views\TipodeDocumento.aspx" />
     <Content Include="Views\usuario\login.aspx" />
@@ -7492,11 +7494,37 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>1111.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\probador\asignar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>asignar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Views\probador\CrystalReport1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\probador\proceso.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proceso.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\probador\ReporteProceso.aspx.cs">
+      <DependentUpon>ReporteProceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\probador\ReporteProceso.aspx.designer.cs">
+      <DependentUpon>ReporteProceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\probador\ReporteAsignar.aspx.cs">
+      <DependentUpon>ReporteAsignar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\probador\ReporteAsignar.aspx.designer.cs">
+      <DependentUpon>ReporteAsignar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\probador\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -7569,9 +7597,17 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Views\probador\asignar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>asignar.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\probador\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\probador\proceso.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>proceso.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
