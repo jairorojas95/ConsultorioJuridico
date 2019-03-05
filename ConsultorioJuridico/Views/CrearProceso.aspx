@@ -29,8 +29,9 @@
                     <div class="col-md-6  ">
                         <div class="form-group ">
                             <label>Tipo de Proceso</label>
-                            <asp:DropDownList ID="droplisproceso" CssClass="form-control select2 text-center " AppendDataBoundItems="true" runat="server" required="">
-                                <asp:ListItem Value=""> ---- Seleccion ----</asp:ListItem>
+                            <asp:DropDownList ID="droplisproceso"  runat="server"  CssClass="form-control select2 text-center " required="true" AppendDataBoundItems="true"  AutoPostBack="true" >
+                                  <asp:ListItem Value=""> ---- Seleccion ----</asp:ListItem>
+                                
                             </asp:DropDownList>
 
                         </div>
@@ -43,7 +44,7 @@
                         <div class="form-group">
 
                             <label>Radicado </label>
-                            <asp:TextBox ID="Textradicado" runat="server" CssClass=" form-control" required=""></asp:TextBox>
+                            <asp:TextBox ID="Textradicado" runat="server" CssClass="form-control" required ></asp:TextBox>
                         </div>
                     </div>
 
@@ -54,7 +55,7 @@
                         <div class="form-group">
                             <label>Accionante</label>
                             <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
-                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" required="" OnSelectedIndexChanged="Dropaccionante_SelectedIndexChanged1" AutoPostBack="true">
+                            <asp:DropDownList ID="Dropaccionante" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" required  OnSelectedIndexChanged="Dropaccionante_SelectedIndexChanged1" AutoPostBack="true">
                                 <asp:ListItem Value="">  ---- Seleccion ---- </asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -67,7 +68,7 @@
                         <div class="form-group">
                             <label>Accionado</label>
                             <button type="button" class="btn btn-primary" style="margin-bottom: 3px;" data-toggle="modal" data-target="#lamodal">Crear </button>
-                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" required="">
+                            <asp:DropDownList ID="Dropaccionado" CssClass="form-control select2 text-center" AppendDataBoundItems="true" runat="server" required >
                                 <asp:ListItem Value="">      ---- Seleccion ----     </asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -81,14 +82,14 @@
                     <div class="col-md-12 ">
                         <div class="form-group">
                             <label for="comment">Naturaleza del Asunto</label>
-                            <asp:TextBox runat="server" CssClass="form-control" Rows="5" TextMode="MultiLine" ID="asunto" required=""></asp:TextBox>
+                            <asp:TextBox runat="server" CssClass="form-control" Rows="5" TextMode="MultiLine" ID="asunto" required ></asp:TextBox>
                         </div>
                     </div>
 
                     <div class="col-md-6 ">
                         <div class="form-group">
                             <label for="file">Archivo Soporte:</label>
-                            <asp:FileUpload ID="MyFile" runat="server" required="" accept="application/msword, application/pdf" />
+                            <asp:FileUpload ID="MyFile" runat="server"  required accept="application/msword, application/pdf" />
                         </div>
                     </div>
                 </div>

@@ -13,8 +13,8 @@ namespace juefi2.Views
     {
         ProcesoController proce = new ProcesoController();
         ProcesoModel procemo = new ProcesoModel();
-       
-       
+
+
 
 
 
@@ -29,9 +29,9 @@ namespace juefi2.Views
 
                     try
                     {
-                        
+
                     }
-                    catch (Exception )
+                    catch (Exception)
                     {
                         //Handle errors 
                     }
@@ -58,7 +58,7 @@ namespace juefi2.Views
                     droplisproceso.DataBind();
 
 
-                  
+
 
 
                     DropDowndocument.DataValueField = "idtipo_documento";
@@ -67,7 +67,7 @@ namespace juefi2.Views
                     DropDowndocument.DataBind();
 
                 }
-                catch (Exception )
+                catch (Exception)
                 {
                 }
 
@@ -107,7 +107,7 @@ namespace juefi2.Views
             procemo.tipo_documento = DropDowndocument.SelectedValue;
             procemo.telefono = telefono.Text;
             procemo.direccion = direccion.Text;
-         
+
 
 
             if (proce.registropersona(procemo) == true)
@@ -148,7 +148,7 @@ namespace juefi2.Views
 
                 nit.Text = "";
                 empresa.Text = "";
-                
+
             }
             else
             {
@@ -159,7 +159,7 @@ namespace juefi2.Views
 
         }
 
-      
+
 
         protected void Dropaccionante_SelectedIndexChanged1(object sender, EventArgs e)
         {
@@ -203,29 +203,38 @@ namespace juefi2.Views
             procemo.accionado = Dropaccionado.SelectedItem.Text;
             procemo.asunto = asunto.Text;
             procemo.tipo_proceso = droplisproceso.SelectedValue;
-            
-       
 
-        if (proce.Registraproceso(procemo) == true)
-        {
-            Response.Write("<script> alert('Registro Exitoso'); </script>");
+            if (droplisproceso.SelectedIndex == 0 || Dropaccionante.SelectedIndex == 0 || Dropaccionado.SelectedIndex == 0 ||
+                Textradicado.Text.Equals("") || asunto.Text.Equals(""))
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", " swal('Alerta', 'Debe llenar todos los campos', 'info');", true);
+            }
+            else
+            {
+                if (proce.Registraproceso(procemo) == true)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "hwa", " swal('Exito', 'Datos agregados correctamente', 'success');", true);
 
 
 
-            Textradicado.Text = "";
-            asunto.Text = "";
-            droplisproceso.SelectedIndex = 0;
-            Dropaccionado.SelectedIndex = 0;
-            Dropaccionante.SelectedIndex = 0;
+                    Textradicado.Text = "";
+                    asunto.Text = "";
+                    droplisproceso.SelectedIndex = 0;
+                    Dropaccionado.SelectedIndex = 0;
+                    Dropaccionante.SelectedIndex = 0;
+
+                }
+                else
+                {
+                    Response.Write("<script> alert('verifique Datos  '); </script>");
+                    return;
+                }
+            }
+
+
+
+
 
         }
-        else
-        {
-            Response.Write("<script> alert('verifique Datos  '); </script>");
-            return;
-        }
-
-
-    }
     }
 }

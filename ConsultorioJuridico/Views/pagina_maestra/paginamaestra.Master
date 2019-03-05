@@ -257,6 +257,7 @@
     <!-- Sparkline -->
     <script src="../../Content/stilos/estiloadmin/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
     <!-- jvectormap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
     
     <!-- DataTables -->
     <script src="../../Content/stilos/estiloadmin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
