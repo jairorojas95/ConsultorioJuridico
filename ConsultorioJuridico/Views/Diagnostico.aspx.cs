@@ -58,7 +58,7 @@ namespace juefi2.Views
             }
 
 
-            if (DropRadicado.SelectedIndex <= 0 )
+            if (DropRadicado.SelectedIndex <= 0)
             {
 
                 Response.Write("<script> alert('Verifique Datos'); </script>");
@@ -67,11 +67,13 @@ namespace juefi2.Views
 
 
             diagmode.fk_proceso = DropRadicado.SelectedValue;
+            diagmode.observacion = texdiagnostico.Text; 
 
 
             if (diag.registro_dignostico(diagmode) == true )
             {
                 Response.Write("<script> alert('Registro Exitoso'); </script>");
+                texdiagnostico.Text = "";
             }
             else
             {

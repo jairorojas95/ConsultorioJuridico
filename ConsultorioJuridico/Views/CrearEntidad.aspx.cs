@@ -32,6 +32,7 @@ namespace juefi2.Views
 
                 Response.Write("<script> alert('Registro Exitoso'); </script>");
                 Txnuevoproceos.Text = "";
+                Response.Redirect("../Views/CrearEntidad.aspx");
 
                 return;
 

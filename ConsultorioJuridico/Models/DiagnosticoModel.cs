@@ -23,7 +23,7 @@ namespace juefi2.Models
         public bool registrarDiagnostico(DiagnosticoModel obj)
         {
 
-            string sqlee = "INSERT INTO diagnostico (archivo,fk_proceso )  VALUES('" + obj.archivo + "','"  + obj.fk_proceso+ "');";
+            string sqlee = "INSERT INTO diagnostico (observacion,archivo,fk_proceso )  VALUES('" + obj.observacion +  "','" + obj.archivo + "','" + obj.fk_proceso+ "');";
             return conn.EjecutarSql(sqlee, CommandType.Text);
         }
 

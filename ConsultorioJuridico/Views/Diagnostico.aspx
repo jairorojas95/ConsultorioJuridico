@@ -32,6 +32,12 @@
                     </div>
                 </div>
 
+                   <div class="col-md-12 ">
+                        <div class="form-group">
+                            <label for="comment">Naturaleza del Asunto</label>
+                            <asp:TextBox runat="server" CssClass="form-control" Rows="5" TextMode="MultiLine" ID="texdiagnostico" required=""></asp:TextBox>
+                        </div>
+                    </div>
 
 
                 <div class="col-md-6 ">

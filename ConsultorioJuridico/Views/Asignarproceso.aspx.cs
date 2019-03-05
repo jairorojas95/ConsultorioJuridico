@@ -46,6 +46,7 @@ namespace juefi2.Views
             promodal.idusua = ViewState["id"].ToString();
             promodal.docente = Dropasesor.SelectedValue;
             proce.actualizarpersona(promodal);
+            Response.Redirect("../Views/Asignarproceso.aspx");
         }
 
         protected void asignar_Command(object sender, CommandEventArgs e)
